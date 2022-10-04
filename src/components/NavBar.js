@@ -12,6 +12,27 @@ export default function NavBar() {
             <img src={profile} alt="Imagen perfil Samuel Amaro" />
           </div>
         </div>
+        <div class="switch-theme">
+          <input
+            type="radio"
+            id="theme-light"
+            name="option-theme"
+            aria-label="Option theme light"
+            value="light"
+            class="option-theme"
+            tabindex="0"
+          />
+          <input
+            type="radio"
+            id="theme-dark"
+            name="option-theme"
+            aria-label="Option theme dark"
+            value="dark"
+            class="option-theme"
+            checked
+            tabindex="0"
+          />
+        </div>
         <button
           type="button"
           title="button menu"
@@ -72,7 +93,7 @@ export default function NavBar() {
             <li className="nav__item" role="menuitem">
               <a
                 className="nav__link"
-                href="#projetos"
+                href="#projects"
                 target="_self"
                 rel="next"
               >

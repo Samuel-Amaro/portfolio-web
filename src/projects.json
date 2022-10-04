@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {
+            "id" : "project01",
+            "name": "Site Android",
+            "repository": "https://github.com/Samuel-Amaro/Site-Android",
+            "url": "https://samuel-amaro.github.io/Site-Android/",
+            "description": "Um site estático que descreve um pouco da história do (mascote) da android e sua criadora.",
+            "tecnologys": ["html", "css"],
+            "image": "project01.jpg"
+        }
+    ]
+}

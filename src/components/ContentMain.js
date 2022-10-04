@@ -2,6 +2,9 @@ import SectionAbout from "./SectionAbout";
 import Diviser from "./Diviser";
 import SectionExperience from "./SectionExperience";
 import SectionEducation from "./SectionEducation";
+import SectionSkills from "./SectionSkills";
+import SectionInteresses from "./SectionInteresses";
+import SectionProjects from "./SectionProjects";
 
 export default function ContentMain() {
     return (
@@ -12,6 +15,11 @@ export default function ContentMain() {
             <Diviser />
             <SectionEducation />
             <Diviser />
+            <SectionSkills />
+            <Diviser />
+            <SectionInteresses />
+            <Diviser />
+            <SectionProjects />
         </article>
     );
 }
