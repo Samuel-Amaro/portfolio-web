@@ -8,6 +8,244 @@
             "description": "Um site estático que descreve um pouco da história do (mascote) da android e sua criadora.",
             "tecnologys": ["html", "css"],
             "image": "project01.jpg"
+        },
+        {
+          "id": "project02",
+          "name": "Componente QR Code",
+          "repository": "https://github.com/Samuel-Amaro/qr-code-component",
+          "url": "https://samuel-amaro.github.io/qr-code-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de código QR code.",
+          "tecnologys": ["html", "css"],
+          "image": "project02.jpg"
+        },
+        {
+          "id": "project03",
+          "name": "Projeto TCC",
+          "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
+          "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
+          "description": "Protejo de TCC, uma aplicação web cujo objetivo é resolver um problema pontual de distribuição de benefícios sociais durante a pandemia do (COVID-19), para as pessoas com menos condição financeira na cidade onde resido.",
+          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart", "DataTables", "Apache"],
+          "image": "project03.jpg"
+        },
+        {
+          "id": "project04",
+          "name": "NFT Preview card component",
+          "repository": "https://github.com/Samuel-Amaro/NFT-preview-card-component",
+          "url": "https://samuel-amaro.github.io/NFT-preview-card-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um cartão componente NFT com pre-visualização.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project04.jpg"
+        },
+        {
+          "id": "project05",
+          "name": "Component card order summary",
+          "repository": "https://github.com/Samuel-Amaro/order-summary-component",
+          "url": "https://samuel-amaro.github.io/order-summary-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de cartão de resumo de pedido",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem"
+          ],
+          "image": "project05.jpg"
+        },
+        {
+          "id": "project06",
+          "name": "Profile card component",
+          "repository": "https://github.com/Samuel-Amaro/profile-card-component",
+          "url": "https://samuel-amaro.github.io/profile-card-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de cartão de perfil de usuário com estatísticas sobre rede social.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project06.jpg"
+        },
+        {
+          "id": "project07",
+          "name": "Stats preview card component",
+          "repository": "https://github.com/Samuel-Amaro/stats-preview-card-component",
+          "url": "https://samuel-amaro.github.io/stats-preview-card-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de cartão com visualização de estatísticas.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project07.jpg"
+        },
+        {
+          "id": "project08",
+          "name": "3 Column preview card component",
+          "repository": "https://github.com/Samuel-Amaro/3-column-preview-card-component",
+          "url": "https://samuel-amaro.github.io/3-column-preview-card-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de visualização de 3 colunas.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project08.jpg"
+        },
+        {
+          "id": "project09",
+          "name": "Single Price grid component",
+          "repository": "https://github.com/Samuel-Amaro/single-price-grid-component",
+          "url": "https://samuel-amaro.github.io/single-price-grid-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de grade de preço único.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project09.jpg"
+        },
+        {
+          "id": "project10",
+          "name": "Testimonials section grid",
+          "repository": "https://github.com/Samuel-Amaro/testimonials-grid-section",
+          "url": "https://samuel-amaro.github.io/testimonials-grid-section/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma página com uma seção de grade de depoimentos.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project10.jpg"
+        },
+        {
+          "id": "project11",
+          "name": "Huddle landing-page with introductory section",
+          "repository": "https://github.com/Samuel-Amaro/huddle-landing-page-with-introductory-section",
+          "url": "https://samuel-amaro.github.io/huddle-landing-page-with-introductory-section/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma landing-page sobre comunidades com uma seção de introdução",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project11.jpg"
+        },
+        {
+          "id": "project12",
+          "name": "Four card feature section",
+          "repository": "https://github.com/Samuel-Amaro/four-card-feature-section",
+          "url": "https://samuel-amaro.github.io/four-card-feature-section/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma seção de recursos de quatro cartões.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project12.jpg"
+        },
+        {
+          "id": "project13",
+          "name": "Section proof social",
+          "repository": "https://github.com/Samuel-Amaro/section-proof-social",
+          "url": "https://samuel-amaro.github.io/section-proof-social/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma seção de prova social com feedbacks.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project13.jpg"
+        },
+        {
+          "id": "project14",
+          "name": "Landing-Page Clipboard",
+          "repository": "https://github.com/Samuel-Amaro/clipboard-landing-page",
+          "url": "https://samuel-amaro.github.io/clipboard-landing-page/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma landing-page com uma área de transferência.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project14.jpg"
+        },
+        {
+          "id": "project15",
+          "name": "Landing-Page Huddle with alternating feature blocks",
+          "repository": "https://github.com/Samuel-Amaro/Huddle-landing-page-with-alternating-feature-blocks",
+          "url": "https://samuel-amaro.github.io/Huddle-landing-page-with-alternating-feature-blocks/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma landing-page huddle com uma seção de blocos de recursos alternados.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project15.jpg"
+        },
+        {
+          "id": "project16",
+          "name": "Component data storage fylo",
+          "repository": "https://github.com/Samuel-Amaro/Fylo-data-storage-component",
+          "url": "https://samuel-amaro.github.io/Fylo-data-storage-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de armazenando de dados fylo.",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project16.jpg"
+        },
+        {
+          "id": "project17",
+          "name": "Fylo landing page with two column layout",
+          "repository": "https://github.com/Samuel-Amaro/fylo-landing-page-with-two-column-layout",
+          "url": "https://samuel-amaro.github.io/fylo-landing-page-with-two-column-layout/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir uma landing-page fylo com layout de duas colunas",
+          "tecnologys": ["html", "css", "Bem"],
+          "image": "project17.jpg"
+        },
+        {
+          "id": "project18",
+          "name": "Componente article preview",
+          "repository": "https://github.com/Samuel-Amaro/article-preview-component",
+          "url": "https://samuel-amaro.github.io/article-preview-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente de visualização de artigo com button de compartilhar.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project18.jpg"
+        },
+        {
+          "id": "project19",
+          "name": "Interactive rating component",
+          "repository": "https://github.com/Samuel-Amaro/interactive-rating-component",
+          "url": "https://samuel-amaro.github.io/interactive-rating-component/",
+          "description": "Solução de desafio de codificação Front-End, objetivo do desafio era construir um componente interativo de avaliação de serviços.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project19.jpg"
+        },
+        {
+          "id": "project20",
+          "name": "Advice Generator App",
+          "repository": "https://github.com/Samuel-Amaro/advice-generator-app",
+          "url": "https://samuel-amaro.github.io/advice-generator-app/",
+          "description": "Solução de desafio de codificação Front-End, aplicativo gerador de conselhos que consome uma API que retorna conselhos.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project20.jpg"
+        },
+        {
+          "id": "project21",
+          "name": "Intro component with sign up form",
+          "repository": "https://github.com/Samuel-Amaro/Intro-component-with-sign-up-form",
+          "url": "https://samuel-amaro.github.io/Intro-component-with-sign-up-form/",
+          "description": "Solução de desafio de codificação Front-End, landing-page com componente de introdução com formulário de inscrição.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project21.jpg"
+        },
+        {
+          "id": "project22",
+          "name": "Tip calculator app",
+          "repository": "https://github.com/Samuel-Amaro/tip-calculator-app",
+          "url": "https://samuel-amaro.github.io/tip-calculator-app/",
+          "description": "Solução de desafio de codificação Front-End, calculadora de gorjetas.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project22.jpg"
+        },
+        {
+          "id": "project23",
+          "name": "Intro section with dropdown navigation",
+          "repository": "https://github.com/Samuel-Amaro/intro-section-with-dropdown-navigation",
+          "url": "https://samuel-amaro.github.io/intro-section-with-dropdown-navigation/",
+          "description": "Solução de desafio de codificação Front-End, seção de introdução com dropdown menu.",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project23.jpg"
+        },
+        {
+          "id": "project24",
+          "name": "IP Address Tracker",
+          "repository": "https://github.com/Samuel-Amaro/ip-address-tracker",
+          "url": "https://samuel-amaro.github.io/ip-address-tracker/",
+          "description": "Solução de desafio de codificação Front-End, aplicativo de rastreador de endereço IP",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project24.jpg"
+        },
+        {
+          "id": "project25",
+          "name": "Calculator App",
+          "repository": "https://github.com/Samuel-Amaro/calculator-app",
+          "url": "https://samuel-amaro.github.io/calculator-app/",
+          "description": "Solução de desafio de codificação Front-End, aplicativo de calculadora com alternador de tema",
+          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "image": "project25.jpg"
+        },
+        {
+          "id": "project26",
+          "name": "QRCode Component",
+          "repository": "https://github.com/Samuel-Amaro/qr-code-component-react",
+          "url": "https://samuel-amaro.github.io/qr-code-component-react/",
+          "description": "Solução de desafio de codificação Front-End, QRCode component",
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "image": "project26.jpg"
+        },
+        {
+          "id": "project27",
+          "name": "Ping single column coming soon page",
+          "repository": "https://github.com/Samuel-Amaro/coming-soon-page",
+          "url": "https://samuel-amaro.github.io/coming-soon-page/",
+          "description": "Solução de desafio de codificação Front-End, página ping column coming son",
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "image": "project27.jpg"
         }
     ]
 }
