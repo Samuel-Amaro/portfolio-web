@@ -1,6 +1,7 @@
 import Section from "./Section";
 import Skill from "./Skill";
 import iconBem from "../assets/images/icon-bem-black.png";
+import iconAcessibility from "../assets/images/icon-universal-access-solid.svg";
 import Workflow from "./Workflow";
 
 export default function SectionSkills() {
@@ -79,6 +80,15 @@ export default function SectionSkills() {
               src={iconBem}
               alt="O ícone do logotipo para bem(block element modifier)"
               title="BEM(Block Element Modifier)"
+              height="60"
+              width="60"
+            />
+          </li>
+          <li className="tools__item">
+            <Skill
+              src={iconAcessibility}
+              alt="O ícone do logotipo para acessibilidade universal"
+              title="Acessibility Universal"
               height="60"
               width="60"
             />

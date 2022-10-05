@@ -1,4 +1,5 @@
 import Section from "./Section";
+import SocialMediaLink from "./SocialMediaLink";
 import iconLinkedin from "../assets/images/icon-linkedin-white.svg";
 import iconGitHub from "../assets/images/icon-github-white.svg";
 import iconFrontMentor from "../assets/images/icon-logo-frontmentor-white.svg";
@@ -38,52 +39,22 @@ export default function SectionAbout() {
       </p>
       <ul className="social-medias">
         <li className="social-medias__item">
-          <a
-            class="social-medias__link"
+          <SocialMediaLink
             href="https://www.linkedin.com/in/samuel-amaro/"
-            target="_blank"
-            rel="noreferrer"
-            title="link social media profile linkedin"
-          >
-            <img
-              src={iconLinkedin}
-              alt="icon linkedin media social"
-              width="22"
-              height="22"
-            />
-          </a>
+            src={iconLinkedin}
+          />
         </li>
         <li class="social-medias__item">
-          <a
-            class="social-medias__link"
+          <SocialMediaLink
             href="https://github.com/Samuel-Amaro"
-            target="_blank"
-            rel="noreferrer"
-            title="link social media GitHub profile Git"
-          >
-            <img
-              src={iconGitHub}
-              alt="icon GitHub media social"
-              width="22"
-              height="22"
-            />
-          </a>
+            src={iconGitHub}
+          />
         </li>
         <li class="social-medias__item">
-          <a
-            class="social-medias__link"
+          <SocialMediaLink
             href="https://www.frontendmentor.io/profile/Samuel-Amaro"
-            target="_blank"
-            rel="noreferrer"
-            title="link social media Front-End mentor profile"
-          >
-            <img
-              src={iconFrontMentor}
-              alt="icon Front-End mentor profile"
-              width="22"
-              height="22"
-            />
-          </a>
+            src={iconFrontMentor}
+          />
         </li>
         <a
           class="link-curriculo"

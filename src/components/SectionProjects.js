@@ -1,6 +1,24 @@
 import Section from "./Section";
+import DataProjects from "../projects.json";
+import CardProject from "./CardProject";
 
 export default function SectionProjects() {
+    const listCardProjects = DataProjects.projects.map((project) => {
+      return (
+        <li className="project__item" key={project.id}>
+          {
+            <CardProject
+              id={project.id} /*imagens local*/
+              src={"./images/" + project.image}
+              name={project.name}
+              tecnologys={project.tecnologys}
+              repository={project.repository}
+              url={project.url}
+            />
+          }
+        </li>
+      );
+    });
     return (
       <Section nameSection="projects">
         <h2 className="section__heading-2">Projetos</h2>
@@ -11,7 +29,7 @@ export default function SectionProjects() {
           sua respectiva implementação.
         </p>
         <ul className="projects">
-        
+          {listCardProjects}
         </ul>
       </Section>
     );
