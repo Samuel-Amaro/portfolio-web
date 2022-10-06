@@ -36,8 +36,19 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --border-menu: rgba(255, 255, 255, 0.1);
+  --shadow-menu_color-link: rgba(255, 255, 255, 0.55);
+  --color-hover-link: rgba(255, 255, 255, 0.75);
+  --hover-switch: var(--color-05);
   /*variables theme with values theme light*/
-
+  --bg-navbar: var(--bs-primary);
+  --text-emph: var(--bs-white); 
+  --bg-switch-theme: var(--bs-gray-dark);
+  --bg-switch-controler: var(--bs-gray-500);
+  --border-button-menu: var(--border-menu);
+  --shadow-button-menu_color-link: var(--shadow-menu_color-link);
+  --hover-link: var(--color-hover-link);
+  --hover-switche-controler: var(--hover-switch);
 }
 
 * {

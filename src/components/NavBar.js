@@ -1,17 +1,26 @@
 import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
+import { useState } from "react";
 
 
 export default function NavBar() {
+    const [btnIsPressed, setBtnIsPressed] = useState(false);
+
+    function hadleBtn(event) {
+      setBtnIsPressed(!btnIsPressed);
+    }
+
+    function handleMenuTransition(event) {
+      console.log(event.target);
+    }
+
     return (
       <aside className="main__nav-bar">
         <div className="main__data-profile">
-          <span class="professional-position">
-            Desenvolvedor Front-End Júnior
-          </span>
+          <span class="professional-position">Junior Front End Developer</span>
           <div class="main__profile-img">
-            <img src={profile} alt="Imagen perfil Samuel Amaro" />
+            <img src={profile} alt="Perfil Samuel Amaro" />
           </div>
         </div>
         <div class="switch-theme">
@@ -23,6 +32,7 @@ export default function NavBar() {
             value="light"
             class="option-theme"
             tabindex="0"
+            title="Option Theme light"
           />
           <input
             type="radio"
@@ -31,14 +41,15 @@ export default function NavBar() {
             aria-label="Option theme dark"
             value="dark"
             class="option-theme"
-            checked
             tabindex="0"
+            title="Option Theme Dark"
           />
           <button
             type="button"
             class="switch-controler"
             aria-pressed="mixed"
             aria-label="Switch Controller to toggle themes"
+            title="Toggle Theme"
           ></button>
         </div>
         <button
@@ -46,7 +57,8 @@ export default function NavBar() {
           title="button menu"
           class="main__button-menu"
           tabindex="0"
-          aria-expanded="true"
+          aria-expanded={btnIsPressed ? "true" : "false"}
+          onPointerDown={(event) => hadleBtn(event)}
         >
           <img
             class="button-menu__icon"
@@ -56,7 +68,11 @@ export default function NavBar() {
             height="25"
           />
         </button>
-        <nav className="nav">
+        <nav
+          className={btnIsPressed ? "collapsing" : "nav"}
+          style={btnIsPressed ? {height: 206.4 + "px"} : {}} 
+          onTransitionEnd={(event) => handleMenuTransition(event)}
+        >
           <ul className="nav__links" role="menu">
             <li className="nav__item" role="menuitem">
               <a className="nav__link" href="#about" target="_self" rel="next">
