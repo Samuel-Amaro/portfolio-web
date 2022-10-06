@@ -1,0 +1,43 @@
+.main__nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--bs-primary);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.main__profile-img, .nav{
+    display: none;
+}
+
+.professional-position{
+    display: block;
+    font-size: 1.25rem;
+    color: var(--bs-white);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.switch-theme{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bs-gray-dark);
+}
+
+.option-theme{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+}

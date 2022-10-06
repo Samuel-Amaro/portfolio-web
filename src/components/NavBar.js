@@ -1,5 +1,7 @@
+import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
+
 
 export default function NavBar() {
     return (
@@ -32,6 +34,12 @@ export default function NavBar() {
             checked
             tabindex="0"
           />
+          <button
+            type="button"
+            class="switch-controler"
+            aria-pressed="mixed"
+            aria-label="Switch Controller to toggle themes"
+          ></button>
         </div>
         <button
           type="button"
