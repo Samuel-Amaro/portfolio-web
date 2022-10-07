@@ -1,0 +1,20 @@
+.social-medias__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--bg-link-social_link-curriculo);
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    border-radius: 100%;
+}
+
+.social-medias__link:hover{
+    text-decoration: none;
+    background-color: var(--hover-link-social_link-curriculo);
+}
+
+.social-medias__link img{
+    display: block;
+}

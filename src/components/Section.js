@@ -1,3 +1,4 @@
+import "./Section.css";
 
 export default function Section(props) {
     return (

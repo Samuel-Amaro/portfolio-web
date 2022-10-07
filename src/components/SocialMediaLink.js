@@ -1,3 +1,4 @@
+import "./SocialMediaLink.css";
 
 export default function SocialMediaLink(props) {
     return (

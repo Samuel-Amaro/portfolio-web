@@ -1,0 +1,13 @@
+.tools{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    gap: 8px;
+    align-items: center;
+}
+
+.workflow{
+    list-style: none;
+    margin-left: 16px;
+}

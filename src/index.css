@@ -41,6 +41,10 @@
   --color-hover-link: rgba(255, 255, 255, 0.75);
   --hover-switch: var(--color-05);
   /*variables theme with values theme light*/
+  /*general*/
+  --text: var(--bs-gray-600);
+  --bg-body: var(--bs-white);
+  /*navbar component*/
   --bg-navbar: var(--bs-primary);
   --text-emph: var(--bs-white); 
   --bg-switch-theme: var(--bs-gray-dark);
@@ -49,6 +53,15 @@
   --shadow-button-menu_color-link: var(--shadow-menu_color-link);
   --hover-link: var(--color-hover-link);
   --hover-switche-controler: var(--hover-switch);
+  /*section about*/
+  --text-title: var(--bs-gray-dark);
+  --text-title-name-emph_date-betewen: rgba(189, 93, 56, 1);
+  --link-email: var(--bs-primary);
+  --bg-link-social_link-curriculo: var(--bs-gray-700);
+  --hover-link-social_link-curriculo: var(--bs-primary);
+  --text-link-curriculo: var(--bs-white);
+  --bg-diviser: var(--bs-gray-600);
+
 }
 
 * {
@@ -70,6 +83,20 @@ h4,
 h5,
 h6 {
   font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-title);
+  line-height: 1.2;
+}
+
+body{
+  padding-top: 3.22rem;
+  color: var(--text);
+  font-family: "Mulish", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--bg-body);
 }
 
 /**MOBILE FIRST**/

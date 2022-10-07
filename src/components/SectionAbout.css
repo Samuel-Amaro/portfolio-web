@@ -1,0 +1,53 @@
+.section__heading-main{
+    line-height: 1;
+    font-size: calc(1.725rem + 5.7vw);
+}
+
+.title__name-emph{
+    color: var(--text-title-name-emph_date-betewen);
+}
+
+.section__data-addres{
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.link-email{
+    text-decoration: underline;
+    color: var(--link-email);
+}
+
+.section__description-about{
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.social-medias{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 3rem;
+}
+
+.link-curriculo{
+    display: block;
+    background-color: var(--bg-link-social_link-curriculo);
+    color: var(--text-link-curriculo);
+    font-size: 1.15rem;
+    text-decoration: none;
+    padding: 1rem 1.15rem;
+    max-width: 160px;
+    border-radius: 4px;
+}
+
+.link-curriculo:hover{
+    text-decoration: none;
+    background-color: var(--hover-link-social_link-curriculo);
+}

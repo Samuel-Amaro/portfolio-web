@@ -1,4 +1,5 @@
 import iconCheck from "../assets/images/icon-check-solid-gray.svg";
+import "./Workflow.css";
 
 export default function Workflow(props) {
     return (

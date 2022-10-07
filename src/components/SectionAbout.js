@@ -4,6 +4,7 @@ import iconLinkedin from "../assets/images/icon-linkedin-white.svg";
 import iconGitHub from "../assets/images/icon-github-white.svg";
 import iconFrontMentor from "../assets/images/icon-logo-frontmentor-white.svg";
 import curriculo from "../assets/files/curriculo-portefolio-samuel-amaro.pdf";
+import "./SectionAbout.css";
 
 export default function SectionAbout() {
   return (
@@ -13,7 +14,12 @@ export default function SectionAbout() {
       </h1>
       <address className="section__data-addres">
         Formosa Goiás · Bosque II ·{" "}
-        <a href="mailto:samuel.dev.front@gmail.com" target="_self" rel="author">
+        <a
+          href="mailto:samuel.dev.front@gmail.com"
+          target="_self"
+          rel="author"
+          className="link-email"
+        >
           samuel.dev.front@gmail.com
         </a>{" "}
         · Desenvolvedor Front-End Júnior
@@ -56,17 +62,17 @@ export default function SectionAbout() {
             src={iconFrontMentor}
           />
         </li>
-        <a
-          class="link-curriculo"
-          href={curriculo}
-          target="_blank"
-          rel="noreferrer"
-          download="curriculo"
-          type="application/pdf"
-        >
-          Download currículo(PDF)
-        </a>
       </ul>
+      <a
+        class="link-curriculo"
+        href={curriculo}
+        target="_blank"
+        rel="noreferrer"
+        download="curriculo"
+        type="application/pdf"
+      >
+        Currículo(PDF)
+      </a>
     </Section>
   );
 }

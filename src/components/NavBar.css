@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1050;
     background-color: var(--bg-navbar);
     display: flex;
     flex-flow: row wrap;
@@ -13,7 +13,7 @@
     padding: 0.5rem 1rem;
 }
 
-.main__profile-img{
+.main__profile-img, .nav{
     display: none;
 }
 
@@ -95,22 +95,26 @@
     color: var(--shadow-button-menu_color-link);
 }
 
+/*
 .nav:not(.nav_show) {
     display: none;
 }
+*/
 
 .nav{
     flex-basis: 100%;
 }
 
+/*
 .collapsing{
     height: 0;
     overflow: hidden;
     transition: height 20s ease;
 }
+*/
 
 .nav_show{
-   height: 206.4px;
+   display: block;
 }
 
 .nav__links{

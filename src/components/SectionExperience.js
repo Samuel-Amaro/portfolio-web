@@ -1,5 +1,6 @@
 import Section from "./Section";
 import ContentRow from "./ContentRow";
+import "./SectionExperience.css";
 
 export default function SectionExperience() {
     return (

@@ -1,0 +1,6 @@
+.section{
+    display: flex;
+    align-items: center;
+    padding: 5rem 1rem;
+    max-width: 75rem;
+}

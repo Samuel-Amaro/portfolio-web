@@ -11,14 +11,10 @@ export default function NavBar() {
       setBtnIsPressed(!btnIsPressed);
     }
 
-    function handleMenuTransition(event) {
-      console.log(event.target);
-    }
-
     return (
       <aside className="main__nav-bar">
         <div className="main__data-profile">
-          <span class="professional-position">Junior Front End Developer</span>
+          <span class="professional-position">Samuel Amaro</span>
           <div class="main__profile-img">
             <img src={profile} alt="Perfil Samuel Amaro" />
           </div>
@@ -69,9 +65,7 @@ export default function NavBar() {
           />
         </button>
         <nav
-          className={btnIsPressed ? "collapsing" : "nav"}
-          style={btnIsPressed ? {height: 206.4 + "px"} : {}} 
-          onTransitionEnd={(event) => handleMenuTransition(event)}
+          className={btnIsPressed ? "nav nav_show" : "nav"}
         >
           <ul className="nav__links" role="menu">
             <li className="nav__item" role="menuitem">

@@ -1,3 +1,4 @@
+import "./ContentRow.css";
 
 export default function ContentRow(props) {
     return (

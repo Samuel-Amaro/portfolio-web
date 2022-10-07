@@ -1,1 +1,4 @@
-
+.section__heading-2{
+    font-size: calc(1.475rem + 2.7vw);
+    margin-bottom: 3rem;
+}

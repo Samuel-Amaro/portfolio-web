@@ -1,4 +1,5 @@
 import Badge from "./Badge";
+import "./CardProject.css";
 
 export default function CardProject(props) {
   let pathsImages = new Map([

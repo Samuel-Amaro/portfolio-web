@@ -1,0 +1,63 @@
+.badge{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: min-content;
+    gap: 5px;
+    padding: 0.1rem 0.3rem;
+}
+
+.badge__ilustration{
+    display: block;
+}
+
+.badge__text{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+.badge__text_javascript, 
+.badge__text_css,
+.badge__text_html,
+.badge__text_php,
+.badge__text_postgresql,
+.badge__text_boostrap,
+.badge__text_jquery,
+.badge__text_chart,
+.badge__text_datatables,
+.badge__text_apache,
+.badge__text_bem,
+.badge__text_reactjs,
+.badge__text_npm{ 
+    color: #fff; 
+}
+
+.badge__javascript{ background-color: #323330; }
+
+.badge__css{ background-color: #1572b6; }
+
+.badge__html{ background-color: #e34f26; }
+
+.badge__php{ background-color: #777bb4; }
+
+.badge__postgresql{background-color: #316192;}
+
+.badge__boostrap{ background-color: #563d7c;}
+
+.badge__jquery{ background-color: #0769ad;}
+
+.badge__chart{ background-color: #f5788d;}
+
+.badge__datatables{ background-color: #3C81D6;}
+
+.badge__apache{ background-color: #d42029;}
+
+.badge__bem{ background-color: #8A8A9B;}
+
+.badge__reactjs{ background-color: #20232a; }
+
+.badge__npm { background-color: #000000;}

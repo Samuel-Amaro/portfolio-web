@@ -1,11 +1,12 @@
 import Section from "./Section";
 import DataProjects from "../projects.json";
 import CardProject from "./CardProject";
+import "./SectionProjects.css";
 
 export default function SectionProjects() {
     const listCardProjects = DataProjects.projects.map((project) => {
       return (
-        <li className="project__item" key={project.id}>
+        <li className="project__item" key={project.id} tabIndex="0">
           {
             <CardProject
               id={project.id} /*imagens local*/
