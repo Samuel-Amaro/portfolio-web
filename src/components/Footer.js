@@ -1,13 +1,15 @@
+import "./Footer.css";
 
 export default function Footer() {
     return (
       <footer class="footer">
-        <p>
+        <p className="description">
           © 2022 - Layout original{" "}
           <a
             href="https://startbootstrap.com/theme/resume"
             target="_blank"
             rel="noreferrer"
+            className="link-footer"
           >
             Resume
           </a>{" "}
@@ -16,6 +18,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/samuel-amaro/"
             target="_blank"
             rel="noreferrer"
+            className="link-footer"
           >
             Samuel Amaro
           </a>

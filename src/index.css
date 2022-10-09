@@ -45,7 +45,7 @@
   --text: var(--bs-gray-600);
   --bg-body: var(--bs-white);
   /*navbar component*/
-  --bg-navbar: var(--bs-primary);
+  --bg-navbar_footer: var(--bs-primary);
   --text-emph: var(--bs-white); 
   --bg-switch-theme: var(--bs-gray-dark);
   --bg-switch-controler: var(--bs-gray-500);
@@ -61,6 +61,16 @@
   --hover-link-social_link-curriculo: var(--bs-primary);
   --text-link-curriculo: var(--bs-white);
   --bg-diviser: var(--bs-gray-600);
+  /*card project*/
+  --bg-preview-datas: rgb(0, 0, 0, 0.65);
+  --border-color-project-link: #d7d9b1;
+  --border-color-hover-project-link: #f5f8de;
+  --hover-text-color-project-link: #fff8f0;
+  --color-text-project-title_link: var(--bs-white);
+  /*footer*/
+  --text-color-footer: rgba(255, 255, 255, 0.5);
+  --text-color-link-footer: var(--bs-gray-100);
+  --text-color-hover-link-footer: var(--bs-gray-300);
 
 }
 

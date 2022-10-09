@@ -5,7 +5,7 @@
     right: 0;
     width: 100%;
     z-index: 1050;
-    background-color: var(--bg-navbar);
+    background-color: var(--bg-navbar_footer);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
