@@ -4,7 +4,7 @@ import iconHamburguer from "../assets/images/icon-hamburguer.svg";
 import { useState } from "react";
 
 
-export default function NavBar() {
+export default function NavBar(props) {
     const [btnIsPressed, setBtnIsPressed] = useState(false);
 
     function hadleBtn(event) {
@@ -15,6 +15,11 @@ export default function NavBar() {
       if(event.code === "Enter") {
         setBtnIsPressed(!btnIsPressed);
       }
+    }
+
+    function handleChangeBtnToggle(event) {
+      props.onSetOptionTheme(event.target.value);
+      //alert(event.target.value);
     }
 
     return (
@@ -35,6 +40,7 @@ export default function NavBar() {
             class="option-theme"
             tabindex="0"
             title="Option Theme light"
+            onChange={(event) => handleChangeBtnToggle(event)}
           />
           <input
             type="radio"
@@ -45,6 +51,7 @@ export default function NavBar() {
             class="option-theme"
             tabindex="0"
             title="Option Theme Dark"
+            onChange={(event) => handleChangeBtnToggle(event)}
           />
           <button
             type="button"

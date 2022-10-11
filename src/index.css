@@ -1,5 +1,12 @@
 @import-normalize;
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
 :root {
   --color-01: #fffcf2;
   --color-02: #ccc5b9;
@@ -40,6 +47,9 @@
   --shadow-menu_color-link: rgba(255, 255, 255, 0.55);
   --color-hover-link: rgba(255, 255, 255, 0.75);
   --hover-switch: var(--color-05);
+  /*colors palete theme dark*/
+  --bg-dark: #000000;
+  --text-primary: #F0F0F0;
   /*variables theme with values theme light*/
   /*general*/
   --text: var(--bs-gray-600);
@@ -74,16 +84,12 @@
   --text-color-hover-link-footer: var(--bs-gray-300);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html {
   font-size: 16px;
   font-family: "Mulish", sans-serif;
   font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 h1,
@@ -99,18 +105,28 @@ h6 {
   line-height: 1.2;
 }
 
+
 body {
   padding-top: 3.22rem;
   color: var(--text);
-  font-family: "Mulish", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
   background-color: var(--bg-body);
 }
 
-@media screen and (min-width: 992px){
-  body{
+@media screen and (min-width: 992px) {
+  body {
     padding: 0 0 0 17rem;
   }
 }
+
+[data-theme="dark"] {
+  --bg-body: var(--bg-dark);
+  --text: var(--text-primary);
+  --bg-navbar_footer: #31332E;
+  --text-title: #D7DBDB;
+  --text-title-name-emph_date-betewen: #878787;
+  --bg-switch-theme: #878787;
+  --bg-switch-controler: #31332E;
+  --hover-switche-controler: #000000;
+}
+
+
