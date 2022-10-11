@@ -1,16 +1,17 @@
-.section__description{
-    margin-bottom: 3rem;
+.section__description {
+  margin-bottom: 3rem;
 }
 
-.projects{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
+.projects {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .badges {
@@ -23,6 +24,56 @@
   margin: 0 auto;*/
 }
 
-.project__item{
-    max-width: 320px;
+.project__item {
+  max-width: 480px;
+}
+
+.buttons__load {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  display: block;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  background-color: var(--bg-link-social_link-curriculo_buttons-load);
+  color: var(--text-link-curriculo_buttons-load);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+}
+
+.button:disabled {
+  opacity: 0.6;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: var(--hover-link-social_link-curriculo_buttons-load);
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .project__item {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 300px));
+    gap: 15px;
+  }
 }

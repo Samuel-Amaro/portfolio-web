@@ -18,3 +18,20 @@
     color: var(--text-title-name-emph_date-betewen);
     margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .section__row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .section__data {
+    flex-grow: 1;
+  }
+
+  .section__date {
+    flex-shrink: 0;
+  }
+}

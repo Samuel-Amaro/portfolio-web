@@ -3,4 +3,21 @@
     align-items: center;
     padding: 5rem 1rem;
     max-width: 75rem;
+    margin: 0 auto;
+}
+
+.section__content{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 992px){
+    .section{
+        padding: 5rem 3rem;
+    }
 }

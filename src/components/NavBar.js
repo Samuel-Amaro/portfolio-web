@@ -55,6 +55,7 @@ export default function NavBar() {
           tabindex="0"
           aria-expanded={btnIsPressed ? "true" : "false"}
           onPointerDown={(event) => hadleBtn(event)}
+          aria-label="Botão Mostrar/Ocultar Links de navegação"
         >
           <img
             class="button-menu__icon"
@@ -64,56 +65,98 @@ export default function NavBar() {
             height="25"
           />
         </button>
-        <nav
-          className={btnIsPressed ? "nav nav_show" : "nav"}
-        >
-          <ul className="nav__links" role="menu">
-            <li className="nav__item" role="menuitem">
-              <a className="nav__link" href="#about" target="_self" rel="next">
+        <nav className={btnIsPressed ? "nav nav_show" : "nav"}>
+          <ul
+            className="nav__links"
+            role="menu"
+            aria-label="Lista de links de Menu de navegação"
+          >
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Sobre"
+            >
+              <a
+                className="nav__link"
+                href="#about"
+                target="_self"
+                rel="next"
+                aria-label="Link de Menu para section Sobre"
+              >
                 sobre
               </a>
             </li>
-            <li className="nav__item" role="menuitem">
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Experiencia"
+            >
               <a
                 className="nav__link"
                 href="#experience"
                 target="_self"
                 rel="next"
+                aria-label="Link de Menu para section Experiencia"
               >
                 experiência
               </a>
             </li>
-            <li className="nav__item" role="menuitem">
-              <a className="nav__link" href="#skills" target="_self" rel="next">
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Skills"
+            >
+              <a
+                className="nav__link"
+                href="#skills"
+                target="_self"
+                rel="next"
+                aria-label="Link de Menu para section Skills"
+              >
                 skills
               </a>
             </li>
-            <li className="nav__item" role="menuitem">
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Interesses"
+            >
               <a
                 className="nav__link"
                 href="#interesses"
                 target="_self"
                 rel="next"
+                aria-label="Link de Menu para section Interesses"
               >
                 interesses
               </a>
             </li>
-            <li className="nav__item" role="menuitem">
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Educação"
+            >
               <a
                 className="nav__link"
                 href="#education"
                 target="_self"
                 rel="next"
+                aria-label="Link de Menu para section Educação"
               >
                 educação
               </a>
             </li>
-            <li className="nav__item" role="menuitem">
+            <li
+              className="nav__item"
+              role="menuitem"
+              aria-label="Link section Projetos"
+            >
               <a
                 className="nav__link"
                 href="#projects"
                 target="_self"
                 rel="next"
+                aria-label="Link de Menu para section Projetos"
               >
                 projetos
               </a>

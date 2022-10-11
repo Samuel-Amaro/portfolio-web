@@ -19,6 +19,7 @@ export default function SectionAbout() {
           target="_self"
           rel="author"
           className="link-email"
+          aria-label="Link para email de Samuel Amaro"
         >
           samuel.dev.front@gmail.com
         </a>{" "}
@@ -32,6 +33,7 @@ export default function SectionAbout() {
           href="https://www.ifg.edu.br/formosa"
           target="_blank"
           rel="noreferrer"
+          aria-label="Link para instituição Federal Goias"
         >
           <abbr title="instituto federal de Goiás">IFG</abbr>
         </a>
@@ -43,23 +45,26 @@ export default function SectionAbout() {
         pessoais. Sinta-se a vontade para visualizar o meu currículo e minhas
         redes logo abaixo.
       </p>
-      <ul className="social-medias">
+      <ul className="social-medias" aria-label="Lista de Links para midias Sociais de Samuel Amaro">
         <li className="social-medias__item">
           <SocialMediaLink
             href="https://www.linkedin.com/in/samuel-amaro/"
             src={iconLinkedin}
+            text="Linkedin"
           />
         </li>
         <li class="social-medias__item">
           <SocialMediaLink
             href="https://github.com/Samuel-Amaro"
             src={iconGitHub}
+            text="GitHub"
           />
         </li>
         <li class="social-medias__item">
           <SocialMediaLink
             href="https://www.frontendmentor.io/profile/Samuel-Amaro"
             src={iconFrontMentor}
+            text="Plataforma de desafio de codificação Front-End Mentor"
           />
         </li>
       </ul>
@@ -70,6 +75,7 @@ export default function SectionAbout() {
         rel="noreferrer"
         download="curriculo"
         type="application/pdf"
+        aria-label="Link para Curriculo de Samuel"
       >
         Currículo(PDF)
       </a>

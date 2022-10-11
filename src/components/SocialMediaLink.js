@@ -7,7 +7,8 @@ export default function SocialMediaLink(props) {
         href={props.href}
         target="_blank"
         rel="noreferrer"
-        title="link social media profile"
+        title={"Link Para Media Social " + props.text}
+        aria-label={"Link Para media Social " + props.text}
       >
         <img
           src={props.src}

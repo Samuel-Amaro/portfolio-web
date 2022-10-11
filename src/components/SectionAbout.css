@@ -30,7 +30,7 @@
 .social-medias{
     list-style: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     gap: 24px;
     margin-bottom: 3rem;
@@ -38,16 +38,17 @@
 
 .link-curriculo{
     display: block;
-    background-color: var(--bg-link-social_link-curriculo);
-    color: var(--text-link-curriculo);
-    font-size: 1.15rem;
+    background-color: var(--bg-link-social_link-curriculo_buttons-load);
+    color: var(--text-link-curriculo_buttons-load);
+    font-size: 1rem;
     text-decoration: none;
-    padding: 1rem 1.15rem;
-    max-width: 160px;
+    padding: 0.7rem 1rem;
+    max-width: 140px;
     border-radius: 4px;
+    text-align: center;
 }
 
 .link-curriculo:hover{
     text-decoration: none;
-    background-color: var(--hover-link-social_link-curriculo);
+    background-color: var(--hover-link-social_link-curriculo_buttons-load);
 }

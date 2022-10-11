@@ -3,7 +3,7 @@ import "./CardProject.css";
 
 export default function CardProject(props) {
   return (
-    <div className="project__card" id={props.id}>
+    <div className="project__card" /*id={props.id}*/>
       <div className="project__preview-datas">
         <h3 className="project__title">{props.name}</h3>
         <div className="project__links">
@@ -12,6 +12,7 @@ export default function CardProject(props) {
             target="_blank"
             rel="noreferrer"
             className="project__link project__link-repository"
+            aria-label="Link para Visualizar Repositorio Do Projeto"
           >
             Repositório
           </a>
@@ -20,6 +21,7 @@ export default function CardProject(props) {
             target="_blank"
             rel="noreferrer"
             className="project__link project__link-liveresult"
+            aria-label="Link para visualizar Projeto ao Vivo"
           >
             Visualizar
           </a>

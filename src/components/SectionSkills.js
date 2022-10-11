@@ -19,7 +19,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para GitHub"
               title="GitHub"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -28,7 +28,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para HTML5"
               title="HTML5"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -37,7 +37,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para CSS3"
               title="CSS3"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -46,7 +46,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para Git"
               title="GIT"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -55,7 +55,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para JavaScript"
               title="JavaScript"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -64,7 +64,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para React"
               title="React"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -73,7 +73,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para NPM"
               title="NPM"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -81,8 +81,8 @@ export default function SectionSkills() {
               src={iconBem}
               alt="O ícone do logotipo para bem(block element modifier)"
               title="BEM(Block Element Modifier)"
-              height="36"
-              width="36"
+              height="48"
+              width="48"
             />
           </li>
           <li className="tools__item">
@@ -91,7 +91,7 @@ export default function SectionSkills() {
               alt="O ícone do logotipo para acessibilidade universal"
               title="Acessibility Universal"
               height="48"
-              width="36"
+              width="48"
             />
           </li>
         </ul>

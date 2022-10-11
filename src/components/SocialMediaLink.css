@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: var(--bg-link-social_link-curriculo);
+    background-color: var(--bg-link-social_link-curriculo_buttons-load);
     height: 3.5rem;
     width: 3.5rem;
     font-size: 1.5rem;
@@ -12,9 +12,30 @@
 
 .social-medias__link:hover{
     text-decoration: none;
-    background-color: var(--hover-link-social_link-curriculo);
+    background-color: var(--hover-link-social_link-curriculo_buttons-load);
+    transition: background-color 0.5s;
+    animation-name: hover-btn;
+    animation-duration: 0.50s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .social-medias__link:hover {
+    animation: hover-btn infinite 1.5s linear;
+  }
 }
 
 .social-medias__link img{
     display: block;
+}
+
+@keyframes hover-btn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
