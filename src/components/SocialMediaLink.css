@@ -10,7 +10,7 @@
     border-radius: 100%;
 }
 
-.social-medias__link:hover{
+.social-medias__link:hover, .social-medias__link:focus{
     text-decoration: none;
     background-color: var(--hover-link-social_link-curriculo_buttons-load);
     transition: background-color 0.5s;

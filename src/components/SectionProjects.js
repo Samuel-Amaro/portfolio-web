@@ -6,7 +6,7 @@ import Badge from "./Badge";
 import { useState } from "react";
 
 export default function SectionProjects() {
-  const [btnIsValid, setBtnIsValid] = useState(true);
+  const [btnIsValid, setBtnIsValid] = useState(true); 
   let pathsImages = new Map([
     ["html", "badge-logo-html.svg"],
     ["css", "badge-logo-css.png"],
@@ -47,7 +47,10 @@ export default function SectionProjects() {
           key={project.id}
           tabIndex="0"
           aria-label={
-            "Projeto " + project.name + " Implementado com as tecnologias " + project.tecnologys.join(",")
+            "Projeto " +
+            project.name +
+            " Implementado com as tecnologias " +
+            project.tecnologys.join(",")
           }
         >
           {
@@ -59,7 +62,17 @@ export default function SectionProjects() {
               url={project.url}
             />
           }
-          <ul className="badges" aria-label={"Lista de Tecnologias Que Foram usadas na implementação do Projeto " + project.name + " foram " + project.tecnologys.join(",")}>{badges}</ul>
+          <ul
+            className="badges"
+            aria-label={
+              "Lista de Tecnologias Que Foram usadas na implementação do Projeto " +
+              project.name +
+              " foram " +
+              project.tecnologys.join(",")
+            }
+          >
+            {badges}
+          </ul>
         </li>
       );
     });
@@ -97,13 +110,12 @@ export default function SectionProjects() {
         setBtnIsValid(false);
       }
     }
-    
   }
 
   return (
     <Section nameSection="projects">
       <h2 className="section__heading-2">Projetos</h2>
-      <p className="section__description">
+      <p className="section__description section__description_projects">
         Portefólio, com projetos desenvolvidos para fins de prática em
         determinadas tecnologias. Cada card de projeto possui um link para
         visualização do projeto e um link para o repositório do projeto com a

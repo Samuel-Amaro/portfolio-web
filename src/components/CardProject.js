@@ -1,10 +1,11 @@
-import Badge from "./Badge";
 import "./CardProject.css";
 
 export default function CardProject(props) {
   return (
-    <div className="project__card" /*id={props.id}*/>
-      <div className="project__preview-datas">
+    <div className="project__card">
+      <div
+        className="project__preview-datas"
+      >
         <h3 className="project__title">{props.name}</h3>
         <div className="project__links">
           <a

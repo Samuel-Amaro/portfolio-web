@@ -21,6 +21,10 @@
     color: var(--link-email);
 }
 
+.link-email:hover, .link-email:focus, .link-instituicao:hover, .link-instituicao:focus{
+    color: var(--link-hover-email_instituicao);
+}
+
 .section__description-about{
     font-size: 1.15rem;
     font-weight: 400;
@@ -48,7 +52,7 @@
     text-align: center;
 }
 
-.link-curriculo:hover{
+.link-curriculo:hover, .link-curriculo:focus{
     text-decoration: none;
     background-color: var(--hover-link-social_link-curriculo_buttons-load);
 }

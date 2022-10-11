@@ -59,7 +59,8 @@
 
 .project__preview-datas:hover,
 .project__preview-datas:focus,
-.project__item:focus .project__preview-datas {
+.project__item:focus .project__preview-datas,
+.project__preview-datas:focus-within {
   opacity: 1;
 }
 

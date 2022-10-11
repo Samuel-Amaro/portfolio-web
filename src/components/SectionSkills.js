@@ -12,7 +12,7 @@ export default function SectionSkills() {
         <h3 className="section__heading-4">
           Linguagens de programação & ferramentas
         </h3>
-        <ul className="tools">
+        <ul className="tools" aria-label="Lista de Linguagens de programação e ferramentas">
           <li className="tools__item">
             <Skill
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
@@ -96,7 +96,7 @@ export default function SectionSkills() {
           </li>
         </ul>
         <h3 className="section__heading-4">Workflow</h3>
-        <ul className="workflow">
+        <ul className="workflow" aria-label="Lista de Padrões e Principios usados no fluxo de trabalho">
           <li className="workflow__item">
             <Workflow text="Mobile-First" />
           </li>

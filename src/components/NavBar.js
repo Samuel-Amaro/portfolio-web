@@ -11,6 +11,12 @@ export default function NavBar() {
       setBtnIsPressed(!btnIsPressed);
     }
 
+    function handleBtnKey(event) {
+      if(event.code === "Enter") {
+        setBtnIsPressed(!btnIsPressed);
+      }
+    }
+
     return (
       <aside className="main__nav-bar">
         <div className="main__data-profile">
@@ -50,12 +56,13 @@ export default function NavBar() {
         </div>
         <button
           type="button"
-          title="button menu"
+          title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"
           class="main__button-menu"
           tabindex="0"
           aria-expanded={btnIsPressed ? "true" : "false"}
           onPointerDown={(event) => hadleBtn(event)}
           aria-label="Botão Mostrar/Ocultar Links de navegação"
+          onKeyDown={(event) => handleBtnKey(event)}
         >
           <img
             class="button-menu__icon"

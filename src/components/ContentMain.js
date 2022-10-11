@@ -5,7 +5,7 @@ import SectionEducation from "./SectionEducation";
 import SectionSkills from "./SectionSkills";
 import SectionInteresses from "./SectionInteresses";
 import SectionProjects from "./SectionProjects";
-import "./ContentMain.css";
+
 
 export default function ContentMain() {
     return (
