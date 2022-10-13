@@ -1,9 +1,11 @@
 import Section from "./Section";
 import Skill from "./Skill";
 import iconBem from "../assets/images/icon-bem-black.png";
-import iconAcessibility from "../assets/images/icon-universal-access-solid.svg";
 import Workflow from "./Workflow";
 import "./SectionSkills.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faCss3Alt, faHtml5, faJs, faGitAlt, faReact, faNpm } from "@fortawesome/free-brands-svg-icons";
+import {faUniversalAccess} from "@fortawesome/free-solid-svg-icons";
 
 export default function SectionSkills() {
     return (
@@ -12,91 +14,49 @@ export default function SectionSkills() {
         <h3 className="section__heading-4">
           Linguagens de programação & ferramentas
         </h3>
-        <ul className="tools" aria-label="Lista de Linguagens de programação e ferramentas">
+        <ul
+          className="tools"
+          aria-label="Lista de Linguagens de programação e ferramentas"
+        >
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
-              alt="O ícone do logotipo para GitHub"
-              title="GitHub"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faGithub} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
-              alt="O ícone do logotipo para HTML5"
-              title="HTML5"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faHtml5} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
-              alt="O ícone do logotipo para CSS3"
-              title="CSS3"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faCss3Alt} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"
-              alt="O ícone do logotipo para Git"
-              title="GIT"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faGitAlt} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="O ícone do logotipo para JavaScript"
-              title="JavaScript"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faJs} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-              alt="O ícone do logotipo para React"
-              title="React"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faReact} />
           </li>
           <li className="tools__item">
-            <Skill
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
-              alt="O ícone do logotipo para NPM"
-              title="NPM"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faNpm} />
           </li>
           <li className="tools__item">
             <Skill
               src={iconBem}
               alt="O ícone do logotipo para bem(block element modifier)"
               title="BEM(Block Element Modifier)"
-              height="48"
-              width="48"
+              height="46"
+              width="46"
             />
           </li>
           <li className="tools__item">
-            <Skill
-              src={iconAcessibility}
-              alt="O ícone do logotipo para acessibilidade universal"
-              title="Acessibility Universal"
-              height="48"
-              width="48"
-            />
+            <FontAwesomeIcon icon={faUniversalAccess} />
           </li>
         </ul>
         <h3 className="section__heading-4">Workflow</h3>
-        <ul className="workflow" aria-label="Lista de Padrões e Principios usados no fluxo de trabalho">
+        <ul
+          className="workflow"
+          aria-label="Lista de Padrões e Principios usados no fluxo de trabalho"
+        >
           <li className="workflow__item">
             <Workflow text="Mobile-First" />
           </li>

@@ -66,7 +66,7 @@
   /*section about*/
   --text-title: var(--bs-gray-dark);
   --text-title-name-emph_date-betewen: rgba(189, 93, 56, 1);
-  --link-email: var(--bs-primary);
+  --link-email_instituicao: var(--bs-primary);
   --bg-link-social_link-curriculo_buttons-load: var(--bs-gray-700);
   --hover-link-social_link-curriculo_buttons-load: var(--bs-primary);
   --text-link-curriculo_buttons-load: var(--bs-white);
@@ -110,6 +110,7 @@ body {
   padding-top: 3.22rem;
   color: var(--text);
   background-color: var(--bg-body);
+  position: relative;
 }
 
 @media screen and (min-width: 992px) {
@@ -127,6 +128,7 @@ body {
   --bg-switch-theme: #878787;
   --bg-switch-controler: #31332E;
   --hover-switche-controler: #000000;
+  --hover-link-social_link-curriculo_buttons-load: #974a2d;
 }
 
 

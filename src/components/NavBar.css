@@ -13,8 +13,8 @@
   padding: 0.5rem 1rem;
 }
 
-.main__profile-img,
-.nav {
+.main__profile-img
+/*.nav*/ {
   display: none;
 }
 
@@ -98,26 +98,22 @@
   outline: none;
 }
 
-/*
-.nav:not(.nav_show) {
-    display: none;
+.nav_hidden:not(.nav_show) {
+  display: none;
 }
-*/
 
 .nav {
   flex-basis: 100%;
 }
 
-/*
-.collapsing{
-    height: 0;
-    overflow: hidden;
-    transition: height 20s ease;
+.nav_collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 20s ease;
 }
-*/
 
 .nav_show {
-  display: block;
+  width: 100%;
 }
 
 .nav__links {

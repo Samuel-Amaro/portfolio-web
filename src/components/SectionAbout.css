@@ -16,9 +16,10 @@
     margin-bottom: 3rem;
 }
 
-.link-email{
+.link-email, .link-instituicao{
     text-decoration: underline;
-    color: var(--link-email);
+    color: var(--link-email_instituicao);
+    display: inline-block;
 }
 
 .link-email:hover, .link-email:focus, .link-instituicao:hover, .link-instituicao:focus{

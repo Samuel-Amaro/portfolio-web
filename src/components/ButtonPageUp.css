@@ -1,0 +1,29 @@
+.button-page-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  appearance: none;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 40px;
+  color: var(--text-link-curriculo_buttons-load);
+  background-color: var(--bg-link-social_link-curriculo_buttons-load);
+  z-index: 1045;
+  transition: height 10s ease;
+  height: 40px;
+}
+
+.button-page-up-hidden {
+  display: none;
+}
+
+.button-page-up:hover {
+  text-decoration: none;
+  background-color: var(--hover-link-social_link-curriculo_buttons-load);
+  cursor: pointer;
+  border: 1px solid var(--bs-white);
+}

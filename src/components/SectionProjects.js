@@ -121,7 +121,14 @@ export default function SectionProjects() {
         visualização do projeto e um link para o repositório do projeto com a
         sua respectiva implementação.
       </p>
-      <ul className="projects" aria-live="polite" aria-atomic="true" aria-label="Lista Projetos Concluidos">{listProjectsView}</ul>
+      <ul
+        className="projects"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-label="Lista Projetos Concluidos"
+      >
+        {listProjectsView}
+      </ul>
       <div className="buttons__load">
         <button
           className="button button__more"
@@ -130,6 +137,11 @@ export default function SectionProjects() {
           onClick={(event) => handleButtons(event)}
           disabled={btnIsValid ? "" : "disabled"}
           aria-label="Carregar Mais Projetos"
+          title={
+            btnIsValid
+              ? "Carregar Mais Projetos"
+              : "Todos Projetos ja estão carregados"
+          }
         >
           Carregar Mais
         </button>
@@ -140,6 +152,11 @@ export default function SectionProjects() {
           onClick={(event) => handleButtons(event)}
           disabled={btnIsValid ? "" : "disabled"}
           aria-label="Carregar Todos Projetos"
+          title={
+            btnIsValid
+              ? "Carregar Todos Projetos"
+              : "Todos Projetos ja estão carregados"
+          }
         >
           Carregar Tudo
         </button>

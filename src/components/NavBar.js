@@ -3,180 +3,217 @@ import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
 import { useState } from "react";
 
-
 export default function NavBar(props) {
-    const [btnIsPressed, setBtnIsPressed] = useState(false);
+  const [btnIsPressed, setBtnIsPressed] = useState(false);
+  const [resultStyle, setResultStyle] = useState({ height: 0 });
 
-    function hadleBtn(event) {
+  function addStyleTransition() {
+    return new Promise(function executor(resolve, reject) {
+      setTimeout(() => {
+        if (btnIsPressed) {
+          resolve({ height: 240 });
+        } else {
+          reject({ height: 0 });
+        }
+      }, 0);
+    });
+  }
+
+  function hadleBtn(event) {
+    setBtnIsPressed(!btnIsPressed);
+    addStyleTransition()
+      .then(
+        (heightObj) => {
+          console.log(resultStyle);
+          setResultStyle({...heightObj });
+          console.log(resultStyle);
+        },
+        (heightEmpty) => {
+          setResultStyle({ ...resultStyle, ...heightEmpty });
+        }
+      )
+      .catch((error) => {
+        console.log("Error ao aplicar height navbar");
+      });
+  }
+
+  function handleBtnKey(event) {
+    if (event.code === "Enter") {
       setBtnIsPressed(!btnIsPressed);
     }
+  }
 
-    function handleBtnKey(event) {
-      if(event.code === "Enter") {
-        setBtnIsPressed(!btnIsPressed);
-      }
-    }
+  function handleTransitionNav(event) {
+    console.log("transition end");
+  }
 
-    function handleChangeBtnToggle(event) {
-      props.onSetOptionTheme(event.target.value);
-      //alert(event.target.value);
-    }
+  function handleChangeBtnToggle(event) {
+    props.onSetOptionTheme(event.target.value);
+    //alert(event.target.value);
+  }
 
-    return (
-      <aside className="main__nav-bar">
-        <div className="main__data-profile">
-          <span class="professional-position">Samuel Amaro</span>
-          <div class="main__profile-img">
-            <img src={profile} alt="Perfil Samuel Amaro" />
-          </div>
+  return (
+    <aside className="main__nav-bar">
+      <div className="main__data-profile">
+        <span class="professional-position">Samuel Amaro</span>
+        <div class="main__profile-img">
+          <img src={profile} alt="Perfil Samuel Amaro" />
         </div>
-        <div class="switch-theme">
-          <input
-            type="radio"
-            id="theme-light"
-            name="option-theme"
-            aria-label="Option theme light"
-            value="light"
-            class="option-theme"
-            tabindex="0"
-            title="Option Theme light"
-            onChange={(event) => handleChangeBtnToggle(event)}
-          />
-          <input
-            type="radio"
-            id="theme-dark"
-            name="option-theme"
-            aria-label="Option theme dark"
-            value="dark"
-            class="option-theme"
-            tabindex="0"
-            title="Option Theme Dark"
-            onChange={(event) => handleChangeBtnToggle(event)}
-          />
-          <button
-            type="button"
-            class="switch-controler"
-            aria-pressed="mixed"
-            aria-label="Switch Controller to toggle themes"
-            title="Toggle Theme"
-          ></button>
-        </div>
+      </div>
+      <div class="switch-theme">
+        <input
+          type="radio"
+          id="theme-light"
+          name="option-theme"
+          aria-label="Option theme light"
+          value="light"
+          class="option-theme"
+          tabindex="0"
+          title="Option Theme light"
+          onChange={(event) => handleChangeBtnToggle(event)}
+        />
+        <input
+          type="radio"
+          id="theme-dark"
+          name="option-theme"
+          aria-label="Option theme dark"
+          value="dark"
+          class="option-theme"
+          tabindex="0"
+          title="Option Theme Dark"
+          onChange={(event) => handleChangeBtnToggle(event)}
+        />
         <button
           type="button"
-          title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"
-          class="main__button-menu"
-          tabindex="0"
-          aria-expanded={btnIsPressed ? "true" : "false"}
-          onPointerDown={(event) => hadleBtn(event)}
-          aria-label="Botão Mostrar/Ocultar Links de navegação"
-          onKeyDown={(event) => handleBtnKey(event)}
+          class="switch-controler"
+          aria-pressed="mixed"
+          aria-label="Switch Controller to toggle themes"
+          title="Toggle Theme"
+        ></button>
+      </div>
+      <button
+        type="button"
+        title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"
+        class="main__button-menu"
+        tabindex="0"
+        aria-expanded={btnIsPressed ? "true" : "false"}
+        onPointerDown={(event) => hadleBtn(event)}
+        aria-label="Botão Mostrar/Ocultar Links de navegação"
+        onKeyDown={(event) => handleBtnKey(event)}
+      >
+        <img
+          class="button-menu__icon"
+          src={iconHamburguer}
+          alt="icon menu"
+          width="25"
+          height="25"
+        />
+      </button>
+      <nav
+        className={
+          btnIsPressed ? "nav nav_collapsing" : "nav nav_collapsing nav_hidden"
+        }
+        style={resultStyle}
+        onTransitionEnd={(event) => handleTransitionNav(event)}
+      >
+        {/*nav nav_show*/}
+        <ul
+          className="nav__links"
+          role="menu"
+          aria-label="Lista de links de Menu de navegação"
         >
-          <img
-            class="button-menu__icon"
-            src={iconHamburguer}
-            alt="icon menu"
-            width="25"
-            height="25"
-          />
-        </button>
-        <nav className={btnIsPressed ? "nav nav_show" : "nav"}>
-          <ul
-            className="nav__links"
-            role="menu"
-            aria-label="Lista de links de Menu de navegação"
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Sobre"
           >
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Sobre"
+            <a
+              className="nav__link"
+              href="#about"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Sobre"
             >
-              <a
-                className="nav__link"
-                href="#about"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Sobre"
-              >
-                sobre
-              </a>
-            </li>
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Experiencia"
+              sobre
+            </a>
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Experiencia"
+          >
+            <a
+              className="nav__link"
+              href="#experience"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Experiencia"
             >
-              <a
-                className="nav__link"
-                href="#experience"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Experiencia"
-              >
-                experiência
-              </a>
-            </li>
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Skills"
+              experiência
+            </a>
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Skills"
+          >
+            <a
+              className="nav__link"
+              href="#skills"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Skills"
             >
-              <a
-                className="nav__link"
-                href="#skills"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Skills"
-              >
-                skills
-              </a>
-            </li>
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Interesses"
+              skills
+            </a>
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Interesses"
+          >
+            <a
+              className="nav__link"
+              href="#interesses"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Interesses"
             >
-              <a
-                className="nav__link"
-                href="#interesses"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Interesses"
-              >
-                interesses
-              </a>
-            </li>
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Educação"
+              interesses
+            </a>
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Educação"
+          >
+            <a
+              className="nav__link"
+              href="#education"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Educação"
             >
-              <a
-                className="nav__link"
-                href="#education"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Educação"
-              >
-                educação
-              </a>
-            </li>
-            <li
-              className="nav__item"
-              role="menuitem"
-              aria-label="Link section Projetos"
+              educação
+            </a>
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Projetos"
+          >
+            <a
+              className="nav__link"
+              href="#projects"
+              target="_self"
+              rel="next"
+              aria-label="Link de Menu para section Projetos"
             >
-              <a
-                className="nav__link"
-                href="#projects"
-                target="_self"
-                rel="next"
-                aria-label="Link de Menu para section Projetos"
-              >
-                projetos
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    );
+              projetos
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  );
 }

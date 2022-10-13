@@ -3,8 +3,9 @@
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 1rem;
-    gap: 8px;
+    gap: 20px;
     align-items: center;
+    font-size: 3rem;
 }
 
 .workflow{
