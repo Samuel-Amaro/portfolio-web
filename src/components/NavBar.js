@@ -1,40 +1,15 @@
 import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
-import { useState } from "react";
+import {useState } from "react";
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
-  const [resultStyle, setResultStyle] = useState({ height: 0 });
-
-  function addStyleTransition() {
-    return new Promise(function executor(resolve, reject) {
-      setTimeout(() => {
-        if (btnIsPressed) {
-          resolve({ height: 240 });
-        } else {
-          reject({ height: 0 });
-        }
-      }, 0);
-    });
-  }
 
   function hadleBtn(event) {
-    setBtnIsPressed(!btnIsPressed);
-    addStyleTransition()
-      .then(
-        (heightObj) => {
-          console.log(resultStyle);
-          setResultStyle({...heightObj });
-          console.log(resultStyle);
-        },
-        (heightEmpty) => {
-          setResultStyle({ ...resultStyle, ...heightEmpty });
-        }
-      )
-      .catch((error) => {
-        console.log("Error ao aplicar height navbar");
-      });
+    setBtnIsPressed((value) => {
+      return !value;
+    });
   }
 
   function handleBtnKey(event) {
@@ -43,13 +18,8 @@ export default function NavBar(props) {
     }
   }
 
-  function handleTransitionNav(event) {
-    console.log("transition end");
-  }
-
   function handleChangeBtnToggle(event) {
     props.onSetOptionTheme(event.target.value);
-    //alert(event.target.value);
   }
 
   return (
@@ -111,12 +81,9 @@ export default function NavBar(props) {
       </button>
       <nav
         className={
-          btnIsPressed ? "nav nav_collapsing" : "nav nav_collapsing nav_hidden"
+          btnIsPressed ? "nav nav_show" : "nav nav_hidden"
         }
-        style={resultStyle}
-        onTransitionEnd={(event) => handleTransitionNav(event)}
       >
-        {/*nav nav_show*/}
         <ul
           className="nav__links"
           role="menu"
