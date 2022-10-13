@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
-import {useState } from "react";
+import {useState} from "react";
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
@@ -20,6 +20,7 @@ export default function NavBar(props) {
 
   function handleChangeBtnToggle(event) {
     props.onSetOptionTheme(event.target.value);
+    localStorage.setItem("themeOption", event.target.value);
   }
 
   return (
@@ -41,6 +42,7 @@ export default function NavBar(props) {
           tabindex="0"
           title="Option Theme light"
           onChange={(event) => handleChangeBtnToggle(event)}
+          checked={props.optionThemeCurrent === "light" ? true : false}
         />
         <input
           type="radio"
@@ -52,6 +54,7 @@ export default function NavBar(props) {
           tabindex="0"
           title="Option Theme Dark"
           onChange={(event) => handleChangeBtnToggle(event)}
+          checked={props.optionThemeCurrent === "dark" ? true : false}
         />
         <button
           type="button"
@@ -79,11 +82,7 @@ export default function NavBar(props) {
           height="25"
         />
       </button>
-      <nav
-        className={
-          btnIsPressed ? "nav nav_show" : "nav nav_hidden"
-        }
-      >
+      <nav className={btnIsPressed ? "nav nav_show" : "nav nav_hidden"}>
         <ul
           className="nav__links"
           role="menu"

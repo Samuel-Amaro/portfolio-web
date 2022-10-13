@@ -3,7 +3,7 @@ import SocialMediaLink from "./SocialMediaLink";
 import iconLinkedin from "../assets/images/icon-linkedin-white.svg";
 import iconGitHub from "../assets/images/icon-github-white.svg";
 import iconFrontMentor from "../assets/images/icon-logo-frontmentor-white.svg";
-import curriculo from "../assets/files/curriculo-portefolio-samuel-amaro.pdf";
+import curriculo from "../assets/files/curriculo-samuel-amaro-web.pdf";
 import "./SectionAbout.css";
 
 export default function SectionAbout() {
