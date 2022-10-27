@@ -246,6 +246,15 @@
           "description": "Solução de desafio de codificação Front-End, página ping column coming son",
           "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
           "image": "project27.jpg"
+        },
+        {
+          "id": "28",
+          "name": "E-commerce product page",
+          "repository": "https://github.com/Samuel-Amaro/e-commerce-product-page",
+          "url": "https://samuel-amaro.github.io/e-commerce-product-page/",
+          "description": "Solução de desafio de codificação Front-End, página de e-commerce de produto eletrônico",
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "image": "project28.jpg"
         }
     ]
 }
