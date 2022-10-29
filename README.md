@@ -18,7 +18,9 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
  - Mobile-first workflow
  - RWD(Responsive Web Design)
  - JavaScript programming language
- - ReactJS / Hooks useState
+ - ReactJS Library
+    - Hooks useState
+    - Context API
  - NPM
  - Media Querys CSS
  - DOM JS

@@ -1,7 +1,8 @@
 import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
 import iconHamburguer from "../assets/images/icon-hamburguer.svg";
-import {useState} from "react";
+import { useState } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
@@ -18,11 +19,6 @@ export default function NavBar(props) {
     }
   }
 
-  function handleChangeBtnToggle(event) {
-    props.onSetOptionTheme(event.target.value);
-    localStorage.setItem("themeOption", event.target.value);
-  }
-
   return (
     <aside className="main__nav-bar">
       <div className="main__data-profile">
@@ -31,39 +27,51 @@ export default function NavBar(props) {
           <img src={profile} alt="Perfil Samuel Amaro" />
         </div>
       </div>
-      <div class="switch-theme">
-        <input
-          type="radio"
-          id="theme-light"
-          name="option-theme"
-          aria-label="Option theme light"
-          value="light"
-          class="option-theme"
-          tabindex="0"
-          title="Option Theme light"
-          onChange={(event) => handleChangeBtnToggle(event)}
-          checked={props.optionThemeCurrent === "light" ? true : false}
-        />
-        <input
-          type="radio"
-          id="theme-dark"
-          name="option-theme"
-          aria-label="Option theme dark"
-          value="dark"
-          class="option-theme"
-          tabindex="0"
-          title="Option Theme Dark"
-          onChange={(event) => handleChangeBtnToggle(event)}
-          checked={props.optionThemeCurrent === "dark" ? true : false}
-        />
-        <button
-          type="button"
-          class="switch-controler"
-          aria-pressed="mixed"
-          aria-label="Switch Controller to toggle themes"
-          title="Toggle Theme"
-        ></button>
-      </div>
+      <ThemeContext.Consumer>
+        {({ theme, toggleTheme }) => (
+          <div class="switch-theme">
+            <input
+              type="radio"
+              id="theme-light"
+              name="option-theme"
+              aria-label="Option theme light"
+              value="light"
+              class="option-theme"
+              tabindex="0"
+              title="Option Theme light"
+              onChange={
+                (event) => {
+                  toggleTheme(event.target.value);
+                } 
+              }
+              checked={theme === "light" ? true : false}
+            />
+            <input
+              type="radio"
+              id="theme-dark"
+              name="option-theme"
+              aria-label="Option theme dark"
+              value="dark"
+              class="option-theme"
+              tabindex="0"
+              title="Option Theme Dark"
+              onChange={
+                (event) => {
+                  toggleTheme(event.target.value);
+                } 
+              }
+              checked={theme === "dark" ? true : false}
+            />
+            <button
+              type="button"
+              class="switch-controler"
+              aria-pressed="mixed"
+              aria-label="Switch Controller to toggle themes"
+              title="Toggle Theme"
+            ></button>
+          </div>
+        )}
+      </ThemeContext.Consumer>
       <button
         type="button"
         title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"

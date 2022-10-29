@@ -1,28 +1,45 @@
 import NavBar from './NavBar';
 import ContentMain from './ContentMain';
 import Footer from './Footer';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./App.css";
 import ButtonPageUp from './ButtonPageUp';
+import { ThemeContext } from './ThemeContext';
+
 
 function App() {
-  const [optionTheme, setOptionTheme] = useState("light");
-
-  useEffect(() => {
-    setOptionTheme(
+  const [optionTheme, setOptionTheme] = useState({
+    theme:
       localStorage.getItem("themeOption") === null
         ? "light"
-        : localStorage.getItem("themeOption")
-    );
+        : localStorage.getItem("themeOption"),
+    toggleTheme: toggleTheme,
   });
 
+  function toggleTheme(themeOption) {
+    setOptionTheme((previosState) => {
+      return {
+        ...previosState,
+        theme: themeOption,
+        toggleTheme: previosState.toggleTheme,
+      };
+    });
+    localStorage.setItem("themeOption", themeOption);
+  }
+
   return (
-    <main className='main' data-theme={optionTheme} >
-      <NavBar onSetOptionTheme={setOptionTheme} optionThemeCurrent={optionTheme}/>
-      <ContentMain />
-      <Footer />
-      <ButtonPageUp />
-    </main>
+    <ThemeContext.Provider value={optionTheme}>
+      <ThemeContext.Consumer>
+        {({theme, toggleTheme}) => (
+          <main className="main" data-theme={theme}>
+            <NavBar />
+            <ContentMain />
+            <Footer />
+            <ButtonPageUp />
+          </main>
+        )}
+      </ThemeContext.Consumer>
+    </ThemeContext.Provider>
   );
 }
 
