@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-web/static/css/main.acdb2a28.css",
-    "main.js": "/portfolio-web/static/js/main.e0e8e4bd.js",
+    "main.js": "/portfolio-web/static/js/main.48eb4c98.js",
     "static/media/curriculo-samuel-amaro-web.pdf": "/portfolio-web/static/media/curriculo-samuel-amaro-web.9df04a49811493992e25.pdf",
     "static/media/profile.jfif": "/portfolio-web/static/media/profile.a9f1d815a6370edb85c9.jfif",
     "static/media/icon-github-white.svg": "/portfolio-web/static/media/icon-github-white.75820cf5f04659bb26208e6726e62b2e.svg",
@@ -10,10 +10,10 @@
     "static/media/icon-linkedin-white.svg": "/portfolio-web/static/media/icon-linkedin-white.24084fdc1eea0b35b7e76c335da2dbb2.svg",
     "static/media/icon-hamburguer.svg": "/portfolio-web/static/media/icon-hamburguer.c94fe99e66a606d46fac2dae2b52e763.svg",
     "main.acdb2a28.css.map": "/portfolio-web/static/css/main.acdb2a28.css.map",
-    "main.e0e8e4bd.js.map": "/portfolio-web/static/js/main.e0e8e4bd.js.map"
+    "main.48eb4c98.js.map": "/portfolio-web/static/js/main.48eb4c98.js.map"
   },
   "entrypoints": [
     "static/css/main.acdb2a28.css",
-    "static/js/main.e0e8e4bd.js"
+    "static/js/main.48eb4c98.js"
   ]
 }
