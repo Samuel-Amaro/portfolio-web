@@ -21,6 +21,12 @@
     animation-direction: normal;
 }
 
+.social-medias__icon-link{
+    color: white;
+    width: 22px;
+    height: 22px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .social-medias__link:hover {
     animation: hover-btn infinite 1.5s linear;

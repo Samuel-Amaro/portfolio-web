@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export default function Footer() {
     return (
-      <footer class="footer">
+      <footer className="footer">
         <p className="description">
           © 2022 - Layout original{" "}
           <a

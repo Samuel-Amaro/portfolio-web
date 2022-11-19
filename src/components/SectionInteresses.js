@@ -1,8 +1,8 @@
 import Section from "./Section";
 
-export default function SectionInteresses() {
+export default function SectionInteresses(props) {
     return (
-      <Section nameSection="interesses">
+      <Section nameSection="interesses" refSection={props.refSectionInteresses}>
         <h2 className="section__heading-2">Interesses</h2>
         <p className="section__description">
           Além de gostar de desenvolvimento web, gosto de praticar esporte ao ar

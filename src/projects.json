@@ -1,3 +1,4 @@
+
 {
     "projects": [
         {
@@ -24,7 +25,7 @@
           "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "description": "Protejo de TCC, uma aplicação web cujo objetivo é resolver um problema pontual de distribuição de benefícios sociais durante a pandemia do (COVID-19), para as pessoas com menos condição financeira na cidade onde resido.",
-          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart", "DataTables", "Apache"],
+          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart.JS", "DataTables.JS", "Apache"],
           "image": "project03.jpg"
         },
         {
@@ -235,7 +236,7 @@
           "repository": "https://github.com/Samuel-Amaro/qr-code-component-react",
           "url": "https://samuel-amaro.github.io/qr-code-component-react/",
           "description": "Solução de desafio de codificação Front-End, QRCode component",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
           "image": "project26.jpg"
         },
         {
@@ -244,7 +245,7 @@
           "repository": "https://github.com/Samuel-Amaro/coming-soon-page",
           "url": "https://samuel-amaro.github.io/coming-soon-page/",
           "description": "Solução de desafio de codificação Front-End, página ping column coming son",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
           "image": "project27.jpg"
         },
         {
@@ -253,8 +254,17 @@
           "repository": "https://github.com/Samuel-Amaro/e-commerce-product-page",
           "url": "https://samuel-amaro.github.io/e-commerce-product-page/",
           "description": "Solução de desafio de codificação Front-End, página de e-commerce de produto eletrônico",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "ReactJS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
           "image": "project28.jpg"
+        },
+        {
+          "id": "29",
+          "name": "URL shortening API landing page",
+          "repository": "https://github.com/Samuel-Amaro/landing-page-shortening",
+          "url": "https://samuel-amaro.github.io/landing-page-shortening/",
+          "description": "Solução de desafio de codificação Front-End, landing page encurtadora de links, com integração a API externa",
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
+          "image": "project29.jpg"
         }
     ]
 }

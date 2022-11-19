@@ -7,20 +7,20 @@ import SectionInteresses from "./SectionInteresses";
 import SectionProjects from "./SectionProjects";
 
 
-export default function ContentMain() {
+export default function ContentMain(props) {
     return (
-        <article className="main__content-main">
-            <SectionAbout />
-            <Diviser />
-            <SectionExperience />
-            <Diviser />
-            <SectionEducation />
-            <Diviser />
-            <SectionSkills />
-            <Diviser />
-            <SectionInteresses />
-            <Diviser />
-            <SectionProjects />
-        </article>
+      <article className="main__content-main">
+        <SectionAbout refSectionAbout={props.refSectionAbout} />
+        <Diviser />
+        <SectionExperience refSectionExperience={props.refSectionExperience} />
+        <Diviser />
+        <SectionEducation refSectionEducation={props.refSectionEducation} />
+        <Diviser />
+        <SectionSkills refSectionSkills={props.refSectionSkills} />
+        <Diviser />
+        <SectionInteresses refSectionInteresses={props.refSectionInteresses} />
+        <Diviser />
+        <SectionProjects refSectionProjects={props.refSectionProjects} />
+      </article>
     );
 }

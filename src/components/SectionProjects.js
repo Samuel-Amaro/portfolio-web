@@ -2,44 +2,17 @@ import Section from "./Section";
 import DataProjects from "../projects.json";
 import CardProject from "./CardProject";
 import "./SectionProjects.css";
-import Badge from "./Badge";
 import { useState } from "react";
+import ProjectContent from "./ProjectContent";
+import ProjectLinks from "./ProjectLinks";
 
-export default function SectionProjects() {
+export default function SectionProjects(props) { 
   const [btnIsValid, setBtnIsValid] = useState(true); 
-  let pathsImages = new Map([
-    ["html", "badge-logo-html.svg"],
-    ["css", "badge-logo-css.png"],
-    ["JavaScript", "badge-logo-js.png"],
-    ["Bem", "badge-logo-bem.svg"],
-    ["ReactJS", "badge-logo-react.svg"],
-    ["NPM", "badge-logo-npm.svg"],
-    ["PHP", "badge-logo-php.svg"],
-    ["PostGreSQL", "badge-logo-postgreesql.svg"],
-    ["Boostrap", "badge-logo-bootstrap.svg"],
-    ["JQuery", "badge-logo-jquery.svg"],
-    ["Chart", "badge-logo-chartjs.svg"],
-    ["DataTables", "badge-logo-datatables.png"],
-    ["Apache", "badge-logo-apache.svg"],
-  ]);
-  let badges = [];
   //começar a carregar dos projetos mais recentes para os mais antigos
   //reordenando os objetos
   const listCardProjects = DataProjects.projects
     .sort((a, b) => b.id - a.id)
     .map((project) => {
-      //badges project
-      badges = project.tecnologys.map((tecnology) => {
-        return (
-          <li className="badge__item" key={tecnology} aria-label={"Tecnologia " + tecnology}>
-            <Badge
-              badgeClass={tecnology}
-              text={tecnology}
-              src={"./images/" + pathsImages.get(tecnology)}
-            />
-          </li>
-        );
-      });
       //item project
       return (
         <li
@@ -54,25 +27,17 @@ export default function SectionProjects() {
           }
         >
           {
-            <CardProject
-              /*id={project.id}*/ /*imagens local*/
-              src={"./images/" + project.image}
-              name={project.name}
-              repository={project.repository}
-              url={project.url}
-            />
+            <>
+              <CardProject
+                sourceImage={`${process.env.PUBLIC_URL}/images/${project.image}`}
+                name={project.name}
+                repository={project.repository}
+                url={project.url}
+              />
+              <ProjectContent title={project.name} tecnologys={project.tecnologys}/>
+              <ProjectLinks url={project.url} repository={project.repository}/>
+            </>
           }
-          <ul
-            className="badges"
-            aria-label={
-              "Lista de Tecnologias Que Foram usadas na implementação do Projeto " +
-              project.name +
-              " foram " +
-              project.tecnologys.join(",")
-            }
-          >
-            {badges}
-          </ul>
         </li>
       );
     });
@@ -113,7 +78,7 @@ export default function SectionProjects() {
   }
 
   return (
-    <Section nameSection="projects">
+    <Section nameSection="projects" refSection={props.refSectionProjects}>
       <h2 className="section__heading-2">Projetos</h2>
       <p className="section__description section__description_projects">
         Portefólio, com projetos desenvolvidos para fins de prática em

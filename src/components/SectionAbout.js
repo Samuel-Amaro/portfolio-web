@@ -1,27 +1,27 @@
 import Section from "./Section";
 import SocialMediaLink from "./SocialMediaLink";
-import iconLinkedin from "../assets/images/icon-linkedin-white.svg";
-import iconGitHub from "../assets/images/icon-github-white.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import iconFrontMentor from "../assets/images/icon-logo-frontmentor-white.svg";
 import curriculo from "../assets/files/curriculo-samuel-amaro-web.pdf";
 import "./SectionAbout.css";
 
-export default function SectionAbout() {
+export default function SectionAbout(props) {
   return (
-    <Section nameSection="about">
+    <Section nameSection="about" refSection={props.refSectionAbout}>
       <h1 className="section__heading-main">
-        Samuel <span class="title__name-emph">Amaro</span>
+        Samuel <span className="title__name-emph">Amaro</span>
       </h1>
       <address className="section__data-addres">
         Formosa Goiás · Bosque II ·{" "}
         <a
-          href="mailto:samuel.dev.front@gmail.com"
+          href="mailto:samuelamaro96746313@gmail.com"
           target="_self"
           rel="author"
           className="link-email"
           aria-label="Link para email de Samuel Amaro"
         >
-          samuel.dev.front@gmail.com
+          samuelamaro96746313@gmail.com
         </a>{" "}
         · Desenvolvedor Front-End Júnior
       </address>
@@ -45,31 +45,46 @@ export default function SectionAbout() {
         pessoais. Sinta-se a vontade para visualizar o meu currículo e minhas
         redes logo abaixo.
       </p>
-      <ul className="social-medias" aria-label="Lista de Links para midias Sociais de Samuel Amaro">
+      <ul
+        className="social-medias"
+        aria-label="Lista de Links para midias Sociais de Samuel Amaro"
+      >
         <li className="social-medias__item">
           <SocialMediaLink
             href="https://www.linkedin.com/in/samuel-amaro/"
-            src={iconLinkedin}
             text="Linkedin"
-          />
+          >
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="social-medias__icon-link"
+            />
+          </SocialMediaLink>
         </li>
-        <li class="social-medias__item">
-          <SocialMediaLink
-            href="https://github.com/Samuel-Amaro"
-            src={iconGitHub}
-            text="GitHub"
-          />
+        <li className="social-medias__item">
+          <SocialMediaLink href="https://github.com/Samuel-Amaro" text="GitHub">
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="social-medias__icon-link"
+            />
+          </SocialMediaLink>
         </li>
-        <li class="social-medias__item">
+        <li className="social-medias__item">
           <SocialMediaLink
             href="https://www.frontendmentor.io/profile/Samuel-Amaro"
-            src={iconFrontMentor}
             text="Plataforma de desafio de codificação Front-End Mentor"
-          />
+          >
+            <img
+              src={iconFrontMentor}
+              height="22"
+              width="22"
+              alt=""
+              aria-hidden="true"
+            />
+          </SocialMediaLink>
         </li>
       </ul>
       <a
-        class="link-curriculo"
+        className="link-curriculo"
         href={curriculo}
         target="_blank"
         rel="noreferrer"

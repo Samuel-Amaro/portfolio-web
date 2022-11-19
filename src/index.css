@@ -30,7 +30,7 @@
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
   --bs-gray-400: #ced4da;
-  --bs-gray-500: rgb(173, 181, 189);
+  --bs-gray-500: #adb5bd;
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
@@ -78,10 +78,14 @@
   --border-color-hover-project-link: #f5f8de;
   --hover-text-color-project-link: #fff8f0;
   --color-text-project-title_link: var(--bs-white);
+  --color-project-link: var(--bs-gray-dark);
+  --border-color-project-link: var(--bs-gray-600);
+  --color-hover-project-link: var(--bs-gray-600);
   /*footer*/
   --text-color-footer: rgba(255, 255, 255, 0.5);
   --text-color-link-footer: var(--bs-gray-100);
   --text-color-hover-link-footer: var(--bs-gray-300);
+  --text-tecnology: var(--bs-gray-600);
 }
 
 html {
@@ -123,12 +127,18 @@ body {
   --bg-body: var(--bg-dark);
   --text: var(--text-primary);
   --bg-navbar_footer: #31332E;
-  --text-title: #D7DBDB;
-  --text-title-name-emph_date-betewen: #878787;
+  --text-title: #d7dbdb;
+  --text-title-name-emph_date-betewen: var(--color-05);
+  --link-email_instituicao: var(--color-05);
+  --link-hover-email_instituicao: var(--bs-gray-500);
   --bg-switch-theme: #878787;
   --bg-switch-controler: #31332E;
-  --hover-switche-controler: #000000;
+  --hover-switche-controler: #974a2d;
   --hover-link-social_link-curriculo_buttons-load: #974a2d;
+  --color-project-link: #D7DBDB;
+  --border-color-project-link: var(--color-05);
+  --color-hover-project-link: var(--color-05);
+  --text-tecnology: var(--bs-gray-500);
 }
 
 

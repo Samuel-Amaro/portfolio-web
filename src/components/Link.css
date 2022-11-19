@@ -1,0 +1,13 @@
+.nav__link {
+  display: block;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  color: var(--shadow-button-menu_color-link);
+}
+
+.nav__link_active{
+  color: #ffffff;
+  opacity: 0.95;
+}

@@ -1,11 +1,22 @@
 import "./NavBar.css";
 import profile from "../assets/images/profile.jfif";
-import iconHamburguer from "../assets/images/icon-hamburguer.svg";
+import Link from "./Link";
 import { useState } from "react";
 import { ThemeContext } from "./ThemeContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
+  const refSections = [
+    props.refSectionAbout,
+    props.refSectionExperience,
+    props.refSectionEducation,
+    props.refSectionSkills,
+    props.refSectionInteresses,
+    props.refSectionProjects,
+  ];
+  const [menuItemActiveScroll, setMenuItemActiveScroll] = useState("about");
 
   function hadleBtn(event) {
     setBtnIsPressed((value) => {
@@ -19,31 +30,38 @@ export default function NavBar(props) {
     }
   }
 
+  window.addEventListener("scroll", onActiveItemMenuScroll);
+
+  function onActiveItemMenuScroll(event) {
+    refSections.forEach((refSection) => {
+      if (window.pageYOffset >= refSection.current.offsetTop) {
+        setMenuItemActiveScroll(refSection.current.id);
+      }
+    });
+  }
+
   return (
     <aside className="main__nav-bar">
       <div className="main__data-profile">
-        <span class="professional-position">Samuel Amaro</span>
-        <div class="main__profile-img">
+        <span className="professional-position">Samuel Amaro</span>
+        <div className="main__profile-img">
           <img src={profile} alt="Perfil Samuel Amaro" />
         </div>
       </div>
       <ThemeContext.Consumer>
         {({ theme, toggleTheme }) => (
-          <div class="switch-theme">
+          <div className="switch-theme">
             <input
               type="radio"
               id="theme-light"
               name="option-theme"
               aria-label="Option theme light"
               value="light"
-              class="option-theme"
-              tabindex="0"
+              className="option-theme"
               title="Option Theme light"
-              onChange={
-                (event) => {
-                  toggleTheme(event.target.value);
-                } 
-              }
+              onChange={(event) => {
+                toggleTheme(event.target.value);
+              }}
               checked={theme === "light" ? true : false}
             />
             <input
@@ -52,19 +70,16 @@ export default function NavBar(props) {
               name="option-theme"
               aria-label="Option theme dark"
               value="dark"
-              class="option-theme"
-              tabindex="0"
+              className="option-theme"
               title="Option Theme Dark"
-              onChange={
-                (event) => {
-                  toggleTheme(event.target.value);
-                } 
-              }
+              onChange={(event) => {
+                toggleTheme(event.target.value);
+              }}
               checked={theme === "dark" ? true : false}
             />
             <button
               type="button"
-              class="switch-controler"
+              className="switch-controler"
               aria-pressed="mixed"
               aria-label="Switch Controller to toggle themes"
               title="Toggle Theme"
@@ -75,21 +90,15 @@ export default function NavBar(props) {
       <button
         type="button"
         title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"
-        class="main__button-menu"
-        tabindex="0"
+        className="main__button-menu"
         aria-expanded={btnIsPressed ? "true" : "false"}
         onPointerDown={(event) => hadleBtn(event)}
         aria-label="Botão Mostrar/Ocultar Links de navegação"
         onKeyDown={(event) => handleBtnKey(event)}
       >
-        <img
-          class="button-menu__icon"
-          src={iconHamburguer}
-          alt="icon menu"
-          width="25"
-          height="25"
-        />
+        <FontAwesomeIcon icon={faBars} className="button-menu__icon" />
       </button>
+      {/*COMPONENTIZAR LINK E ARRUMAR CLASS PARA QUANDO O LINK ESTIVER ACTIVE NO SCOLL, E ENCONTRAR A FORMA E ADD A CLASS DINAMICAMENTE QUANDO O SCROLL ESTIVER ROLANDO*/}
       <nav className={btnIsPressed ? "nav nav_show" : "nav nav_hidden"}>
         <ul
           className="nav__links"
@@ -101,90 +110,78 @@ export default function NavBar(props) {
             role="menuitem"
             aria-label="Link section Sobre"
           >
-            <a
-              className="nav__link"
+            <Link
               href="#about"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Sobre"
-            >
-              sobre
-            </a>
+              label="Link de Menu para section Sobre"
+              text="sobre"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="about"
+            />
           </li>
           <li
             className="nav__item"
             role="menuitem"
             aria-label="Link section Experiencia"
           >
-            <a
-              className="nav__link"
+            <Link
               href="#experience"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Experiencia"
-            >
-              experiência
-            </a>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Skills"
-          >
-            <a
-              className="nav__link"
-              href="#skills"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Skills"
-            >
-              skills
-            </a>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Interesses"
-          >
-            <a
-              className="nav__link"
-              href="#interesses"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Interesses"
-            >
-              interesses
-            </a>
+              label="Link de Menu para section Experiencia"
+              text="experiência"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="experience"
+            />
           </li>
           <li
             className="nav__item"
             role="menuitem"
             aria-label="Link section Educação"
           >
-            <a
-              className="nav__link"
+            <Link
               href="#education"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Educação"
-            >
-              educação
-            </a>
+              label="Link de Menu para section Educação"
+              text="educação"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="education"
+            />
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Skills"
+          >
+            <Link
+              href="#skills"
+              label="Link de Menu para section Skills"
+              text="skills"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="skills"
+            />
+          </li>
+          <li
+            className="nav__item"
+            role="menuitem"
+            aria-label="Link section Interesses"
+          >
+            <Link
+              href="#interesses"
+              label="Link de Menu para section Interesses"
+              text="interesses"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="interesses"
+            />
           </li>
           <li
             className="nav__item"
             role="menuitem"
             aria-label="Link section Projetos"
           >
-            <a
-              className="nav__link"
+            <Link
               href="#projects"
-              target="_self"
-              rel="next"
-              aria-label="Link de Menu para section Projetos"
-            >
-              projetos
-            </a>
+              label="Link de Menu para section Projetoso"
+              text="projetos"
+              menuItemActiveScroll={menuItemActiveScroll}
+              nameSectionMenu="projects"
+            />
           </li>
         </ul>
       </nav>

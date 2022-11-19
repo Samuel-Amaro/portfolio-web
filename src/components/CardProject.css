@@ -1,20 +1,22 @@
 .project__card {
-  max-width: 100%;/*350px*/
+  max-width: 100%; /*350px*/
   /*margin: 0 auto;*/
   position: relative;
   z-index: 1020;
   overflow: hidden;
+  margin: 0 0 20px 0;
 }
 
-.project__thumbnail{
+.project__thumbnail {
   overflow: hidden;
-  border-radius: 4px 4px 4px 0;
+  border-radius: 2px 2px 2px 2px;
 }
 
-.project__thumbnail img, .thumbnail-ilustration {
+.project__thumbnail img,
+.thumbnail-ilustration {
   display: block;
   max-width: 100%;
-  border-radius: 4px 4px 4px 0px;
+  border-radius: 2px 2px 2px 2px;
   -moz-transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
   transition: transform 0.5s;
@@ -22,23 +24,10 @@
 }
 
 .project__preview-datas {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 1030;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--bg-preview-datas);
-  border-radius: 4px 4px 4px 0;
-  overflow: hidden;
+  display: none;
 }
 
+/*
 .project__title {
   color: var(--color-text-project-title_link);
   line-height: 1.5;
@@ -49,20 +38,7 @@
   padding: 0 20px;
   margin-bottom: 10px;
 }
-
-.project__preview-datas:hover ~ .project__thumbnail > .thumbnail-ilustration{
-  transform-origin: center;
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.project__preview-datas:hover,
-.project__preview-datas:focus,
-.project__item:focus .project__preview-datas,
-.project__preview-datas:focus-within {
-  opacity: 1;
-}
+*/
 
 .badges {
   list-style: none;
@@ -74,25 +50,63 @@
 
 .project__links {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
 
 .project__link {
+  font-family: "Saira Extra Condensed", sans-serif;
   display: block;
   text-decoration: none;
-  color: var(--color-text-project-title_link);
+  color: var(--border-color-project-link);
   line-height: 1.5;
-  font-weight: 500;
-  font-size: 1rem;
-  border: 1px solid var(--border-color-project-link);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--border-color-hover-project-link);
+  padding: 0 0 0.3rem 0;
+  text-transform: uppercase;
 }
 
 .project__link:hover {
-  border-color: var(--border-color-hover-project-link);
   color: var(--hover-text-color-project-link);
+}
+
+@media screen and (min-width: 992px) {
+  .project__link {
+    color: #d7d9b1;
+  }
+
+  .project__preview-datas {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1030;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-preview-datas);
+    border-radius: 4px 4px 4px 0;
+    overflow: hidden;
+  }
+
+  .project__preview-datas:hover ~ .project__thumbnail > .thumbnail-ilustration {
+    transform-origin: center;
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .project__preview-datas:hover,
+  .project__preview-datas:focus,
+  .project__item:focus .project__preview-datas,
+  .project__preview-datas:focus-within {
+    opacity: 1;
+  }
 }
