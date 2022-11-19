@@ -98,7 +98,6 @@ export default function NavBar(props) {
       >
         <FontAwesomeIcon icon={faBars} className="button-menu__icon" />
       </button>
-      {/*COMPONENTIZAR LINK E ARRUMAR CLASS PARA QUANDO O LINK ESTIVER ACTIVE NO SCOLL, E ENCONTRAR A FORMA E ADD A CLASS DINAMICAMENTE QUANDO O SCROLL ESTIVER ROLANDO*/}
       <nav className={btnIsPressed ? "nav nav_show" : "nav nav_hidden"}>
         <ul
           className="nav__links"
