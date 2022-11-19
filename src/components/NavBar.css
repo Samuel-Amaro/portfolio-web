@@ -134,17 +134,6 @@
   flex-flow: column nowrap;
 }
 
-/*
-.nav__link {
-  display: block;
-  text-decoration: none;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 0.5rem 0;
-  color: var(--shadow-button-menu_color-link);
-}
-*/
-
 .nav__link:hover {
   color: var(--hover-link);
 }
