@@ -25,7 +25,7 @@
           "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "description": "Protejo de TCC, uma aplicação web cujo objetivo é resolver um problema pontual de distribuição de benefícios sociais durante a pandemia do (COVID-19), para as pessoas com menos condição financeira na cidade onde resido.",
-          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart.JS", "DataTables.JS", "Apache"],
+          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart.JS", "DataTables.JS", "Apache", "API"],
           "image": "project03.jpg"
         },
         {
@@ -182,7 +182,7 @@
           "repository": "https://github.com/Samuel-Amaro/advice-generator-app",
           "url": "https://samuel-amaro.github.io/advice-generator-app/",
           "description": "Solução de desafio de codificação Front-End, aplicativo gerador de conselhos que consome uma API que retorna conselhos.",
-          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "API"],
           "image": "project20.jpg"
         },
         {
@@ -218,7 +218,7 @@
           "repository": "https://github.com/Samuel-Amaro/ip-address-tracker",
           "url": "https://samuel-amaro.github.io/ip-address-tracker/",
           "description": "Solução de desafio de codificação Front-End, aplicativo de rastreador de endereço IP",
-          "tecnologys": ["html", "css", "Bem", "JavaScript"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "API"],
           "image": "project24.jpg"
         },
         {
@@ -263,7 +263,7 @@
           "repository": "https://github.com/Samuel-Amaro/landing-page-shortening",
           "url": "https://samuel-amaro.github.io/landing-page-shortening/",
           "description": "Solução de desafio de codificação Front-End, landing page encurtadora de links, com integração a API externa",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "API"],
           "image": "project29.jpg"
         }
     ]
