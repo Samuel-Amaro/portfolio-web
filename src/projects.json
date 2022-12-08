@@ -265,6 +265,23 @@
           "description": "Solução de desafio de codificação Front-End, landing page encurtadora de links, com integração a API externa",
           "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "API"],
           "image": "project29.jpg"
+        },
+        {
+          "id": "30",
+          "name": "Space tourism multi-page website",
+          "repository": "https://github.com/Samuel-Amaro/space-tourism-website",
+          "url": "https://samuel-amaro.github.io/space-tourism-website/",
+          "description": "Solução de desafio de codificação Front-End, WebSite com tema de turismo espacial, com multiplas paginas",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "JavaScript",
+            "React.JS",
+            "NPM",
+            "reac-router-dom"
+          ],
+          "image": "project30.jpg"
         }
     ]
 }

@@ -123,6 +123,9 @@ export default function SectionSkills(props) {
           <li className="workflow__item">
             <Workflow text="Web Acessibility" />
           </li>
+          <li className="workflow__item">
+            <Workflow text="react-router-dom Library" />
+          </li>
         </ul>
       </Section>
     );
