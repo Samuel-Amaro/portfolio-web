@@ -9,7 +9,7 @@ export default function SectionExperience(props) {
         <ContentRow
           heading3="Sem experiência profissional"
           heading4="desempregado atualmente"
-          description="Em busca da primeira oportunidade profissional relacionada a areá de desenvolvimento web para atuar como desenvolvedor front-end júnior."
+          description="Em busca da primeira oportunidade profissional relacionada a areá de desenvolvimento web para atuar como desenvolvedor front-end."
           dateStart="jan 2022"
           dateEnd="Presente"
         />

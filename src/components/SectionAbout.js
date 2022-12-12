@@ -23,7 +23,7 @@ export default function SectionAbout(props) {
         >
           samuelamaro96746313@gmail.com
         </a>{" "}
-        · Desenvolvedor Front-End Júnior
+        · Desenvolvedor Front-End
       </address>
       <p className="section__description-about">
         Olá! Meu nome e Samuel Amaro, sou formado em análise e desenvolvimento
@@ -38,12 +38,14 @@ export default function SectionAbout(props) {
           <abbr title="instituto federal de Goiás">IFG</abbr>
         </a>
         , tenho 22 anos, atualmente estou desempregado buscando uma oportunidade
-        profissional na areá de desenvolvimento web para atuar como estagiário
-        ou desenvolvedor júnior Front-End. Sou proativo, determinado, focado,
-        gosto de resolver problemas usando as minhas habilidades, lido bem com
-        ambientes sob pressão, aplico gerenciamento de tempo nas minhas tarefas
-        pessoais. Sinta-se a vontade para visualizar o meu currículo e minhas
-        redes logo abaixo.
+        profissional na areá de desenvolvimento web para atuar como
+        desenvolvedor Front-End. Sobre min sou um desenvolvedor que gosta do que faz, sou
+        dedicado nas minhas tarefas, sou detalhista e busco sempre extrair o
+        melhor de min para entregar valor e contribuição, busco aprender
+        constantemente, consistência e oque busco no meu aprendizado, tento ser  proativo, determinado, sou detalhista,
+        gosto de aplicar gerenciamento de tempo nas minhas tarefas pessoais.
+        Sinta-se a vontade para visualizar o meu currículo e minhas redes logo
+        abaixo.
       </p>
       <ul
         className="social-medias"
