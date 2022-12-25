@@ -282,6 +282,26 @@
             "reac-router-dom"
           ],
           "image": "project30.jpg"
+        },
+        {
+          "id": "31",
+          "name": "REST Countries API with color theme switcher",
+          "repository": "https://github.com/Samuel-Amaro/rest-countries-api",
+          "url": "https://samuel-amaro.github.io/rest-countries-api/",
+          "description": "API de países REST com seletor de tema de cores, desafio de codificação Front-End, mostrar países obtidos por meio de uma API.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "JavaScript",
+            "React.JS",
+            "NPM",
+            "reac-router-dom Library React",
+            "fetch.JS",
+            "Hooks React API",
+            "Context API React"
+          ],
+          "image": "project31.jpg"
         }
     ]
 }
