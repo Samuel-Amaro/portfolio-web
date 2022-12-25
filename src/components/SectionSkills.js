@@ -1,11 +1,11 @@
 import Section from "./Section";
-import Skill from "./Skill";
-import iconBem from "../assets/images/icon-bem-black.png";
 import Workflow from "./Workflow";
 import "./SectionSkills.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faCss3Alt, faHtml5, faJs, faGitAlt, faReact, faNpm } from "@fortawesome/free-brands-svg-icons";
 import {faUniversalAccess} from "@fortawesome/free-solid-svg-icons";
+import { SiReactrouter, SiTypescript } from "react-icons/si";
+
 
 export default function SectionSkills(props) {
     return (
@@ -79,13 +79,13 @@ export default function SectionSkills(props) {
             title="Metologia de organização de código CSS"
             aria-label="Metologia de organização de código CSS"
           >
-            <Skill
-              src={iconBem}
-              alt="O ícone do logotipo para bem(block element modifier)"
-              title="BEM(Block Element Modifier)"
-              height="46"
-              width="46"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 101.7 84"
+              className="tools__Icon-Tool tools__Icon-Tool_Mediun"
+            >
+              <path d="M0 13h23.8v7H0zM0 0h23.8v7H0zm42.7 25.9H0v7h41.1c4.5 0 15 .1 18.9 6.4v-3.9c-1.9-6.2-7.5-9.5-17.3-9.5zm.1 13H0v7h41.1c10 0 16.3.4 18.9 1.8v-3.1c-2-4.9-10.4-5.7-17.2-5.7zm-.1 33H0v-7h41.1c4.5 0 15-.1 18.9-6.4v3.9c-1.9 6.2-7.5 9.5-17.3 9.5zm.1-13H0v-7h41.1c10 0 16.3-.4 18.9-1.8v3.1c-2 4.9-10.4 5.7-17.2 5.7zM70.4 84h31.4v-4.3H71.3c-2.7 0-9.1-.1-11.4-3.8v2.4C61 82 64.4 84 70.4 84zm-.1-7.9h31.4v-4.3H71.3c-6.1 0-9.9-.2-11.4-1.1v1.9c1.2 3 6.3 3.5 10.4 3.5z"></path>
+            </svg>
             <span className="tools__content">bem</span>
           </li>
           <li
@@ -99,6 +99,22 @@ export default function SectionSkills(props) {
             />
             <span className="tools__content">Acessibility</span>
           </li>
+          <li
+            className="tools__item"
+            title="Library React react-router-dom"
+            aria-label="Library React react-router-dom"
+          >
+            <SiReactrouter className="tools__Icon-Tool" />
+            <span className="tools__content">react-router-dom</span>
+          </li>
+          <li
+            className="tools__item"
+            title="Language TypeScript"
+            aria-label="Language TypeScript"
+          >
+            <SiTypescript className="tools__Icon-Tool" />
+            <span className="tools__content">TypeScript</span>
+          </li>
         </ul>
         <h3 className="section__heading-4">Workflow</h3>
         <ul
@@ -106,7 +122,7 @@ export default function SectionSkills(props) {
           aria-label="Lista de Padrões e Principios usados no fluxo de trabalho"
         >
           <li className="workflow__item">
-            <Workflow text="Mobile-First" />
+            <Workflow text="Mobile-First Design" />
           </li>
           <li className="workflow__item">
             <Workflow text="RWD(Responsive Web Design)" />
@@ -118,7 +134,7 @@ export default function SectionSkills(props) {
             <Workflow text="Markup Semantic" />
           </li>
           <li className="workflow__item">
-            <Workflow text="BEM naming methodology" />
+            <Workflow text="BEM naming methodology Architecture CSS" />
           </li>
           <li className="workflow__item">
             <Workflow text="Web Acessibility" />

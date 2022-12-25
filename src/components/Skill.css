@@ -1,6 +1,10 @@
-@media screen and (min-width: 992px) {
+.img-skill{
+    display: block;
+    max-width: 100%;        
+}
+/*@media screen and (min-width: 992px) {
     .img-skill{
         width: 55px;
         height: 55px;
     }
-}
+}*/

@@ -30,3 +30,9 @@
     list-style: none;
     margin-left: 16px;
 }
+
+.tools__Icon-Tool_Mediun{
+    fill: var(--text);
+    width: 48px;
+    height: 48px;
+}
