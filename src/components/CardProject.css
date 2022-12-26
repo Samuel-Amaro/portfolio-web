@@ -1,6 +1,5 @@
 .project__card {
-  max-width: 100%; /*350px*/
-  /*margin: 0 auto;*/
+  max-width: 100%; 
   position: relative;
   z-index: 1020;
   overflow: hidden;
@@ -26,19 +25,6 @@
 .project__preview-datas {
   display: none;
 }
-
-/*
-.project__title {
-  color: var(--color-text-project-title_link);
-  line-height: 1.5;
-  font-weight: 500;
-  font-size: 1.5rem;
-  width: 100%;
-  text-align: center;
-  padding: 0 20px;
-  margin-bottom: 10px;
-}
-*/
 
 .badges {
   list-style: none;
