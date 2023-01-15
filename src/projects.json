@@ -302,6 +302,23 @@
             "Context API React"
           ],
           "image": "project31.jpg"
+        },
+        {
+          "id": "32",
+          "name": " Multi-step form",
+          "repository": "https://github.com/Samuel-Amaro/multi-step-form",
+          "url": "https://samuel-amaro.github.io/multi-step-form/",
+          "description": "Formulario de varias etapas",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "JavaScript",
+            "React.JS",
+            "NPM",
+            "Hooks React API"
+          ],
+          "image": "project32.jpg"
         }
     ]
 }
