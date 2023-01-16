@@ -53,10 +53,10 @@ export default function NavBar(props) {
   }
 
   return (
-    <aside className="main__nav-bar">
-      <div className="main__data-profile">
-        <span className="professional-position">Samuel Amaro</span>
-        <div className="main__profile-img">
+    <aside className="navbar">
+      <div className="navbar__data-profile">
+        <span className="navbar__name">Samuel Amaro</span>
+        <div className="navbar__profile-img">
           <img src={profile} alt="Perfil Samuel Amaro" />
         </div>
       </div>
@@ -68,7 +68,11 @@ export default function NavBar(props) {
             aria-checked={theme === "light" ? false : true}
             onPointerDown={(event) => {
               toggleStatus(event);
-              toggleTheme(event.currentTarget.getAttribute("aria-checked") === 'true' ? "dark" : "light");
+              toggleTheme(
+                event.currentTarget.getAttribute("aria-checked") === "true"
+                  ? "dark"
+                  : "light"
+              );
             }}
             aria-label="Alternador de esquema de cores desde site"
             onKeyDown={(event) => {
@@ -85,10 +89,10 @@ export default function NavBar(props) {
           >
             <div className="switch__icons">
               <span className="switch__icon">
-                <FontAwesomeIcon icon={faMoon} className="icon" />
+                <FontAwesomeIcon icon={faMoon} className="switch__icon" />
               </span>
               <span className="switch__icon">
-                <FontAwesomeIcon icon={faSun} className="icon" />
+                <FontAwesomeIcon icon={faSun} className="switch__icon" />
               </span>
             </div>
             <span
@@ -103,15 +107,15 @@ export default function NavBar(props) {
       <button
         type="button"
         title="Botão Menu, Pode ser acionado com Mouse ou Key Enter"
-        className="main__button-menu"
+        className="navbar__button-menu"
         aria-expanded={btnIsPressed ? "true" : "false"}
         onPointerDown={(event) => hadleBtn(event)}
         aria-label="Botão Mostrar/Ocultar Links de navegação"
         onKeyDown={(event) => handleBtnKey(event)}
       >
-        <FontAwesomeIcon icon={faBars} className="button-menu__icon" />
+        <FontAwesomeIcon icon={faBars} className="navbar__icon-button" />
       </button>
-      <nav className={btnIsPressed ? "nav nav_show" : "nav nav_hidden"}>
+      <nav className={btnIsPressed ? "nav nav--show" : "nav nav--hidden"}>
         <ul
           className="nav__links"
           role="menu"

@@ -1,4 +1,4 @@
-.main__nav-bar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,11 +13,11 @@
   padding: 0.5rem 1rem;
 }
 
-.main__profile-img{
+.navbar__profile-img{
   display: none;
 }
 
-.professional-position {
+.navbar__name {
   display: block;
   font-size: 1.25rem;
   color: var(--text-emph);
@@ -44,18 +44,6 @@
   box-shadow: 1px 1px 3px 2px var(--bs-orange), -1px -1px 3px 2px var(--bs-orange);
 }
 
-/*.option-theme,
-.switch-controler {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  display: block;
-  border: none;
-  width: 50%;
-  height: 15px;
-  cursor: pointer;
-}*/
-
 .switch-controler {
   appearance: none;
   -moz-appearance: none;
@@ -72,18 +60,6 @@
   top: 2px;
   transition: all 0.3s;
 }
-
-/*.switch-controler:hover {
-  background-color: var(--hover-switche-controler);
-}*/
-
-/*.option-theme[value="light"]:checked ~ .switch-controler {
-  left: 5px;
-}
-
-.option-theme[value="dark"]:checked ~ .switch-controler {
-  left: 30.5px;
-}*/
 
 .switch[aria-checked="false"] .switch-controler {
   left: 3px;
@@ -106,13 +82,13 @@
   padding: 4px;
 }
 
-.icon{
+.switch__icon{
   color: var(--color-icon-switch);
   width: 15px;
   height: 15px;
 }
 
-.main__button-menu {
+.navbar__button-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,12 +111,12 @@
   outline: none;
 }
 
-.button-menu__icon{
+.navbar__icon-button{
   color: white;
   font-size: 1.8rem;
 }
 
-.nav_collapse:not(.nav_show) {
+.nav--collapse:not(.nav--show) {
   display: none;
 }
 
@@ -150,13 +126,13 @@
   overflow: hidden;
 }
 
-.nav_hidden {
+.nav--hidden {
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease;
 }
 
-.nav_show {
+.nav--show {
   height: 240px;
   width: 100%;
 }
@@ -176,7 +152,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .main__nav-bar {
+  .navbar {
     width: 17rem;
     height: 100vh;
     flex-flow: column nowrap;
@@ -186,18 +162,18 @@
     text-align: center;
   }
 
-  .professional-position,
-  .main__button-menu {
+  .navbar__name,
+  .navbar__button-menu {
     display: none;
   }
 
-  .nav_collapsing,
-  .main__profile-img,
-  .main__profile-img img {
+  .nav--collapsing,
+  .navbar__profile-img,
+  .navbar__profile-img img {
     display: block;
   }
 
-  .main__profile-img img {
+  .navbar__profile-img img {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
@@ -213,7 +189,7 @@
     margin: 0;
   }
 
-  .nav_hidden {
+  .nav--hidden {
     display: block;
     width: 100%;
     height: 240px;

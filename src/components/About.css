@@ -1,0 +1,64 @@
+.about__name {
+  line-height: 1;
+  font-size: calc(1.725rem + 5.7vw);
+}
+
+.about__name-emph {
+  color: var(--text-title-name-emph_date-betewen);
+}
+
+.about__datas {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.about__link-email,
+.about__link-instituicao {
+  text-decoration: underline;
+  color: var(--link-email_instituicao);
+  display: inline-block;
+}
+
+.about__link-email:hover,
+.about__link-email:focus,
+.about__link-instituicao:hover,
+.about__link-instituicao:focus {
+  color: var(--link-hover-email_instituicao);
+}
+
+.about__description {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.social-medias {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 3rem;
+}
+
+.about__link-curriculo{
+  display: block;
+  background-color: var(--bg-link-social_link-curriculo_buttons-load);
+  color: var(--text-link-curriculo_buttons-load);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  max-width: 140px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.about__link-curriculo:hover,
+.about__link-curriculo:focus {
+  text-decoration: none;
+  background-color: var(--hover-link-social_link-curriculo_buttons-load);
+}

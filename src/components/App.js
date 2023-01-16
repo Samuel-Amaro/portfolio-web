@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import ContentMain from "./ContentMain";
+import Content from "./Content";
 import Footer from "./Footer";
 import React, { useState, useRef } from "react";
 import "./App.css";
@@ -47,7 +47,7 @@ function App() {
               refSectionInteresses={refSectionInteresses}
               refSectionProjects={refSectionProjects}
             />
-            <ContentMain
+            <Content
               refSectionAbout={refSectionAbout}
               refSectionExperience={refSectionExperience}
               refSectionEducation={refSectionEducation}

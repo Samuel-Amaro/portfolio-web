@@ -1,12 +1,12 @@
 import Section from "./Section";
 import DataProjects from "../projects.json";
 import CardProject from "./CardProject";
-import "./SectionProjects.css";
+import "./Projects.css";
 import { useState } from "react";
 import ProjectContent from "./ProjectContent";
 import ProjectLinks from "./ProjectLinks";
 
-export default function SectionProjects(props) { 
+export default function Projects(props) { 
   const [btnIsValid, setBtnIsValid] = useState(true); 
   //começar a carregar dos projetos mais recentes para os mais antigos
   //reordenando os objetos
@@ -79,52 +79,54 @@ export default function SectionProjects(props) {
 
   return (
     <Section nameSection="projects" refSection={props.refSectionProjects}>
-      <h2 className="section__heading-2">Projetos</h2>
-      <p className="section__description section__description_projects">
-        Portefólio, com projetos desenvolvidos para fins de prática em
-        determinadas tecnologias. Cada card de projeto possui um link para
-        visualização do projeto e um link para o repositório do projeto com a
-        sua respectiva implementação.
-      </p>
-      <ul
-        className="projects"
-        aria-live="polite"
-        aria-atomic="true"
-        aria-label="Lista Projetos Concluidos"
-      >
-        {listProjectsView}
-      </ul>
-      <div className="buttons__load">
-        <button
-          className="button button__more"
-          type="button"
-          value="Carregar Mais"
-          onClick={(event) => handleButtons(event)}
-          disabled={btnIsValid ? "" : "disabled"}
-          aria-label="Carregar Mais Projetos"
-          title={
-            btnIsValid
-              ? "Carregar Mais Projetos"
-              : "Todos Projetos ja estão carregados"
-          }
+      <div className="project">
+        <h2 className="section__heading-2">Projetos</h2>
+        <p className="section__description section__description_projects">
+          Portefólio, com projetos desenvolvidos para fins de prática em
+          determinadas tecnologias. Cada card de projeto possui um link para
+          visualização do projeto e um link para o repositório do projeto com a
+          sua respectiva implementação.
+        </p>
+        <ul
+          className="projects"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label="Lista Projetos Concluidos"
         >
-          Carregar Mais
-        </button>
-        <button
-          className="button button__all"
-          type="button"
-          value="Carregar Tudo"
-          onClick={(event) => handleButtons(event)}
-          disabled={btnIsValid ? "" : "disabled"}
-          aria-label="Carregar Todos Projetos"
-          title={
-            btnIsValid
-              ? "Carregar Todos Projetos"
-              : "Todos Projetos ja estão carregados"
-          }
-        >
-          Carregar Tudo
-        </button>
+          {listProjectsView}
+        </ul>
+        <div className="buttons__load">
+          <button
+            className="button button__more"
+            type="button"
+            value="Carregar Mais"
+            onClick={(event) => handleButtons(event)}
+            disabled={btnIsValid ? "" : "disabled"}
+            aria-label="Carregar Mais Projetos"
+            title={
+              btnIsValid
+                ? "Carregar Mais Projetos"
+                : "Todos Projetos ja estão carregados"
+            }
+          >
+            Carregar Mais
+          </button>
+          <button
+            className="button button__all"
+            type="button"
+            value="Carregar Tudo"
+            onClick={(event) => handleButtons(event)}
+            disabled={btnIsValid ? "" : "disabled"}
+            aria-label="Carregar Todos Projetos"
+            title={
+              btnIsValid
+                ? "Carregar Todos Projetos"
+                : "Todos Projetos ja estão carregados"
+            }
+          >
+            Carregar Tudo
+          </button>
+        </div>
       </div>
     </Section>
   );
