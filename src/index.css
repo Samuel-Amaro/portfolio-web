@@ -63,6 +63,7 @@
   --shadow-button-menu_color-link: var(--shadow-menu_color-link);
   --hover-link: var(--color-hover-link);
   --hover-switche-controler: var(--hover-switch);
+  --color-icon-switch: var(--color-05);
   /*section about*/
   --text-title: var(--bs-gray-dark);
   --text-title-name-emph_date-betewen: rgba(189, 93, 56, 1);
@@ -139,6 +140,7 @@ body {
   --border-color-project-link: var(--color-05);
   --color-hover-project-link: var(--color-05);
   --text-tecnology: var(--bs-gray-500);
+  --color-icon-switch: var(--bs-gray-800);
 }
 
 

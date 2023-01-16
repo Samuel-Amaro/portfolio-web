@@ -4,7 +4,8 @@ import Link from "./Link";
 import { useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars} from "@fortawesome/free-solid-svg-icons";
+import {faSun, faMoon} from "@fortawesome/free-regular-svg-icons"
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
@@ -30,6 +31,17 @@ export default function NavBar(props) {
     }
   }
 
+  function toggleStatus(event) {
+    let state = '';
+    if(event.currentTarget.getAttribute("aria-checked") === 'true') {
+     state = 'false'; 
+    }else{
+      state = 'true';
+    }
+    event.currentTarget.setAttribute("aria-checked", state);
+    
+  }
+
   window.addEventListener("scroll", onActiveItemMenuScroll);
 
   function onActiveItemMenuScroll(event) {
@@ -50,40 +62,41 @@ export default function NavBar(props) {
       </div>
       <ThemeContext.Consumer>
         {({ theme, toggleTheme }) => (
-          <div className="switch-theme">
-            <input
-              type="radio"
-              id="theme-light"
-              name="option-theme"
-              aria-label="Option theme light"
-              value="light"
-              className="option-theme"
-              title="Option Theme light"
-              onChange={(event) => {
-                toggleTheme(event.target.value);
-              }}
-              checked={theme === "light" ? true : false}
-            />
-            <input
-              type="radio"
-              id="theme-dark"
-              name="option-theme"
-              aria-label="Option theme dark"
-              value="dark"
-              className="option-theme"
-              title="Option Theme Dark"
-              onChange={(event) => {
-                toggleTheme(event.target.value);
-              }}
-              checked={theme === "dark" ? true : false}
-            />
-            <button
-              type="button"
+          <div
+            className="switch"
+            role="switch"
+            aria-checked={theme === "light" ? false : true}
+            onPointerDown={(event) => {
+              toggleStatus(event);
+              toggleTheme(event.currentTarget.getAttribute("aria-checked") === 'true' ? "dark" : "light");
+            }}
+            aria-label="Alternador de esquema de cores desde site"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                toggleStatus(event);
+                toggleTheme(
+                  event.currentTarget.getAttribute("aria-checked") === "true"
+                    ? "dark"
+                    : "light"
+                );
+              }
+            }}
+            tabIndex="0"
+          >
+            <div className="switch__icons">
+              <span className="switch__icon">
+                <FontAwesomeIcon icon={faMoon} className="icon" />
+              </span>
+              <span className="switch__icon">
+                <FontAwesomeIcon icon={faSun} className="icon" />
+              </span>
+            </div>
+            <span
               className="switch-controler"
-              aria-pressed="mixed"
-              aria-label="Switch Controller to toggle themes"
-              title="Toggle Theme"
-            ></button>
+              aria-label="Switch Controlador para alternar temas"
+              title="Controlador esquema de cores usado neste site"
+              tabIndex="0"
+            ></span>
           </div>
         )}
       </ThemeContext.Consumer>

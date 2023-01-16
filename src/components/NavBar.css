@@ -26,7 +26,7 @@
   margin: 0 15px 0 0;
 }
 
-.switch-theme {
+.switch {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -40,7 +40,11 @@
   margin: 0 15px 0 0;
 }
 
-.option-theme,
+.switch:focus .switch-controler, .switch:hover .switch-controler{
+  box-shadow: 1px 1px 3px 2px var(--bs-orange), -1px -1px 3px 2px var(--bs-orange);
+}
+
+/*.option-theme,
 .switch-controler {
   appearance: none;
   -moz-appearance: none;
@@ -50,28 +54,62 @@
   width: 50%;
   height: 15px;
   cursor: pointer;
-}
+}*/
 
 .switch-controler {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  border: none;
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
   background-color: var(--bg-switch-controler);
-  width: 15px;
   position: absolute;
-  left: 5px;
+  left: 3px;
   border-radius: 50%;
-  top: 3px;
+  top: 2px;
   transition: all 0.3s;
 }
 
-.switch-controler:hover {
+/*.switch-controler:hover {
   background-color: var(--hover-switche-controler);
-}
+}*/
 
-.option-theme[value="light"]:checked ~ .switch-controler {
+/*.option-theme[value="light"]:checked ~ .switch-controler {
   left: 5px;
 }
 
 .option-theme[value="dark"]:checked ~ .switch-controler {
   left: 30.5px;
+}*/
+
+.switch[aria-checked="false"] .switch-controler {
+  left: 3px;
+}
+
+.switch[aria-checked="true"] .switch-controler{
+  left: 30px;
+}
+
+.switch__icon{
+  display: block;
+}
+
+.switch__icons{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px;
+}
+
+.icon{
+  color: var(--color-icon-switch);
+  width: 15px;
+  height: 15px;
 }
 
 .main__button-menu {
@@ -171,7 +209,7 @@
     flex-basis: auto;
   }
 
-  .switch-theme {
+  .switch {
     margin: 0;
   }
 
