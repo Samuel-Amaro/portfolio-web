@@ -1,0 +1,30 @@
+.project-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.project-links__link {
+  font-family: "Saira Extra Condensed", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: var(--color-project-link);
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-bottom: 3px solid var(--border-color-project-link);
+  padding: 0 0 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.project-links__link:hover {
+  color: var(--color-hover-project-link);
+}
+
+@media screen and (min-width: 992px){
+    .project-links{
+        display: none;
+    }
+}

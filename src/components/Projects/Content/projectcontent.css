@@ -1,0 +1,32 @@
+.project-content {
+  margin-bottom: 20px;
+}
+
+.project-content__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  margin: 0 0 7px 0;
+}
+
+.project-content__list-tecnologys {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project-content__item-tecnology {
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  margin-right: 18px;
+  color: var(--text-tecnology);
+}
+
+@media screen and (min-width: 992px) {
+  .project-content {
+    margin-bottom: 0px;
+  }
+}

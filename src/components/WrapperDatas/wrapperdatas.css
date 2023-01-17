@@ -1,0 +1,44 @@
+/*.heading3 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+.heading4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+*/
+
+.wrapper-datas__description,
+.wrapper-datas__date-beetwen {
+  margin-bottom: 1rem;
+}
+
+.wrapper-datas__date-beetwen {
+  color: var(--text-title-name-emph_date-betewen);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-datas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .wrapper-datas__datas {
+    flex-grow: 1;
+  }
+
+  .wrapper-datas__date {
+    flex-shrink: 0;
+  }
+
+  .wrapper-datas__description,
+  .wrapper-datas__date-beetwen {
+    margin-bottom: 0;
+  }
+}

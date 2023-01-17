@@ -1,0 +1,81 @@
+.projects{
+  width: 100%;
+}
+
+.projects__description {
+  margin-bottom: 3rem;
+}
+
+.projects__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.projects__item {
+  max-width: 480px;
+}
+
+.projects__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.projects__button {
+  display: block;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  background-color: var(--bg-link-social_link-curriculo_buttons-load);
+  color: var(--text-link-curriculo_buttons-load);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+}
+
+.projects__button:disabled {
+  opacity: 0.6;
+}
+
+.projects__button:hover {
+  text-decoration: none;
+  background-color: var(--hover-link-social_link-curriculo_buttons-load);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  .projects__item {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects__list {
+    grid-template-columns: repeat(1, minmax(min-content, 548px));
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .projects__list {
+    grid-template-columns: repeat(2, minmax(min-content, 548px));
+  }
+}

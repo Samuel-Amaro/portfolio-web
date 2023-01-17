@@ -1,0 +1,98 @@
+.cardproj {
+  max-width: 100%; 
+  position: relative;
+  z-index: 1020;
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+
+.cardproj__thumbnail {
+  overflow: hidden;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.cardproj__thumbnail img,
+.cardproj__ilustration {
+  display: block;
+  max-width: 100%;
+  border-radius: 2px 2px 2px 2px;
+  -moz-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+
+.cardproj__preview-datas {
+  display: none;
+}
+
+/*.badges {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}*/
+
+.cardproj__links {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardproj__link {
+  font-family: "Saira Extra Condensed", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: var(--border-color-project-link);
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--border-color-hover-project-link);
+  padding: 0 0 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.cardproj__link:hover {
+  color: var(--hover-text-color-project-link);
+}
+
+@media screen and (min-width: 992px) {
+  .cardproj__link {
+    color: #d7d9b1;
+  }
+
+  .cardproj__preview-datas {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1030;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-preview-datas);
+    border-radius: 4px 4px 4px 0;
+    overflow: hidden;
+  }
+
+  .cardproj__preview-datas:hover ~ .cardproj__thumbnail > .cardproj__ilustration {
+    transform-origin: center;
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .cardproj__preview-datas:hover,
+  .cardproj__preview-datas:focus,
+  /*.project__item:focus .cardproj__preview-datas,*/
+  .cardproj__preview-datas:focus-within {
+    opacity: 1;
+  }
+}

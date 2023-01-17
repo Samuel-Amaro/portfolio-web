@@ -1,0 +1,42 @@
+.skills{
+    width: 100%;
+}
+
+.tools{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    gap: 20px;
+    align-items: center;
+}
+
+.tools__Icon-Tool{
+    font-size: 3rem;
+}
+
+.tools__item{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tools__content{
+    display: block;
+    font-family: "Saira Extra Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.workflow{
+    list-style: none;
+    margin-left: 16px;
+}
+
+.tools__Icon-Tool_Mediun{
+    fill: var(--text);
+    width: 48px;
+    height: 48px;
+}
