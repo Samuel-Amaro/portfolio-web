@@ -2,15 +2,18 @@ import Section from "../Section";
 import DataProjects from "../../data/projects.json";
 import CardProject from "./Card";
 import "./projects.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ProjectContent from "./Content";
 import ProjectLinks from "./Links";
 import Heading2 from "../Headings/Heading2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Projects(props) {
-  const [btnIsValid, setBtnIsValid] = useState(true);
+  //const [btnIsValid, setBtnIsValid] = useState(true);
   //começar a carregar dos projetos mais recentes para os mais antigos
   //reordenando os objetos
+  console.log(DataProjects.projects);
   const listCardProjects = DataProjects.projects
     .sort((a, b) => b.id - a.id)
     .map((project) => {
@@ -34,6 +37,7 @@ export default function Projects(props) {
                 name={project.name}
                 repository={project.repository}
                 url={project.url}
+                description={project.description}
               />
               <ProjectContent
                 title={project.name}
@@ -46,14 +50,63 @@ export default function Projects(props) {
       );
     });
 
+  //TODO: ARRUMAR A FORMA COMO CARREGAR E OCULTAR NOVOS PROJETOS USANDO UMA LOGICA SIMPLES E BEM ESCRITA
+  //TODO: MOSTRAR UMA MENSAGEM DE QUANDO TODOS PROJETOS ESTIVEREM CARREGADOS, OU NÃO TEM COMO OCULTAR MAIS PROJETOS
+  //TODO: LIMITAR O TAMANHO DO CONTAINER, DE PROJECTS
+
   //obtem os 3 primeiros cards de projeto iniciais
   const [listProjectsView, setListProjectView] = useState(
     listCardProjects.slice(0, 3)
   );
 
+  function loadMore(startIndex, endIndex) {
+    if (listProjectsView.length < listCardProjects.length) {
+      setListProjectView([
+        ...listProjectsView,
+        ...listCardProjects.slice(startIndex, endIndex),
+      ]);
+    }
+  }
+
+  function loadMinus(startIndex, endIndex) {
+    setListProjectView([...listCardProjects.slice(startIndex, endIndex)]);
+  }
+
+  /*function copyArr(startIndex, endIndex, step) {
+    for (let i = startIndex; i < endIndex; i += step) {
+      setListProjectView([...listProjectsView, listCardProjects[i]]);
+    }
+  }*/
+
   function handleButtons(event) {
-    let startIndex, endCurrentIndex, endIndex;
-    if (listProjectsView.length - 1 === listCardProjects.length - 1) {
+    let startIndex, endIndex;
+    //carrega mais projetos
+    if (event.currentTarget.dataset.name.toLowerCase() === "btn-more") {
+      startIndex = listProjectsView.length;
+      endIndex = startIndex + 3;
+      if (endIndex < listCardProjects.length - 1) {
+        //posso carregar mais três
+        loadMore(startIndex, endIndex);
+      } else {
+        //posso carregar quantos então?
+        let dif = listCardProjects.length - listProjectsView.length;
+        if (dif > 0) {
+          loadMore(startIndex, listProjectsView.length + dif);
+        }
+      }
+    } else if (event.currentTarget.dataset.name.toLowerCase() === "btn-minus") {
+      //carrega menos projetos
+      startIndex = 0;
+      endIndex = listProjectsView.length - 3;
+      //posso diminuir mais três
+      if (endIndex > 3) {
+        loadMinus(startIndex, endIndex);
+      }
+    } else {
+      //carrega todos projetos
+      setListProjectView([...listCardProjects.slice()]);
+    }
+    /*if (listProjectsView.length - 1 === listCardProjects.length - 1) {
       //desativa button para não carregar mais
       setBtnIsValid(false);
     } else {
@@ -78,7 +131,7 @@ export default function Projects(props) {
         //desativa button para não carregar mais
         setBtnIsValid(false);
       }
-    }
+    }*/
   }
 
   return (
@@ -104,32 +157,59 @@ export default function Projects(props) {
           <button
             className="projects__button projects__button--more"
             type="button"
-            value="Carregar Mais"
-            onClick={(event) => handleButtons(event)}
-            disabled={btnIsValid ? "" : "disabled"}
+            onPointerDown={(event) => handleButtons(event)}
+            /*disabled={btnIsValid ? "" : "disabled"}*/
             aria-label="Carregar Mais Projetos"
-            title={
+            title="Carregar Mais Projetos" /*{
               btnIsValid
                 ? "Carregar Mais Projetos"
                 : "Todos Projetos ja estão carregados"
-            }
+            }*/
+            data-name="btn-more"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                handleButtons(event);
+              }
+            }}
           >
-            Carregar Mais
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+          <button
+            className="projects__button projects__button--minus"
+            type="button"
+            onPointerDown={(event) => handleButtons(event)}
+            /*disabled={btnIsValid ? "" : "disabled"}*/
+            aria-label="Ocultar Projetos"
+            title="Ocultar mais projetos"
+            data-name="btn-minus"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                handleButtons(event);
+              }
+            }}
+          >
+            <FontAwesomeIcon icon={faMinus} />
           </button>
           <button
             className="projects__button projects__button--all"
             type="button"
             value="Carregar Tudo"
-            onClick={(event) => handleButtons(event)}
-            disabled={btnIsValid ? "" : "disabled"}
+            onPointerDown={(event) => handleButtons(event)}
+            /*disabled={btnIsValid ? "" : "disabled"}*/
             aria-label="Carregar Todos Projetos"
-            title={
+            title="Carregar Todos Projetos" /*{
               btnIsValid
                 ? "Carregar Todos Projetos"
                 : "Todos Projetos ja estão carregados"
-            }
+            }*/
+            data-name="btn-all"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                handleButtons(event);
+              }
+            }}
           >
-            Carregar Tudo
+            All
           </button>
         </div>
       </div>

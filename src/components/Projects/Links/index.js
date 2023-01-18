@@ -9,6 +9,7 @@ export default function ProjectLinks(props) {
           rel="noreferrer"
           className="project-links__link project-links__link-repository"
           aria-label="Link para Visualizar Repositorio Do Projeto"
+          title="Link para Visualizar Repositório Do Projeto"
         >
           Visualizar Código
         </a>
@@ -18,6 +19,7 @@ export default function ProjectLinks(props) {
           rel="noreferrer"
           className="project-links__link project-links__link-liveresult"
           aria-label="Link para visualizar Projeto ao Vivo"
+          title="Link para visualizar Projeto ao Vivo"
         >
           Visualizar Projeto
         </a>
