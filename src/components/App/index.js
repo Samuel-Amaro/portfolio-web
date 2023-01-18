@@ -2,31 +2,27 @@ import NavBar from "../NavBar";
 import Content from "../Content";
 import Footer from "../Footer";
 import React, { useState, useRef } from "react";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import "./app.css";
 import ButtonPageUp from "../ButtonPageUp";
 import { ThemeContext } from "../../context/ThemeContext";
 
-
 function App() {
   const [theme, setTheme] = useLocalStorage("themeOption", "light");
-  const [optionTheme, setOptionTheme] = useState({
-    theme:
-      localStorage.getItem("themeOption") === null
-        ? "light"
-        : localStorage.getItem("themeOption"),
+  const [stateContext, setStateContext] = useState({
+    theme: theme,
     toggleTheme: toggleTheme,
   });
 
   function toggleTheme(themeOption) {
-    setOptionTheme((previosState) => {
+    setStateContext((previosState) => {
       return {
         ...previosState,
         theme: themeOption,
         toggleTheme: previosState.toggleTheme,
       };
     });
-    localStorage.setItem("themeOption", themeOption);
+    setTheme(themeOption);
   }
 
   //criar as refs para as sections
@@ -38,7 +34,7 @@ function App() {
   const refSectionProjects = useRef(null);
 
   return (
-    <ThemeContext.Provider value={optionTheme}>
+    <ThemeContext.Provider value={stateContext}>
       <ThemeContext.Consumer>
         {({ theme, toggleTheme }) => (
           <main className="main" data-theme={theme}>

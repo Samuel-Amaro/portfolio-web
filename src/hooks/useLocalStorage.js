@@ -1,5 +1,3 @@
-//TODO: CONSTRUIR UM HOOK CUSTOMIZADO QUE OBTENHA E ATUALIZE DADOS DO THEME SELECIONADO
-
 import { useEffect, useState } from "react";
 
 function getValue(key, initialValue) {
