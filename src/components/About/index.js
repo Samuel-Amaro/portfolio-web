@@ -97,6 +97,7 @@ export default function About(props) {
           download="curriculo"
           type="application/pdf"
           aria-label="Link para Curriculo de Samuel"
+          title="Link para Curriculo de Samuel"
         >
           Currículo(PDF)
         </a>

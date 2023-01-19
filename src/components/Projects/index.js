@@ -2,18 +2,24 @@ import Section from "../Section";
 import DataProjects from "../../data/projects.json";
 import CardProject from "./Card";
 import "./projects.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProjectContent from "./Content";
 import ProjectLinks from "./Links";
 import Heading2 from "../Headings/Heading2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
+//TODO: LIMITAR ESPAÇO ONDE PROJETOS SÃO MOSTRADOS, CRIAR UM CONTEINER
+//TODO: PERSONALIZAR SCROLLBAR
+//TODO: NOTIFICAR USUARIOS QUANDO NOVOS PROJETOS FOREM CARREGADOS DENTRO DO ESPAÇO RESERVADO
+//TODO: LIMITAR ESPAÇO ONDE OS PROJETOS SÃO MOSTRADOS E NOTIFICAR QUANDO NOVOS FOREM CARREGADOS.
+//TODO: TENTAR MOSTRA DATA DE ULTIMA MODIFICAÇÃO/CRIAÇÃO DO PROJETO - OPCIONAL
+
 export default function Projects(props) {
-  //const [btnIsValid, setBtnIsValid] = useState(true);
+  const refElemListProjects = useRef(0);
+
   //começar a carregar dos projetos mais recentes para os mais antigos
   //reordenando os objetos
-  console.log(DataProjects.projects);
   const listCardProjects = DataProjects.projects
     .sort((a, b) => b.id - a.id)
     .map((project) => {
@@ -50,10 +56,6 @@ export default function Projects(props) {
       );
     });
 
-  //TODO: ARRUMAR A FORMA COMO CARREGAR E OCULTAR NOVOS PROJETOS USANDO UMA LOGICA SIMPLES E BEM ESCRITA
-  //TODO: MOSTRAR UMA MENSAGEM DE QUANDO TODOS PROJETOS ESTIVEREM CARREGADOS, OU NÃO TEM COMO OCULTAR MAIS PROJETOS
-  //TODO: LIMITAR O TAMANHO DO CONTAINER, DE PROJECTS
-
   //obtem os 3 primeiros cards de projeto iniciais
   const [listProjectsView, setListProjectView] = useState(
     listCardProjects.slice(0, 3)
@@ -68,15 +70,23 @@ export default function Projects(props) {
     }
   }
 
+  //TODO: SCROLL NÃO ESTA MOVENDO CERTO, JUNTO COM A ADIÇÃO DE NOVOS PROJETOS NO CONTEINER, ARRUMAR
+  function moveScroll() {
+    console.log(refElemListProjects.current.scrollHeight);
+    //espera carregar todos componentes e mover scroll
+    refElemListProjects.current.scrollBy(
+      0,
+      refElemListProjects.current.scrollHeight
+    );
+  }
+
   function loadMinus(startIndex, endIndex) {
     setListProjectView([...listCardProjects.slice(startIndex, endIndex)]);
   }
 
-  /*function copyArr(startIndex, endIndex, step) {
-    for (let i = startIndex; i < endIndex; i += step) {
-      setListProjectView([...listProjectsView, listCardProjects[i]]);
-    }
-  }*/
+  useEffect(() => {
+    moveScroll();
+  }, []);
 
   function handleButtons(event) {
     let startIndex, endIndex;
@@ -99,7 +109,7 @@ export default function Projects(props) {
       startIndex = 0;
       endIndex = listProjectsView.length - 3;
       //posso diminuir mais três
-      if (endIndex > 3) {
+      if (endIndex >= 2) {
         loadMinus(startIndex, endIndex);
       }
     } else {
@@ -134,10 +144,38 @@ export default function Projects(props) {
     }*/
   }
 
+  //a cada projeto add move o scroll
+  /*useEffect(() => {
+    if (document.querySelector(".projects__list").scrollTop !== 0) {
+      console.log(
+        "ScrollHeight: " +
+          document.querySelector(".projects__list").scrollHeight
+      );
+      console.log(
+        "ScrollTop: " + document.querySelector(".projects__list").scrollTop
+      );
+      console.log(
+        "offSetHeight: " +
+          document.querySelector(".projects__list").offsetHeight
+      );
+      console.log(
+        refElemListProjects.current.scrollHeight +
+          refElemListProjects.current.scrollTop
+      );
+      document.querySelector(".projects__list").scrollTop =
+        document.querySelector(".projects__list").scrollHeight;
+      console.log(refElemListProjects.current.scrollTop);
+    }
+  });
+  */
+
   return (
-    <Section nameSection="projects" refSection={props.refSectionProjects}>
+    <Section
+      nameSection="projects"
+      refSection={props.refSectionProjects}
+      className="section__projects"
+    >
       <div className="projects">
-        {/*<h2 className="section__heading-2">Projetos</h2>*/}
         <Heading2>Projetos</Heading2>
         <p className="projects__description">
           Portefólio, com projetos desenvolvidos para fins de prática em
@@ -146,6 +184,7 @@ export default function Projects(props) {
           sua respectiva implementação.
         </p>
         <ul
+          ref={refElemListProjects}
           className="projects__list"
           aria-live="polite"
           aria-atomic="true"
@@ -157,18 +196,17 @@ export default function Projects(props) {
           <button
             className="projects__button projects__button--more"
             type="button"
-            onPointerDown={(event) => handleButtons(event)}
-            /*disabled={btnIsValid ? "" : "disabled"}*/
+            onPointerDown={(event) => {
+              handleButtons(event);
+              moveScroll();
+            }}
             aria-label="Carregar Mais Projetos"
-            title="Carregar Mais Projetos" /*{
-              btnIsValid
-                ? "Carregar Mais Projetos"
-                : "Todos Projetos ja estão carregados"
-            }*/
+            title="Carregar Mais Projetos"
             data-name="btn-more"
             onKeyDown={(event) => {
               if (event.key === "Enter" || event.key === " ") {
                 handleButtons(event);
+                moveScroll();
               }
             }}
           >
@@ -178,7 +216,6 @@ export default function Projects(props) {
             className="projects__button projects__button--minus"
             type="button"
             onPointerDown={(event) => handleButtons(event)}
-            /*disabled={btnIsValid ? "" : "disabled"}*/
             aria-label="Ocultar Projetos"
             title="Ocultar mais projetos"
             data-name="btn-minus"
@@ -194,18 +231,17 @@ export default function Projects(props) {
             className="projects__button projects__button--all"
             type="button"
             value="Carregar Tudo"
-            onPointerDown={(event) => handleButtons(event)}
-            /*disabled={btnIsValid ? "" : "disabled"}*/
+            onPointerDown={(event) => {
+              handleButtons(event);
+              moveScroll();
+            }}
             aria-label="Carregar Todos Projetos"
-            title="Carregar Todos Projetos" /*{
-              btnIsValid
-                ? "Carregar Todos Projetos"
-                : "Todos Projetos ja estão carregados"
-            }*/
+            title="Carregar Todos Projetos"
             data-name="btn-all"
             onKeyDown={(event) => {
               if (event.key === "Enter" || event.key === " ") {
                 handleButtons(event);
+                moveScroll();
               }
             }}
           >
