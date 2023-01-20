@@ -151,6 +151,10 @@
   color: var(--hover-link);
 }
 
+.nav__icon{
+  display: inline-block;
+}
+
 @media screen and (min-width: 992px) {
   .navbar {
     width: 17rem;

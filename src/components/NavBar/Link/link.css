@@ -1,13 +1,22 @@
 .nav__link {
-  display: block;
+  display: flex;
   text-decoration: none;
   font-weight: 800;
   text-transform: uppercase;
   padding: 0.5rem 0;
   color: var(--shadow-button-menu_color-link);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
-.nav__link_active{
+.nav__link_active {
   color: #ffffff;
   opacity: 0.95;
+}
+
+@media screen and (min-width: 992px) {
+  .nav__link {
+    justify-content: center;
+  }
 }

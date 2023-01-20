@@ -8,8 +8,9 @@ export default function Link(props) {
         target="_self"
         rel="next"
         aria-label={props.label}
+        title={props.label}
       >
-        {props.text}
+        {props.children}
       </a>
     );
 }

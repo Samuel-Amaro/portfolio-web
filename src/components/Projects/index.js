@@ -7,20 +7,18 @@ import ProjectContent from "./Content";
 import ProjectLinks from "./Links";
 import Heading2 from "../Headings/Heading2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-//TODO: LIMITAR ESPAÇO ONDE PROJETOS SÃO MOSTRADOS, CRIAR UM CONTEINER
-//TODO: PERSONALIZAR SCROLLBAR
-//TODO: NOTIFICAR USUARIOS QUANDO NOVOS PROJETOS FOREM CARREGADOS DENTRO DO ESPAÇO RESERVADO
-//TODO: LIMITAR ESPAÇO ONDE OS PROJETOS SÃO MOSTRADOS E NOTIFICAR QUANDO NOVOS FOREM CARREGADOS.
-//TODO: TENTAR MOSTRA DATA DE ULTIMA MODIFICAÇÃO/CRIAÇÃO DO PROJETO - OPCIONAL
+//TODO: ADD ESTILO DO LINK VER TUDO APOS OS PROJETOS
+//TODO: ARRUMAR FORMA DE DELPOY PARA QUE POSSAMOS USAR REACT-ROUTER BROWSER ROUTER NO GITHUB PAGES
 
 export default function Projects(props) {
-  const refElemListProjects = useRef(0);
+  //const refElemListProjects = useRef(0);
 
   //começar a carregar dos projetos mais recentes para os mais antigos
   //reordenando os objetos
-  const listCardProjects = DataProjects.projects
+  /*const listCardProjects = DataProjects.projects
     .sort((a, b) => b.id - a.id)
     .map((project) => {
       //item project
@@ -55,13 +53,14 @@ export default function Projects(props) {
         </li>
       );
     });
+    */
 
   //obtem os 3 primeiros cards de projeto iniciais
-  const [listProjectsView, setListProjectView] = useState(
+  /*const [listProjectsView, setListProjectView] = useState(
     listCardProjects.slice(0, 3)
-  );
+  );*/
 
-  function loadMore(startIndex, endIndex) {
+  /*function loadMore(startIndex, endIndex) {
     if (listProjectsView.length < listCardProjects.length) {
       setListProjectView([
         ...listProjectsView,
@@ -73,7 +72,6 @@ export default function Projects(props) {
   //TODO: SCROLL NÃO ESTA MOVENDO CERTO, JUNTO COM A ADIÇÃO DE NOVOS PROJETOS NO CONTEINER, ARRUMAR
   function moveScroll() {
     console.log(refElemListProjects.current.scrollHeight);
-    //espera carregar todos componentes e mover scroll
     refElemListProjects.current.scrollBy(
       0,
       refElemListProjects.current.scrollHeight
@@ -87,8 +85,9 @@ export default function Projects(props) {
   useEffect(() => {
     moveScroll();
   }, []);
+  */
 
-  function handleButtons(event) {
+  /*function handleButtons(event) {
     let startIndex, endIndex;
     //carrega mais projetos
     if (event.currentTarget.dataset.name.toLowerCase() === "btn-more") {
@@ -116,7 +115,9 @@ export default function Projects(props) {
       //carrega todos projetos
       setListProjectView([...listCardProjects.slice()]);
     }
-    /*if (listProjectsView.length - 1 === listCardProjects.length - 1) {
+
+    //!CODE ANTIGO NÃO USAR ESTA PARTE 
+    if (listProjectsView.length - 1 === listCardProjects.length - 1) {
       //desativa button para não carregar mais
       setBtnIsValid(false);
     } else {
@@ -141,8 +142,9 @@ export default function Projects(props) {
         //desativa button para não carregar mais
         setBtnIsValid(false);
       }
-    }*/
-  }
+    }
+    //!FIM DO CODE ANTIGO
+  }*/
 
   //a cada projeto add move o scroll
   /*useEffect(() => {
@@ -184,16 +186,56 @@ export default function Projects(props) {
           sua respectiva implementação.
         </p>
         <ul
-          ref={refElemListProjects}
+          /*ref={refElemListProjects}*/
           className="projects__list"
           aria-live="polite"
           aria-atomic="true"
           aria-label="Lista Projetos Concluidos"
         >
-          {listProjectsView}
+          {DataProjects.projects
+            .sort((a, b) => b.id - a.id)
+            .filter((project) => {
+              return project.id > 27;
+            })
+            .map((project) => {
+              //item project
+              return (
+                <li
+                  className="projects__item"
+                  key={project.id}
+                  tabIndex="0"
+                  aria-label={
+                    "Projeto " +
+                    project.name +
+                    " Implementado com as tecnologias " +
+                    project.tecnologys.join(",")
+                  }
+                >
+                  {
+                    <>
+                      <CardProject
+                        sourceImage={`${process.env.PUBLIC_URL}/images/${project.image}`}
+                        name={project.name}
+                        repository={project.repository}
+                        url={project.url}
+                        description={project.description}
+                      />
+                      <ProjectContent
+                        title={project.name}
+                        tecnologys={project.tecnologys}
+                      />
+                      <ProjectLinks
+                        url={project.url}
+                        repository={project.repository}
+                      />
+                    </>
+                  }
+                </li>
+              );
+            })}
         </ul>
         <div className="projects__buttons">
-          <button
+          {/*<button
             className="projects__button projects__button--more"
             type="button"
             onPointerDown={(event) => {
@@ -246,7 +288,16 @@ export default function Projects(props) {
             }}
           >
             All
-          </button>
+          </button>*/}
+          <Link
+            to="/projects"
+            title="Ir para página projetos"
+            aria-label="Ir para página projetos"
+            target="_self"
+            rel="next"
+          >
+            Ver Tudo <FontAwesomeIcon icon={faArrowRight} />
+          </Link>
         </div>
       </div>
     </Section>

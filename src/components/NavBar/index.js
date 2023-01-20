@@ -4,7 +4,7 @@ import Link from "./Link";
 import { useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faUser, faFile, faUserGraduate, faClipboardList, faList, faCode} from "@fortawesome/free-solid-svg-icons";
 import {faSun, faMoon} from "@fortawesome/free-regular-svg-icons"
 
 export default function NavBar(props) {
@@ -132,7 +132,9 @@ export default function NavBar(props) {
               text="sobre"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="about"
-            />
+            >
+              <FontAwesomeIcon icon={faUser} className="nav__icon" /> sobre
+            </Link>
           </li>
           <li
             className="nav__item"
@@ -145,7 +147,10 @@ export default function NavBar(props) {
               text="experiência"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="experience"
-            />
+            >
+              <FontAwesomeIcon icon={faFile} className="nav__icon" />{" "}
+              experiência
+            </Link>
           </li>
           <li
             className="nav__item"
@@ -158,7 +163,10 @@ export default function NavBar(props) {
               text="educação"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="education"
-            />
+            >
+              <FontAwesomeIcon icon={faUserGraduate} className="nav__icon" />{" "}
+              educação
+            </Link>
           </li>
           <li
             className="nav__item"
@@ -171,7 +179,10 @@ export default function NavBar(props) {
               text="skills"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="skills"
-            />
+            >
+              <FontAwesomeIcon icon={faClipboardList} className="nav__icon" />{" "}
+              skills
+            </Link>
           </li>
           <li
             className="nav__item"
@@ -184,7 +195,10 @@ export default function NavBar(props) {
               text="interesses"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="interesses"
-            />
+            >
+              <FontAwesomeIcon icon={faList} className="nav__icon" />
+              interesses
+            </Link>
           </li>
           <li
             className="nav__item"
@@ -197,7 +211,10 @@ export default function NavBar(props) {
               text="projetos"
               menuItemActiveScroll={menuItemActiveScroll}
               nameSectionMenu="projects"
-            />
+            >
+              <FontAwesomeIcon icon={faCode} className="nav__icon" />
+              projetos
+            </Link>
           </li>
         </ul>
       </nav>

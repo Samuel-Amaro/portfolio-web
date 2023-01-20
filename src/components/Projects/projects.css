@@ -64,16 +64,17 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 40px;
-    max-height: 500px;
+    /*max-height: 500px;
     overflow-y: scroll;
-    /*firefox supoort*/
+    firefox supoort
     background-color: var(--bg-list-projects);
     scrollbar-width: thin;
     scrollbar-color: var(--bg-thumb-scroll) var(--bg-scrollbar);
+    */
   }
 
   /*webkit browsers*/
-  .projects__list::-webkit-scrollbar {
+  /*.projects__list::-webkit-scrollbar {
     width: 0.5rem;
   }
 
@@ -95,6 +96,7 @@
   .projects__item {
     max-width: none;
   }
+  */
 }
 
 @media screen and (min-width: 992px) {
@@ -102,7 +104,8 @@
     grid-template-columns: repeat(1, minmax(min-content, 548px));
     column-gap: 20px;
     row-gap: 40px;
-    max-height: 540px;
+    /*max-height: 540px;
+    */
   }
 }
 
