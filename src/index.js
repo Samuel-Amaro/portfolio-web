@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './components/App';
-import Projects from './routers/Projects';
 import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
-
+import Projects from "./routers/Projects";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
     path: "/projects",
     element: <Projects />
   }
-])
+]);
 
 ReactDOM.createRoot(document.querySelector(".root")).render(
   <React.StrictMode>

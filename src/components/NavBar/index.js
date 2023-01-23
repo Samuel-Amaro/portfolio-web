@@ -1,11 +1,19 @@
 import "./navbar.css";
 import profile from "../../assets/images/profile.jfif";
 import Link from "./Link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faUser, faFile, faUserGraduate, faClipboardList, faList, faCode} from "@fortawesome/free-solid-svg-icons";
-import {faSun, faMoon} from "@fortawesome/free-regular-svg-icons"
+import {
+  faBars,
+  faUser,
+  faFile,
+  faUserGraduate,
+  faClipboardList,
+  faList,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 
 export default function NavBar(props) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
@@ -32,17 +40,21 @@ export default function NavBar(props) {
   }
 
   function toggleStatus(event) {
-    let state = '';
-    if(event.currentTarget.getAttribute("aria-checked") === 'true') {
-     state = 'false'; 
-    }else{
-      state = 'true';
+    let state = "";
+    if (event.currentTarget.getAttribute("aria-checked") === "true") {
+      state = "false";
+    } else {
+      state = "true";
     }
     event.currentTarget.setAttribute("aria-checked", state);
-    
   }
 
-  window.addEventListener("scroll", onActiveItemMenuScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", onActiveItemMenuScroll);
+    return () => {
+      window.removeEventListener("scroll", onActiveItemMenuScroll);
+    };
+  }, []);
 
   function onActiveItemMenuScroll(event) {
     refSections.forEach((refSection) => {

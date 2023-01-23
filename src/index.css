@@ -91,6 +91,12 @@
   --text-color-link-footer: var(--bs-gray-100);
   --text-color-hover-link-footer: var(--bs-gray-300);
   --text-tecnology: var(--bs-gray-600);
+  /*other variables*/
+  --shadow-btn-home: rgba(0, 0, 0, 0.2);
+  --icon-home: var(--bs-orange);
+  --icon-home-active: var(--bs-gray-100);
+  --bg-btn-home-active: var(--bs-orange);
+  --bg-color-select: var(--bs-orange);
 }
 
 html {
@@ -131,15 +137,19 @@ h6 {
   line-height: 1.5;
 }
 
-body {
-  padding-top: 3.22rem;
+.body {
   color: var(--text);
   background-color: var(--bg-body);
   position: relative;
 }
 
+.main{
+  padding-top: 3.22rem;
+  width: 100%;
+}
+
 @media screen and (min-width: 992px) {
-  body {
+  .main {
     padding: 0 0 0 17rem;
   }
 }
@@ -165,4 +175,7 @@ body {
   --text-btns: var(--bs-gray-200);
   --bg-list-projects: #0A0B0D;
   --bg-scrollbar: var(--bs-gray-900);
+  --shadow-btn-home:  var(--color-05);
+  --icon-home-active: var(--bs-gray-100);
+  --bg-btn-home-active: #974a2d;
 }

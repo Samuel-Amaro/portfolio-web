@@ -1,7 +1,7 @@
 import NavBar from "../NavBar";
 import Content from "../Content";
 import Footer from "../Footer";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./app.css";
 import ButtonPageUp from "../ButtonPageUp";
@@ -25,6 +25,10 @@ function App() {
     setTheme(themeOption);
   }
 
+  useEffect(() => {
+    document.querySelector("body").dataset.theme = theme;
+  }, [theme]);
+
   //criar as refs para as sections
   const refSectionAbout = useRef(null);
   const refSectionExperience = useRef(null);
@@ -37,7 +41,7 @@ function App() {
     <ThemeContext.Provider value={stateContext}>
       <ThemeContext.Consumer>
         {({ theme, toggleTheme }) => (
-          <main className="main" data-theme={theme}>
+          <main className="main" /*data-theme={theme}*/>
             <NavBar
               refSectionAbout={refSectionAbout}
               refSectionExperience={refSectionExperience}
