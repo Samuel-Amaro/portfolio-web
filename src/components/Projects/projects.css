@@ -24,26 +24,47 @@
   max-width: 480px;
 }
 
-.projects__buttons {
+/*.projects__buttons {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
   transition: all 0.4s ease;
-}
+}*/
 
 .projects__button {
-  display: block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   appearance: none;
   border: none;
   font-family: inherit;
   background-color: var(--bg-btns);
   color: var(--text-btns);
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
+  padding: 0.2rem 0.3rem 0.2rem 1rem;
+  border-radius: 50px;
+  width: 145px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.projects__wrapper-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-btn-icon-all-projects);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.projects__icon-button{
+  display: block;
 }
 
 .projects__button:disabled {
@@ -56,6 +77,13 @@
   background-color: var(--hover-link-social_link-curriculo_buttons-load);
   cursor: pointer;
   transition: background-color 0.5s;
+  outline: 2px solid transparent;
+}
+
+.projects__button:hover .projects__wrapper-icon,
+.projects__button:focus .projects__wrapper-icon{
+  background-color: var(--bs-gray-700);
+  transition: all 0.35s ease;
 }
 
 @media screen and (min-width: 768px) {

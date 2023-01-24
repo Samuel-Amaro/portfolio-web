@@ -4,7 +4,7 @@ export default function Footer() {
     return (
       <footer className="footer">
         <p className="description">
-          © 2022 - Layout original{" "}
+          © 2023 - Layout original{" "}
           <a
             href="https://startbootstrap.com/theme/resume"
             target="_blank"

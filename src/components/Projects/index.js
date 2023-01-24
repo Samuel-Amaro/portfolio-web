@@ -234,8 +234,8 @@ export default function Projects(props) {
               );
             })}
         </ul>
-        <div className="projects__buttons">
-          {/*<button
+        {/*<div className="projects__buttons">
+          <button
             className="projects__button projects__button--more"
             type="button"
             onPointerDown={(event) => {
@@ -288,17 +288,35 @@ export default function Projects(props) {
             }}
           >
             All
-          </button>*/}
+          </button>
           <Link
             to="/projects"
             title="Ir para página projetos"
             aria-label="Ir para página projetos"
             target="_self"
             rel="next"
+            className="projects__button"
           >
             Ver Tudo <FontAwesomeIcon icon={faArrowRight} />
           </Link>
         </div>
+        */}
+        <Link
+          to="/projects"
+          title="Ir para página projetos"
+          aria-label="Ir para página projetos"
+          target="_self"
+          rel="next"
+          className="projects__button"
+        >
+          Ver Tudo{" "}
+          <span className="projects__wrapper-icon">
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="projects__icon-button"
+            />
+          </span>
+        </Link>
       </div>
     </Section>
   );

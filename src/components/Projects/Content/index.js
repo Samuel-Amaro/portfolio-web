@@ -1,8 +1,10 @@
+import classNames from "classnames";
 import "./projectcontent.css";
 
 export default function ProjectContent(props) {
+    const className = classNames("project-pontent", props.className);
     return (
-      <div className="project-pontent">
+      <div className={className}>
         <h3 className="project-content__title">{props.title}</h3>
         <ul className="project-content__list-tecnologys">
             {props.tecnologys.map((tecnology, index) => {

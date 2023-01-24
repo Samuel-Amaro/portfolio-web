@@ -97,6 +97,15 @@
   --icon-home-active: var(--bs-gray-100);
   --bg-btn-home-active: var(--bs-orange);
   --bg-color-select: var(--bs-orange);
+  --bg-select: #f5f5f5;
+  --border-color-select-input: var(--bs-gray-600); 
+  --box-shadow-focus: var(--bs-gray-300);
+  --bg-select-combo-menu: #f5f5f5;
+  --color-select-option-current: #0067b8;
+  --bg-select-hover-option: rgb(0 0 0 / 10%);
+  --border-menu-select: var(--bs-gray-700);
+  --color-border-input: var(--bs-gray-400);
+  --color-btn-icon-all-projects: var(--bs-orange);
 }
 
 html {
@@ -178,4 +187,11 @@ h6 {
   --shadow-btn-home:  var(--color-05);
   --icon-home-active: var(--bs-gray-100);
   --bg-btn-home-active: #974a2d;
+  --bg-select: transparent;
+  --border-color-select-input: var(--bs-gray-300);
+  --box-shadow-focus: var(--bs-gray-700);
+  --bg-select-combo-menu: var(--bs-gray-900);
+  --color-select-option-current: var(--color-05);
+  --bg-select-hover-option: #974a2d;
+  --border-menu-select: var(--bs-gray-200);
 }

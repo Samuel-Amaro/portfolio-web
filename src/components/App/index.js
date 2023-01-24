@@ -6,9 +6,10 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 import "./app.css";
 import ButtonPageUp from "../ButtonPageUp";
 import { ThemeContext } from "../../context/ThemeContext";
+import useTheme from "../../hooks/useTheme";
 
 function App() {
-  const [theme, setTheme] = useLocalStorage("themeOption", "light");
+  /*const [theme, setTheme] = useLocalStorage("themeOption", "light");
   const [stateContext, setStateContext] = useState({
     theme: theme,
     toggleTheme: toggleTheme,
@@ -28,6 +29,8 @@ function App() {
   useEffect(() => {
     document.querySelector("body").dataset.theme = theme;
   }, [theme]);
+  */
+ const [theme, toggleTheme, stateContext] = useTheme();
 
   //criar as refs para as sections
   const refSectionAbout = useRef(null);
