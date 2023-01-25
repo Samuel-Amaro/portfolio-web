@@ -17,16 +17,14 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
  - CSS Grid
  - Mobile-first workflow
  - RWD(Responsive Web Design)
- - JavaScript programming language
- - ReactJS Library
-    - Hooks useState
+ - JavaScript programming language(ES6+)
+ - React.JS Library
+    - Hooks 
     - Context API
+    - React router-dom-library
  - NPM
- - Media Querys CSS
- - DOM JS
  - Normalize CSS - [Normalize](https://necolas.github.io/normalize.css/) - Reset CSS
  - Methodology BEM(Block Element Modifier) - [BEM](http://getbem.com/introduction/) - Methodology
- - CSS properties animations
 
 ### Layout/Theme Original
 
@@ -70,3 +68,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 The run:
 
 ``` npm run deploy ```
+
+### Como Fazer Deploy de SPAs em GitHubPages
+
+ - Guia Deploy SPAs GitHub Pages - [Guia](https://github.com/rafgraph/spa-github-pages)
