@@ -131,8 +131,20 @@ export default function Index() {
             </form>
             {projects.length > 0 ? (
               <>
-                <p className="message__info">{projects.length} itens</p>
-                <ul className="listprojects" aria-label="Lista de projetos">
+                <p
+                  className="message__info"
+                  aria-label="Lista de projetos"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  {projects.length} itens
+                </p>
+                <ul
+                  className="listprojects"
+                  aria-label="Lista de projetos"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
                   {projects.map((project) => {
                     return (
                       <li

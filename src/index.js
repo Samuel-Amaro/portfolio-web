@@ -3,18 +3,25 @@ import ReactDOM from 'react-dom/client';
 import App from './components/App';
 import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import Projects from "./routers/Projects";
+import ErrorPage from "./routers/ErrorPage";
 import "./index.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "/projects",
+      element: <Projects />,
+    },
+  ],
   {
-    path: "/",
-    element: <App />
-  },
-  {
-    path: "/projects",
-    element: <Projects />
+    basename: "/portfolio-web",
   }
-]);
+);
 
 ReactDOM.createRoot(document.querySelector(".root")).render(
   <React.StrictMode>
