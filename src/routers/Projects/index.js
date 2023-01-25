@@ -11,21 +11,60 @@ import ProjectContent from "../../components/Projects/Content";
 import ProjectLinks from "../../components/Projects/Links";
 import Heading2 from "../../components/Headings/Heading2";
 import Select from "../../components/Select";
-import "./index.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import useTheme from "../../hooks/useTheme";
+import "./index.css";
 
 export default function Index() {
   const optionsSelect = [
-    "React",
-    "HTML-CSS-JS Vanilla",
+    "All",
+    "React.JS",
+    "HTML",
+    "CSS",
+    "JavaScript",
     "PHP",
     "JAVA",
-    "JavaScript",
-    "CSS",
     "Typescript",
+    "Bem",
   ];
+
+  const [projects, setProjects] = useState(DataProjects.projects);
+  const [search, setSearch] = useState("");
+
+  function filterProjects(filter = { filter: "All", by: "tecnologys" }) {
+    setProjects(
+      DataProjects.projects
+        .sort((a, b) => b.id - a.id)
+        .filter((project) => {
+          if (filter.by === "tecnologys") {
+            if (filter.filter.toLowerCase() === "all") {
+              return true;
+            }
+            return project.tecnologys
+              .map((tecnologys) => {
+                return tecnologys.toLowerCase();
+              })
+              .includes(filter.filter.toLowerCase());
+          } else if (filter.by === "name") {
+            if (project.name.toLowerCase().match(filter.filter.toLowerCase())) {
+              return true;
+            }
+          } else {
+            return true;
+          }
+        })
+    );
+  }
+
+  function handleChangeInput(event) {
+    if (event.target.value !== "") {
+      filterProjects({ filter: event.target.value, by: "name" });
+    } else {
+      filterProjects({ filter: "", by: "" });
+    }
+    setSearch(event.target.value);
+  }
 
   const [theme, toggleTheme, stateContext] = useTheme();
 
@@ -75,58 +114,71 @@ export default function Index() {
                       className="formsearch__input"
                       placeholder="Pesquise um projeto..."
                       id="search"
+                      onChange={(event) => {
+                        handleChangeInput(event);
+                      }}
+                      value={search}
                     />
                   </div>
                 </div>
                 <div className="formsearch__wrapper-select">
-                  <Select optionsSelect={optionsSelect} />
+                  <Select
+                    optionsSelect={optionsSelect}
+                    filterProjects={filterProjects}
+                  />
                 </div>
               </div>
             </form>
-            <ul className="listprojects" aria-label="Lista de projetos">
-              {DataProjects.projects
-                .sort((a, b) => b.id - a.id)
-                .map((project) => {
-                  //item project
-                  return (
-                    <li
-                      className="projects__item"
-                      key={project.id}
-                      tabIndex="0"
-                      aria-label={
-                        "Projeto " +
-                        project.name +
-                        " Implementado com as tecnologias " +
-                        project.tecnologys.join(",")
-                      }
-                    >
-                      {
-                        <>
-                          <CardProject
-                            sourceImage={`${process.env.PUBLIC_URL}/images/${project.image}`}
-                            name={project.name}
-                            repository={project.repository}
-                            url={project.url}
-                            description={project.description}
-                          />
-                          <ProjectContent
-                            title={project.name}
-                            tecnologys={project.tecnologys}
-                            className="listproject__content"
-                          />
-                          <p className="listprojects__description">
-                            {project.description}
-                          </p>
-                          <ProjectLinks
-                            url={project.url}
-                            repository={project.repository}
-                          />
-                        </>
-                      }
-                    </li>
-                  );
-                })}
-            </ul>
+            {projects.length > 0 ? (
+              <>
+                <p className="message__info">{projects.length} itens</p>
+                <ul className="listprojects" aria-label="Lista de projetos">
+                  {projects.map((project) => {
+                    return (
+                      <li
+                        className="projects__item"
+                        key={project.id}
+                        tabIndex="0"
+                        aria-label={
+                          "Projeto " +
+                          project.name +
+                          " Implementado com as tecnologias " +
+                          project.tecnologys.join(",")
+                        }
+                      >
+                        {
+                          <>
+                            <CardProject
+                              sourceImage={`${process.env.PUBLIC_URL}/images/${project.image}`}
+                              name={project.name}
+                              repository={project.repository}
+                              url={project.url}
+                              description={project.description}
+                            />
+                            <ProjectContent
+                              title={project.name}
+                              tecnologys={project.tecnologys}
+                              className="listproject__content"
+                            />
+                            <p className="listprojects__description">
+                              {project.description}
+                            </p>
+                            <ProjectLinks
+                              url={project.url}
+                              repository={project.repository}
+                            />
+                          </>
+                        }
+                      </li>
+                    );
+                  })}
+                </ul>
+              </>
+            ) : (
+              <p className="message">
+                Não foi encontrado projetos com o filtro ou nome fornecido
+              </p>
+            )}
           </>
         )}
       </ThemeContext.Consumer>

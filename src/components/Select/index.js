@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./select.css";
 
 export default function Index(props) {
@@ -6,9 +6,11 @@ export default function Index(props) {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [ignoreBlur, setIgnoreBlur] = useState(false);
   const [optionSelected, setOptionSelected] = useState({
-    option: "Filtre Por Tecnologias",
+    option: "All",
     id: "",
   });
+  
+
   const selectActionsKey = {
     close: 0,
     closeSelect: 1,
@@ -30,8 +32,8 @@ export default function Index(props) {
 
   function handleOptionSelected(event) {
     setOptionSelected({
-      option: event.target.dataset.value,
-      id: event.target.id,
+      option: props.optionsSelect[event.target.dataset.value],
+      id: event.target.dataset.value,
     });
     refCombo.current.focus();
     setIsSelectOpen(false);
@@ -235,6 +237,10 @@ export default function Index(props) {
     }
   }
 
+  useEffect(() => {
+    props.filterProjects({ filter: optionSelected.option, by: "tecnologys" });
+  }, [optionSelected]);
+
   return (
     <>
       <label id="label-select" className="label">
@@ -308,7 +314,7 @@ export default function Index(props) {
                   // mas não queremos executar a ação padrão de desfoque do teclado
                   setIgnoreBlur(true);
                 }}
-                data-value={o.toLowerCase()}
+                data-value={index}
               >
                 {o}
               </div>

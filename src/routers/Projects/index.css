@@ -37,7 +37,7 @@
 /**form**/
 .formsearch {
   display: block;
-  margin: 0px 20px 50px 20px;
+  margin: 0px 20px 30px 20px;
 }
 
 .formsearch__group {
@@ -105,12 +105,20 @@
   margin: 0 20px 30px 20px;
 }
 
-.listproject__content{
-    margin: 0 0 10px 0;
+.listproject__content {
+  margin: 0 0 10px 0;
 }
 
-.listprojects__description{
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 0 20px 0;
+.listprojects__description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.message {
+  padding: 0 20px 0 20px;
+}
+
+.message__info {
+  padding: 0 20px 15px 20px;
 }
