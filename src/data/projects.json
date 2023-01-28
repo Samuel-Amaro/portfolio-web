@@ -21,11 +21,11 @@
         },
         {
           "id": 3,
-          "name": "Projeto TCC",
+          "name": "Software para Controle de Benefícios Sociais",
           "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "description": "Protejo de TCC, uma aplicação web cujo objetivo é resolver um problema pontual de distribuição de benefícios sociais durante a pandemia do (COVID-19), para as pessoas com menos condição financeira na cidade onde resido.",
-          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL", "Boostrap", "JQuery", "Chart.JS", "DataTables.JS", "Apache", "API"],
+          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL SGBD", "Boostrap Framework", "JQuery Library", "Chart.JS API", "DataTables.JS API", "Apache Server", "API", "MVC"],
           "image": "project03.jpg"
         },
         {
@@ -178,6 +178,39 @@
         },
         {
           "id": 20,
+          "name": "Projeto Info-X",
+          "repository": "https://github.com/Samuel-Amaro/Sistema-Desktop---InfoX",
+          "url": "https://github.com/Samuel-Amaro/Sistema-Desktop---InfoX",
+          "description": "Projeto, Que envolve a criação de um sistema de emissão de ordem de serviços e emissão de relatórios para um pequena empresa de pequeno porte, que se trata de uma assistência técnica de microcomputadores e notebooks e periféricos ficticia,onde o gestor deseja obter controle dos serviços da empresa.",
+          "tecnologys": [
+            "Java",
+            "MySQL",
+            "Netbeans 11.0",
+            "SGBD-MySQL-Workbench8.0",
+            "API Swing",
+            "JDBC 8.0.20",
+            "API iReport"
+          ],
+          "image": "project34.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Sistema Para Gerenciamento-Estoque",
+          "repository": "https://github.com/Samuel-Amaro/Gerenciamento-Estoque",
+          "url": "https://github.com/Samuel-Amaro/Gerenciamento-Estoque",
+          "description": "Sistema para controle e Gerenciamento de Estoque de qualquer Segmento Comercial que necessite de organização e controle em seu estoque.",
+          "tecnologys": [
+            "Java",
+            "SQLite 3.30.1",
+            "Netbeans 11.01",
+            "API Swing",
+            "JDBC 8.0.20",
+            "API iReport"
+          ],
+          "image": "project35.jpg"
+        },
+        {
+          "id": 22,
           "name": "Advice Generator App",
           "repository": "https://github.com/Samuel-Amaro/advice-generator-app",
           "url": "https://samuel-amaro.github.io/advice-generator-app/",
@@ -186,7 +219,7 @@
           "image": "project20.jpg"
         },
         {
-          "id": 21,
+          "id": 23,
           "name": "Intro component with sign up form",
           "repository": "https://github.com/Samuel-Amaro/Intro-component-with-sign-up-form",
           "url": "https://samuel-amaro.github.io/Intro-component-with-sign-up-form/",
@@ -195,7 +228,7 @@
           "image": "project21.jpg"
         },
         {
-          "id": 22,
+          "id": 24,
           "name": "Tip calculator app",
           "repository": "https://github.com/Samuel-Amaro/tip-calculator-app",
           "url": "https://samuel-amaro.github.io/tip-calculator-app/",
@@ -204,7 +237,7 @@
           "image": "project22.jpg"
         },
         {
-          "id": 23,
+          "id": 25,
           "name": "Intro section with dropdown navigation",
           "repository": "https://github.com/Samuel-Amaro/intro-section-with-dropdown-navigation",
           "url": "https://samuel-amaro.github.io/intro-section-with-dropdown-navigation/",
@@ -213,7 +246,7 @@
           "image": "project23.jpg"
         },
         {
-          "id": 24,
+          "id": 26,
           "name": "IP Address Tracker",
           "repository": "https://github.com/Samuel-Amaro/ip-address-tracker",
           "url": "https://samuel-amaro.github.io/ip-address-tracker/",
@@ -222,7 +255,7 @@
           "image": "project24.jpg"
         },
         {
-          "id": 25,
+          "id": 27,
           "name": "Calculator App",
           "repository": "https://github.com/Samuel-Amaro/calculator-app",
           "url": "https://samuel-amaro.github.io/calculator-app/",
@@ -231,7 +264,7 @@
           "image": "project25.jpg"
         },
         {
-          "id": 26,
+          "id": 28,
           "name": "QRCode Component",
           "repository": "https://github.com/Samuel-Amaro/qr-code-component-react",
           "url": "https://samuel-amaro.github.io/qr-code-component-react/",
@@ -240,7 +273,7 @@
           "image": "project26.jpg"
         },
         {
-          "id": 27,
+          "id": 29,
           "name": "Ping single column coming soon page",
           "repository": "https://github.com/Samuel-Amaro/coming-soon-page",
           "url": "https://samuel-amaro.github.io/coming-soon-page/",
@@ -249,7 +282,7 @@
           "image": "project27.jpg"
         },
         {
-          "id": 28,
+          "id": 30,
           "name": "E-commerce product page",
           "repository": "https://github.com/Samuel-Amaro/e-commerce-product-page",
           "url": "https://samuel-amaro.github.io/e-commerce-product-page/",
@@ -258,7 +291,7 @@
           "image": "project28.jpg"
         },
         {
-          "id": 29,
+          "id": 31,
           "name": "URL shortening API landing page",
           "repository": "https://github.com/Samuel-Amaro/landing-page-shortening",
           "url": "https://samuel-amaro.github.io/landing-page-shortening/",
@@ -267,7 +300,7 @@
           "image": "project29.jpg"
         },
         {
-          "id": 30,
+          "id": 32,
           "name": "Space tourism multi-page website",
           "repository": "https://github.com/Samuel-Amaro/space-tourism-website",
           "url": "https://samuel-amaro.github.io/space-tourism-website/",
@@ -284,7 +317,7 @@
           "image": "project30.jpg"
         },
         {
-          "id": 31,
+          "id": 33,
           "name": "REST Countries API with color theme switcher",
           "repository": "https://github.com/Samuel-Amaro/rest-countries-api",
           "url": "https://samuel-amaro.github.io/rest-countries-api/",
@@ -304,7 +337,7 @@
           "image": "project31.jpg"
         },
         {
-          "id": 32,
+          "id": 34,
           "name": " Multi-step form",
           "repository": "https://github.com/Samuel-Amaro/multi-step-form",
           "url": "https://samuel-amaro.github.io/multi-step-form/",
@@ -319,6 +352,27 @@
             "Hooks React API"
           ],
           "image": "project32.jpg"
+        },
+        {
+          "id": 35,
+          "name": "Portfólio Web",
+          "repository": "https://github.com/Samuel-Amaro/portfolio-web",
+          "url": "https://samuel-amaro.github.io/portfolio-web/",
+          "description": "Portfólio Web de samuel amaro, contando um pouco de sua historia, e objetivos profissionais, e suas principais habilidades e ferramentas",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "JavaScript",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "Contenxt API",
+            "reac-router-dom Library React",
+            "TypeScript",
+            "LocalStorage browser"
+          ],
+          "image": "project33.jpg"
         }
     ]
 }
