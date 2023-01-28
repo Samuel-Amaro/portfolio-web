@@ -2,7 +2,7 @@
 {
     "projects": [
         {
-            "id" : "1",
+            "id" : 1,
             "name": "Site Android",
             "repository": "https://github.com/Samuel-Amaro/Site-Android",
             "url": "https://samuel-amaro.github.io/Site-Android/",
@@ -11,7 +11,7 @@
             "image": "project01.jpg"
         },
         {
-          "id": "2",
+          "id": 2,
           "name": "Componente QR Code",
           "repository": "https://github.com/Samuel-Amaro/qr-code-component",
           "url": "https://samuel-amaro.github.io/qr-code-component/",
@@ -20,7 +20,7 @@
           "image": "project02.jpg"
         },
         {
-          "id": "3",
+          "id": 3,
           "name": "Projeto TCC",
           "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
@@ -29,7 +29,7 @@
           "image": "project03.jpg"
         },
         {
-          "id": "4",
+          "id": 4,
           "name": "NFT Preview card component",
           "repository": "https://github.com/Samuel-Amaro/NFT-preview-card-component",
           "url": "https://samuel-amaro.github.io/NFT-preview-card-component/",
@@ -38,7 +38,7 @@
           "image": "project04.jpg"
         },
         {
-          "id": "5",
+          "id": 5,
           "name": "Component card order summary",
           "repository": "https://github.com/Samuel-Amaro/order-summary-component",
           "url": "https://samuel-amaro.github.io/order-summary-component/",
@@ -51,7 +51,7 @@
           "image": "project05.jpg"
         },
         {
-          "id": "6",
+          "id": 6,
           "name": "Profile card component",
           "repository": "https://github.com/Samuel-Amaro/profile-card-component",
           "url": "https://samuel-amaro.github.io/profile-card-component/",
@@ -60,7 +60,7 @@
           "image": "project06.jpg"
         },
         {
-          "id": "7",
+          "id": 7,
           "name": "Stats preview card component",
           "repository": "https://github.com/Samuel-Amaro/stats-preview-card-component",
           "url": "https://samuel-amaro.github.io/stats-preview-card-component/",
@@ -69,7 +69,7 @@
           "image": "project07.jpg"
         },
         {
-          "id": "8",
+          "id": 8,
           "name": "3 Column preview card component",
           "repository": "https://github.com/Samuel-Amaro/3-column-preview-card-component",
           "url": "https://samuel-amaro.github.io/3-column-preview-card-component/",
@@ -78,7 +78,7 @@
           "image": "project08.jpg"
         },
         {
-          "id": "9",
+          "id": 9,
           "name": "Single Price grid component",
           "repository": "https://github.com/Samuel-Amaro/single-price-grid-component",
           "url": "https://samuel-amaro.github.io/single-price-grid-component/",
@@ -87,7 +87,7 @@
           "image": "project09.jpg"
         },
         {
-          "id": "10",
+          "id": 10,
           "name": "Testimonials section grid",
           "repository": "https://github.com/Samuel-Amaro/testimonials-grid-section",
           "url": "https://samuel-amaro.github.io/testimonials-grid-section/",
@@ -96,7 +96,7 @@
           "image": "project10.jpg"
         },
         {
-          "id": "11",
+          "id": 11,
           "name": "Huddle landing-page with introductory section",
           "repository": "https://github.com/Samuel-Amaro/huddle-landing-page-with-introductory-section",
           "url": "https://samuel-amaro.github.io/huddle-landing-page-with-introductory-section/",
@@ -105,7 +105,7 @@
           "image": "project11.jpg"
         },
         {
-          "id": "12",
+          "id": 12,
           "name": "Four card feature section",
           "repository": "https://github.com/Samuel-Amaro/four-card-feature-section",
           "url": "https://samuel-amaro.github.io/four-card-feature-section/",
@@ -114,7 +114,7 @@
           "image": "project12.jpg"
         },
         {
-          "id": "13",
+          "id": 13,
           "name": "Section proof social",
           "repository": "https://github.com/Samuel-Amaro/section-proof-social",
           "url": "https://samuel-amaro.github.io/section-proof-social/",
@@ -123,7 +123,7 @@
           "image": "project13.jpg"
         },
         {
-          "id": "14",
+          "id": 14,
           "name": "Landing-Page Clipboard",
           "repository": "https://github.com/Samuel-Amaro/clipboard-landing-page",
           "url": "https://samuel-amaro.github.io/clipboard-landing-page/",
@@ -132,7 +132,7 @@
           "image": "project14.jpg"
         },
         {
-          "id": "15",
+          "id": 15,
           "name": "Landing-Page Huddle with alternating feature blocks",
           "repository": "https://github.com/Samuel-Amaro/Huddle-landing-page-with-alternating-feature-blocks",
           "url": "https://samuel-amaro.github.io/Huddle-landing-page-with-alternating-feature-blocks/",
@@ -141,7 +141,7 @@
           "image": "project15.jpg"
         },
         {
-          "id": "16",
+          "id": 16,
           "name": "Component data storage fylo",
           "repository": "https://github.com/Samuel-Amaro/Fylo-data-storage-component",
           "url": "https://samuel-amaro.github.io/Fylo-data-storage-component/",
@@ -150,7 +150,7 @@
           "image": "project16.jpg"
         },
         {
-          "id": "17",
+          "id": 17,
           "name": "Fylo landing page with two column layout",
           "repository": "https://github.com/Samuel-Amaro/fylo-landing-page-with-two-column-layout",
           "url": "https://samuel-amaro.github.io/fylo-landing-page-with-two-column-layout/",
@@ -159,7 +159,7 @@
           "image": "project17.jpg"
         },
         {
-          "id": "18",
+          "id": 18,
           "name": "Componente article preview",
           "repository": "https://github.com/Samuel-Amaro/article-preview-component",
           "url": "https://samuel-amaro.github.io/article-preview-component/",
@@ -168,7 +168,7 @@
           "image": "project18.jpg"
         },
         {
-          "id": "19",
+          "id": 19,
           "name": "Interactive rating component",
           "repository": "https://github.com/Samuel-Amaro/interactive-rating-component",
           "url": "https://samuel-amaro.github.io/interactive-rating-component/",
@@ -177,7 +177,7 @@
           "image": "project19.jpg"
         },
         {
-          "id": "20",
+          "id": 20,
           "name": "Advice Generator App",
           "repository": "https://github.com/Samuel-Amaro/advice-generator-app",
           "url": "https://samuel-amaro.github.io/advice-generator-app/",
@@ -186,7 +186,7 @@
           "image": "project20.jpg"
         },
         {
-          "id": "21",
+          "id": 21,
           "name": "Intro component with sign up form",
           "repository": "https://github.com/Samuel-Amaro/Intro-component-with-sign-up-form",
           "url": "https://samuel-amaro.github.io/Intro-component-with-sign-up-form/",
@@ -195,7 +195,7 @@
           "image": "project21.jpg"
         },
         {
-          "id": "22",
+          "id": 22,
           "name": "Tip calculator app",
           "repository": "https://github.com/Samuel-Amaro/tip-calculator-app",
           "url": "https://samuel-amaro.github.io/tip-calculator-app/",
@@ -204,7 +204,7 @@
           "image": "project22.jpg"
         },
         {
-          "id": "23",
+          "id": 23,
           "name": "Intro section with dropdown navigation",
           "repository": "https://github.com/Samuel-Amaro/intro-section-with-dropdown-navigation",
           "url": "https://samuel-amaro.github.io/intro-section-with-dropdown-navigation/",
@@ -213,7 +213,7 @@
           "image": "project23.jpg"
         },
         {
-          "id": "24",
+          "id": 24,
           "name": "IP Address Tracker",
           "repository": "https://github.com/Samuel-Amaro/ip-address-tracker",
           "url": "https://samuel-amaro.github.io/ip-address-tracker/",
@@ -222,7 +222,7 @@
           "image": "project24.jpg"
         },
         {
-          "id": "25",
+          "id": 25,
           "name": "Calculator App",
           "repository": "https://github.com/Samuel-Amaro/calculator-app",
           "url": "https://samuel-amaro.github.io/calculator-app/",
@@ -231,7 +231,7 @@
           "image": "project25.jpg"
         },
         {
-          "id": "26",
+          "id": 26,
           "name": "QRCode Component",
           "repository": "https://github.com/Samuel-Amaro/qr-code-component-react",
           "url": "https://samuel-amaro.github.io/qr-code-component-react/",
@@ -240,7 +240,7 @@
           "image": "project26.jpg"
         },
         {
-          "id": "27",
+          "id": 27,
           "name": "Ping single column coming soon page",
           "repository": "https://github.com/Samuel-Amaro/coming-soon-page",
           "url": "https://samuel-amaro.github.io/coming-soon-page/",
@@ -249,7 +249,7 @@
           "image": "project27.jpg"
         },
         {
-          "id": "28",
+          "id": 28,
           "name": "E-commerce product page",
           "repository": "https://github.com/Samuel-Amaro/e-commerce-product-page",
           "url": "https://samuel-amaro.github.io/e-commerce-product-page/",
@@ -258,7 +258,7 @@
           "image": "project28.jpg"
         },
         {
-          "id": "29",
+          "id": 29,
           "name": "URL shortening API landing page",
           "repository": "https://github.com/Samuel-Amaro/landing-page-shortening",
           "url": "https://samuel-amaro.github.io/landing-page-shortening/",
@@ -267,7 +267,7 @@
           "image": "project29.jpg"
         },
         {
-          "id": "30",
+          "id": 30,
           "name": "Space tourism multi-page website",
           "repository": "https://github.com/Samuel-Amaro/space-tourism-website",
           "url": "https://samuel-amaro.github.io/space-tourism-website/",
@@ -284,7 +284,7 @@
           "image": "project30.jpg"
         },
         {
-          "id": "31",
+          "id": 31,
           "name": "REST Countries API with color theme switcher",
           "repository": "https://github.com/Samuel-Amaro/rest-countries-api",
           "url": "https://samuel-amaro.github.io/rest-countries-api/",
@@ -304,7 +304,7 @@
           "image": "project31.jpg"
         },
         {
-          "id": "32",
+          "id": 32,
           "name": " Multi-step form",
           "repository": "https://github.com/Samuel-Amaro/multi-step-form",
           "url": "https://samuel-amaro.github.io/multi-step-form/",
