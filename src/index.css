@@ -106,6 +106,8 @@
   --border-menu-select: var(--bs-gray-700);
   --color-border-input: var(--bs-gray-400);
   --color-btn-icon-all-projects: var(--bs-orange);
+  --bg-color-notification: var(--bs-gray-900);
+  --color-text-notification: var(--color-05);
 }
 
 html {
@@ -194,4 +196,6 @@ h6 {
   --color-select-option-current: var(--color-05);
   --bg-select-hover-option: #974a2d;
   --border-menu-select: var(--bs-gray-200);
+  --bg-color-notification: #974a2d;
+  --color-text-notification: var(--bs-gray-300);
 }

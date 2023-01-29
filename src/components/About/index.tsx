@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import iconFrontMentor from "../../assets/images/icon-logo-frontmentor-white.svg";
-import curriculo from "../../assets/files/curriculo-samuel-amaro-web.pdf";
+import curriculo from "../../assets/files/samuel-curriculo-front-web.pdf";
 import React from "react";
 import Section from "../Section";
 import SocialMediaLink from "./SocialMediaLink";

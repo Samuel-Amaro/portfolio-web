@@ -32,6 +32,7 @@ export default function Index() {
 
   const [projects, setProjects] = useState<IProjectDatas[]>(DataProjects.projects);
   const [search, setSearch] = useState("");
+  const [isViewNotificationsNewsProjects, setIsViewNotificationsNewsProjects] = useState(isScrollable(document.documentElement) ? true : false);
 
   type FilterData = {
     filter: string,
@@ -62,12 +63,34 @@ export default function Index() {
     );
   }
 
+  function isScrollable(element: Element) {
+    return element.clientHeight < element.scrollHeight;
+  }
+
   const [theme, toggleTheme] = useTheme();
 
   useEffect(() => {
     //restaura scroll posição original
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    let timeoutID: number;
+    if(isScrollable(document.documentElement)) {
+      setIsViewNotificationsNewsProjects(true);
+      timeoutID = window.setTimeout(() => {
+        setIsViewNotificationsNewsProjects(false);
+      }, 3000);
+    }else{
+      setIsViewNotificationsNewsProjects(false);
+    }
+
+    return () => {
+      clearTimeout(timeoutID);
+    };
+  }, [projects]);
+
+
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
@@ -132,16 +155,9 @@ export default function Index() {
             </div>
           </div>
         </form>
+        {isViewNotificationsNewsProjects && <p className="notification" role="alert">Carregou {projects.length} projetos</p>}
         {projects.length > 0 ? (
           <>
-            <p
-              className="message__info"
-              aria-label="Lista de projetos"
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              {projects.length} itens
-            </p>
             <ul
               className="listprojects"
               aria-label="Lista de projetos"

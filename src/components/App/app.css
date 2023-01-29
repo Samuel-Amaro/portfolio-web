@@ -1,4 +1,5 @@
 .main{
     background-color: var(--bg-body);
     color: var(--text);
+    transition: all 0.40s ease;
 }
