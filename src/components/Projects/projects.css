@@ -16,22 +16,11 @@
   justify-content: center;
   width: 100%;
   margin-bottom: 3rem;
-  /*padding: 10px;
-  border-radius: 10px;*/
 }
 
 .projects__item {
   max-width: 480px;
 }
-
-/*.projects__buttons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.4s ease;
-}*/
 
 .projects__button {
   display: flex;
@@ -91,53 +80,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
-    /*max-height: 500px;
-    overflow-y: scroll;
-    firefox supoort
-    background-color: var(--bg-list-projects);
-    scrollbar-width: thin;
-    scrollbar-color: var(--bg-thumb-scroll) var(--bg-scrollbar);
-    */
   }
-
-  /*webkit browsers*/
-  /*.projects__list::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-
-  .projects__list::-webkit-scrollbar-track {
-    background-color: var(--bg-scrollbar);
-    border-radius: 100vw;
-    margin-block: 0.5rem;
-  }
-
-  .projects__list::-webkit-scrollbar-thumb {
-    background-color: var(--bg-thumb-scroll);
-    border-radius: 100vw;
-  }
-
-  .projects__list::-webkit-scrollbar-thumb:hover {
-    background-color: var(--hover-link-social_link-curriculo_buttons-load);
-  }
-
-  .projects__item {
-    max-width: none;
-  }
-  */
 }
 
 @media screen and (min-width: 992px) {
   .projects__list {
     grid-template-columns: repeat(1, minmax(min-content, 548px));
     gap: 40px 20px;
-    /*max-height: 540px;
-    */
   }
 }
 
 @media screen and (min-width: 1160px) {
   .projects__list {
-    /*min-content*/
     grid-template-columns: repeat(2, minmax(396px, 548px));
   }
 }
