@@ -16,8 +16,8 @@
   justify-content: center;
   width: 100%;
   margin-bottom: 3rem;
-  padding: 10px;
-  border-radius: 10px;
+  /*padding: 10px;
+  border-radius: 10px;*/
 }
 
 .projects__item {
@@ -90,8 +90,7 @@
   .projects__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 40px;
+    gap: 40px 20px;
     /*max-height: 500px;
     overflow-y: scroll;
     firefox supoort
@@ -130,8 +129,7 @@
 @media screen and (min-width: 992px) {
   .projects__list {
     grid-template-columns: repeat(1, minmax(min-content, 548px));
-    column-gap: 20px;
-    row-gap: 40px;
+    gap: 40px 20px;
     /*max-height: 540px;
     */
   }
@@ -139,7 +137,8 @@
 
 @media screen and (min-width: 1160px) {
   .projects__list {
-    grid-template-columns: repeat(2, minmax(min-content, 548px));
+    /*min-content*/
+    grid-template-columns: repeat(2, minmax(396px, 548px));
   }
 }
 

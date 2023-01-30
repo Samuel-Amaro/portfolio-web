@@ -1,3 +1,5 @@
+import Content from "./Content";
+import Section from "./Section";
 import About from "./About";
 /*import Diviser from "./Diviser";*/
 import Experience from "./Experience";
@@ -5,8 +7,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 import Interesses from "./Interests";
 import Projects from "./Projects";
-import Section from "./Section";
-import Content from "./Content";
+
 import React from "react";
 
 type PropsContent = {

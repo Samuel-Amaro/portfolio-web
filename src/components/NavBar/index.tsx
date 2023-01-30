@@ -16,15 +16,19 @@ import {
 import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 
 type PropsNavBar = {
-  items: string[]
+  items: string[];
 };
 
-export default function NavBar({items}: PropsNavBar) {
+export default function NavBar({ items }: PropsNavBar) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
   const [menuItemActiveScroll, setMenuItemActiveScroll] = useState("about");
   const themeContext = useContext(ThemeContext);
 
-  function toggleStatus(event: React.PointerEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>) {
+  function toggleStatus(
+    event:
+      | React.PointerEvent<HTMLDivElement>
+      | React.KeyboardEvent<HTMLDivElement>
+  ) {
     let state = "";
     if (event.currentTarget.getAttribute("aria-checked") === "true") {
       state = "false";
@@ -35,7 +39,7 @@ export default function NavBar({items}: PropsNavBar) {
   }
 
   function getIcon(item: string) {
-    switch(item) {
+    switch (item) {
       case "sobre":
         return faUser;
       case "experiencia":
@@ -53,24 +57,41 @@ export default function NavBar({items}: PropsNavBar) {
     }
   }
 
+  function getWord(item: string) {
+    switch (item) {
+      case "sobre":
+        return "Sobre";
+      case "experiencia":
+        return "experiência";
+      case "educacao":
+        return "educação";
+      case "skills":
+        return "Habilidades";
+      case "interesses":
+        return "interesses";
+      case "projects":
+        return "Projetos";
+      default:
+        throw new Error("Icon não encontrado para o item fornecido");
+    }
+  }
+
   useEffect(() => {
     //destaca um link automaticamente de acordo com a section visivel na windown
     function onActiveItemMenuScroll() {
       document.querySelectorAll("section").forEach((e) => {
-        if(window.pageYOffset >= e.offsetTop) {
+        if (window.pageYOffset >= e.offsetTop) {
           setMenuItemActiveScroll(e.id);
         }
       });
     }
-    
+
     window.addEventListener("scroll", onActiveItemMenuScroll);
 
     return () => {
       window.removeEventListener("scroll", onActiveItemMenuScroll);
     };
   }, []);
-
-  
 
   return (
     <aside className="navbar">
@@ -143,20 +164,26 @@ export default function NavBar({items}: PropsNavBar) {
           role="menu"
           aria-label="Lista de links de Menu de navegação"
         >
-          {
-            items.map((item, index) => {
-              return (<li className="nav__item" role="menuitem" aria-label={`Link pular para seção ${item}`} key={index}>
+          {items.map((item, index) => {
+            return (
+              <li
+                className="nav__item"
+                role="menuitem"
+                aria-label={`Link pular para seção ${item}`}
+                key={index}
+              >
                 <Link
                   href={`#${item}`}
                   label={`Link de Menu para section ${item}`}
                   menuItemActiveScroll={menuItemActiveScroll}
                   nameSectionMenu={item}
                 >
-                  <FontAwesomeIcon icon={getIcon(item)} className="nav__icon" /> {item}
+                  <FontAwesomeIcon icon={getIcon(item)} className="nav__icon" />{" "}
+                  {getWord(item)}
                 </Link>
-              </li>);
-            })
-          }
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </aside>
