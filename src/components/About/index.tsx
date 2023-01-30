@@ -40,13 +40,12 @@ export default function About() {
         </a>
         , tenho 22 anos, atualmente estou desempregado buscando uma oportunidade
         profissional na areá de desenvolvimento web para atuar como
-        desenvolvedor Front-End. Sobre min sou um desenvolvedor que gosta do que
-        faz, sou dedicado nas minhas tarefas, sou detalhista e busco sempre
-        extrair o melhor de min para entregar valor e contribuição, busco
-        aprender constantemente, consistência e oque busco no meu aprendizado,
-        tento ser proativo, determinado, sou detalhista, gosto de aplicar
-        gerenciamento de tempo nas minhas tarefas pessoais. Sinta-se a vontade
-        para visualizar o meu currículo e minhas redes logo abaixo.
+        desenvolvedor Front-End. Sobre min sou um desenvolvedor que gosta do que faz, me dedicado nas
+        minhas tarefas, sou detalhista e busco sempre extrair o melhor de min
+        para entregar valor e contribuição, busco aprender constantemente,
+        consistência e oque busco no meu aprendizado, tento ser proativo, sou
+        determinado. Sinta-se a vontade para visualizar o meu currículo e minhas
+        redes logo abaixo.
       </p>
       <ul
         className="social-medias"
