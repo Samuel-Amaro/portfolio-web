@@ -1,16 +1,3 @@
-/*.heading3 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-
-.heading4 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-  line-height: 1.5;
-}
-*/
-
 .wrapper-datas__description,
 .wrapper-datas__date-beetwen {
   margin-bottom: 1rem;

@@ -1,5 +1,5 @@
 .cardproj {
-  max-width: 100%; 
+  max-width: 100%;
   position: relative;
   z-index: 1020;
   overflow: hidden;
@@ -25,14 +25,6 @@
 .cardproj__preview-datas {
   display: none;
 }
-
-/*.badges {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-}*/
 
 .cardproj__links {
   display: flex;
@@ -82,7 +74,9 @@
     overflow: hidden;
   }
 
-  .cardproj__preview-datas:hover ~ .cardproj__thumbnail > .cardproj__ilustration {
+  .cardproj__preview-datas:hover
+    ~ .cardproj__thumbnail
+    > .cardproj__ilustration {
     transform-origin: center;
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -91,7 +85,6 @@
 
   .cardproj__preview-datas:hover,
   .cardproj__preview-datas:focus,
-  /*.project__item:focus .cardproj__preview-datas,*/
   .cardproj__preview-datas:focus-within {
     opacity: 1;
   }

@@ -1,48 +1,37 @@
-.social-medias__link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background-color: var(--bg-link-social_link-curriculo_buttons-load);
-    height: 3.5rem;
-    width: 3.5rem;
-    font-size: 1.5rem;
-    border-radius: 100%;
+.social-medias__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--bg-link-social_link-curriculo_buttons-load);
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 1.5rem;
+  border-radius: 100%;
 }
 
-.social-medias__link:hover, .social-medias__link:focus{
-    text-decoration: none;
-    background-color: var(--hover-link-social_link-curriculo_buttons-load);
-    transition: background-color 0.5s;
-    /*animation-name: hover-btn;
-    animation-duration: 0.50s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    */
+.social-medias__link:hover,
+.social-medias__link:focus {
+  text-decoration: none;
+  background-color: var(--hover-link-social_link-curriculo_buttons-load);
+  transition: background-color 0.5s;
 }
 
-.social-medias__icon-link{
-    color: white;
-    width: 22px;
-    height: 22px;
+.social-medias__icon-link {
+  color: white;
+  width: 22px;
+  height: 22px;
 }
 
-/*  @media (prefers-reduced-motion: no-preference) {
-  .social-medias__link:hover {
-    animation: hover-btn infinite 1.5s linear;
-  }
-}*/
-
-.social-medias__link img{
-    display: block;
+.social-medias__link img {
+  display: block;
 }
 
 @keyframes hover-btn {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

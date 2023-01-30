@@ -24,8 +24,8 @@
   color: var(--color-hover-project-link);
 }
 
-@media screen and (min-width: 992px){
-    .project-links{
-        display: none;
-    }
+@media screen and (min-width: 992px) {
+  .project-links {
+    display: none;
+  }
 }
