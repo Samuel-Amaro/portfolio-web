@@ -16,19 +16,11 @@ import {
 import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 
 type PropsNavBar = {
-  refSections: React.RefObject<HTMLElement>[],
+  items: string[]
 };
 
-export default function NavBar({refSections}: PropsNavBar) {
+export default function NavBar({items}: PropsNavBar) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
-  /*const refSections = [
-    props.refSectionAbout,
-    props.refSectionExperience,
-    props.refSectionEducation,
-    props.refSectionSkills,
-    props.refSectionInteresses,
-    props.refSectionProjects,
-  ];*/
   const [menuItemActiveScroll, setMenuItemActiveScroll] = useState("about");
   const themeContext = useContext(ThemeContext);
 
@@ -42,12 +34,31 @@ export default function NavBar({refSections}: PropsNavBar) {
     event.currentTarget.setAttribute("aria-checked", state);
   }
 
+  function getIcon(item: string) {
+    switch(item) {
+      case "sobre":
+        return faUser;
+      case "experiencia":
+        return faFile;
+      case "educacao":
+        return faUserGraduate;
+      case "skills":
+        return faClipboardList;
+      case "interesses":
+        return faList;
+      case "projects":
+        return faCode;
+      default:
+        throw new Error("Icon não encontrado para o item fornecido");
+    }
+  }
+
   useEffect(() => {
+    //destaca um link automaticamente de acordo com a section visivel na windown
     function onActiveItemMenuScroll() {
-      refSections.forEach((refSection) => {
-        const section = refSection.current as HTMLElement;
-        if (window.pageYOffset >= section.offsetTop) {
-          setMenuItemActiveScroll(section.id);
+      document.querySelectorAll("section").forEach((e) => {
+        if(window.pageYOffset >= e.offsetTop) {
+          setMenuItemActiveScroll(e.id);
         }
       });
     }
@@ -57,7 +68,7 @@ export default function NavBar({refSections}: PropsNavBar) {
     return () => {
       window.removeEventListener("scroll", onActiveItemMenuScroll);
     };
-  }, [refSections]);
+  }, []);
 
   
 
@@ -132,95 +143,20 @@ export default function NavBar({refSections}: PropsNavBar) {
           role="menu"
           aria-label="Lista de links de Menu de navegação"
         >
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Sobre"
-          >
-            <Link
-              href="#about"
-              label="Link de Menu para section Sobre"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="about"
-            >
-              <FontAwesomeIcon icon={faUser} className="nav__icon" /> sobre
-            </Link>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Experiencia"
-          >
-            <Link
-              href="#experience"
-              label="Link de Menu para section Experiencia"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="experience"
-            >
-              <FontAwesomeIcon icon={faFile} className="nav__icon" />{" "}
-              experiência
-            </Link>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Educação"
-          >
-            <Link
-              href="#education"
-              label="Link de Menu para section Educação"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="education"
-            >
-              <FontAwesomeIcon icon={faUserGraduate} className="nav__icon" />{" "}
-              educação
-            </Link>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Skills"
-          >
-            <Link
-              href="#skills"
-              label="Link de Menu para section Skills"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="skills"
-            >
-              <FontAwesomeIcon icon={faClipboardList} className="nav__icon" />{" "}
-              skills
-            </Link>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Interesses"
-          >
-            <Link
-              href="#interesses"
-              label="Link de Menu para section Interesses"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="interesses"
-            >
-              <FontAwesomeIcon icon={faList} className="nav__icon" />
-              interesses
-            </Link>
-          </li>
-          <li
-            className="nav__item"
-            role="menuitem"
-            aria-label="Link section Projetos"
-          >
-            <Link
-              href="#projects"
-              label="Link de Menu para section Projetoso"
-              menuItemActiveScroll={menuItemActiveScroll}
-              nameSectionMenu="projects"
-            >
-              <FontAwesomeIcon icon={faCode} className="nav__icon" />
-              projetos
-            </Link>
-          </li>
+          {
+            items.map((item, index) => {
+              return (<li className="nav__item" role="menuitem" aria-label={`Link pular para seção ${item}`} key={index}>
+                <Link
+                  href={`#${item}`}
+                  label={`Link de Menu para section ${item}`}
+                  menuItemActiveScroll={menuItemActiveScroll}
+                  nameSectionMenu={item}
+                >
+                  <FontAwesomeIcon icon={getIcon(item)} className="nav__icon" /> {item}
+                </Link>
+              </li>);
+            })
+          }
         </ul>
       </nav>
     </aside>

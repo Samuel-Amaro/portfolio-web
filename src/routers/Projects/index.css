@@ -124,14 +124,21 @@
 }*/
 
 .notification{
-  display: block;
-  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  gap: 10px;
   color: var(--color-text-notification);
   background-color: var(--bg-color-notification);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 10px 0;
   margin: 0 auto 20px auto;
   text-align: center;
   border-radius: 5px;
+}
+
+.notification__icon{
+  display: block;
 }

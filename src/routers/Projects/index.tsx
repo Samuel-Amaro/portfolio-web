@@ -3,6 +3,7 @@ import {
   faCode,
   faHouse,
   faMagnifyingGlass,
+  faBell
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import DataProjects from "../../data/projects.json";
@@ -16,6 +17,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import useTheme from "../../hooks/useTheme";
 import "./index.css";
 import { IProjectDatas } from "interface/IProjectDatas.interface";
+import ButtonPageUp from "components/ButtonPageUp";
 
 export default function Index() {
   const optionsSelect = [
@@ -155,7 +157,7 @@ export default function Index() {
             </div>
           </div>
         </form>
-        {isViewNotificationsNewsProjects && <p className="notification" role="alert">Carregou {projects.length} projetos</p>}
+        {isViewNotificationsNewsProjects && <p className="notification" role="alert"><FontAwesomeIcon icon={faBell} className="notification__icon fa-shake"/> Carregou {projects.length} projetos</p>}
         {projects.length > 0 ? (
           <>
             <ul
@@ -210,6 +212,7 @@ export default function Index() {
             Não foi encontrado projetos com o filtro ou nome fornecido
           </p>
         )}
+        <ButtonPageUp />
       </>
     </ThemeContext.Provider>
   );
