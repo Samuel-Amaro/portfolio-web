@@ -1,6 +1,6 @@
 # Portfólio/Website 
     
-Portfólio/Currículo em formato web, para demostrar informações e experiências profissionais como desenvolvedor front-end júnior.
+Portfólio/Currículo em formato web, para demostrar informações e experiências profissionais como desenvolvedor front-end.
 
 ## Visão Geral
 
@@ -12,20 +12,19 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
 ### Construído com
 
  - Semantic HTML5 markup
- - CSS custom properties
- - Flexbox
- - CSS Grid
+ - CSS(Flexbox, Grid)
  - Mobile-first workflow
  - RWD(Responsive Web Design)
- - JavaScript programming language(ES6+)
  - TypeScript
  - React.JS Library
-    - Hooks 
+    - Hooks, Custom Hooks 
     - Context API
     - React router-dom-library
  - NPM
- - Normalize CSS - [Normalize](https://necolas.github.io/normalize.css/) - Reset CSS
- - Methodology BEM(Block Element Modifier) - [BEM](http://getbem.com/introduction/) - Methodology
+ - Normalize CSS - [Normalize](https://necolas.github.io/normalize.css/)
+ - Methodology/Architecture CSS BEM(Block Element Modifier) - [BEM](http://getbem.com/introduction/)
+ - LocalStorage Web API Browser
+ - Font Awesome Icons - [Font Awesome](https://fontawesome.com/docs/web/use-with/react/) - Icons
 
 ### Layout/Theme Original
 
