@@ -373,6 +373,25 @@
             "LocalStorage browser"
           ],
           "image": "project33.jpg"
+        },
+        {
+          "id": 36,
+          "name": "TodoMatic App",
+          "repository": "https://github.com/Samuel-Amaro/moz-todo",
+          "url": "https://samuel-amaro.github.io/moz-todo/",
+          "description": "Um aplicativo que permite aos usuários adicionar, editar e excluir tarefas nas quais desejam trabalhar e também marcar tarefas como concluídas sem excluí-las.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "Custom Hooks",
+            "TypeScript",
+            "LocalStorage API Web browser "
+          ],
+          "image": "project36.jpg"
         }
     ]
 }

@@ -29,7 +29,7 @@ export default function Projects() {
         {DataProjects.projects
           .sort((a: IProjectDatas, b: IProjectDatas) => b.id - a.id)
           .filter((project: IProjectDatas) => {
-            return project.id > 27;
+            return project.tecnologys.map((t) => t.toLowerCase()).includes("react.js");
           })
           .map((project: IProjectDatas) => {
             //item project
