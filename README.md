@@ -15,6 +15,7 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
  - CSS(Flexbox, Grid)
  - Mobile-first workflow
  - RWD(Responsive Web Design)
+ - Web accessibility(attributes arias and roles)
  - TypeScript
  - React.JS Library
     - Hooks, Custom Hooks 
@@ -25,6 +26,7 @@ Portfólio/Currículo em formato web, para demostrar informações e experiênci
  - Methodology/Architecture CSS BEM(Block Element Modifier) - [BEM](http://getbem.com/introduction/)
  - LocalStorage Web API Browser
  - Font Awesome Icons - [Font Awesome](https://fontawesome.com/docs/web/use-with/react/) - Icons
+
 
 ### Layout/Theme Original
 
