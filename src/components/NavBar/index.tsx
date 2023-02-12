@@ -1,8 +1,8 @@
 import "./navbar.css";
 import profile from "../../assets/images/profile.jfif";
 import Link from "./Link";
-import React, { useEffect, useState, useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import React, { useEffect, useState} from "react";
+import { useThemeContext } from "../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -22,7 +22,7 @@ type PropsNavBar = {
 export default function NavBar({ items }: PropsNavBar) {
   const [btnIsPressed, setBtnIsPressed] = useState(false);
   const [menuItemActiveScroll, setMenuItemActiveScroll] = useState("about");
-  const themeContext = useContext(ThemeContext);
+  const themeContext = useThemeContext();
 
   function toggleStatus(
     event:
@@ -107,7 +107,7 @@ export default function NavBar({ items }: PropsNavBar) {
         aria-checked={themeContext.theme === "light" ? false : true}
         onPointerDown={(event) => {
           toggleStatus(event);
-          themeContext.toggleTheme(
+          themeContext.setToggleTheme(
             event.currentTarget.getAttribute("aria-checked") === "true"
               ? "dark"
               : "light"
@@ -117,7 +117,7 @@ export default function NavBar({ items }: PropsNavBar) {
         onKeyDown={(event) => {
           if (event.key === "Enter" || event.key === " ") {
             toggleStatus(event);
-            themeContext.toggleTheme(
+            themeContext.setToggleTheme(
               event.currentTarget.getAttribute("aria-checked") === "true"
                 ? "dark"
                 : "light"

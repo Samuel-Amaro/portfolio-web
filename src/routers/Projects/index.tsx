@@ -13,8 +13,7 @@ import ProjectLinks from "../../components/Projects/Links";
 import Heading from "../../components/Headings/";
 import Select from "../../components/Select";
 import React, { useEffect, useState } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import useTheme from "../../hooks/useTheme";
+import { ThemeContextProvider} from "../../context/ThemeContext";
 import "./index.css";
 import { IProjectDatas } from "interface/IProjectDatas.interface";
 import ButtonPageUp from "components/ButtonPageUp";
@@ -69,7 +68,9 @@ export default function Index() {
     return element.clientHeight < element.scrollHeight;
   }
 
-  const [theme, toggleTheme] = useTheme();
+  /*const [theme, toggleTheme] = useTheme();*/
+
+  /*const themeContext = useThemeContext();*/
 
   useEffect(() => {
     //restaura scroll posição original
@@ -95,7 +96,7 @@ export default function Index() {
 
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <ThemeContextProvider>
       <>
         <header className="header">
           <Link
@@ -139,7 +140,10 @@ export default function Index() {
                   onChange={(event) => {
                     //event.preventDefault();
                     if (event.target.value !== "") {
-                      filterProjects({ filter: event.target.value, by: "name" });
+                      filterProjects({
+                        filter: event.target.value,
+                        by: "name",
+                      });
                     } else {
                       filterProjects({ filter: "", by: "" });
                     }
@@ -157,7 +161,15 @@ export default function Index() {
             </div>
           </div>
         </form>
-        {isViewNotificationsNewsProjects && <p className="notification" role="alert"><FontAwesomeIcon icon={faBell} className="notification__icon fa-shake"/> Carregou {projects.length} projetos</p>}
+        {isViewNotificationsNewsProjects && (
+          <p className="notification" role="alert">
+            <FontAwesomeIcon
+              icon={faBell}
+              className="notification__icon fa-shake"
+            />{" "}
+            Carregou {projects.length} projetos
+          </p>
+        )}
         {projects.length > 0 ? (
           <>
             <ul
@@ -214,6 +226,9 @@ export default function Index() {
         )}
         <ButtonPageUp />
       </>
+    </ThemeContextProvider>
+    /*<ThemeContext.Provider value={{theme, toggleTheme}}>
     </ThemeContext.Provider>
+    */
   );
 }

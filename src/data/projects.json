@@ -326,13 +326,14 @@
             "html",
             "css",
             "Bem",
-            "JavaScript",
+            "Typescript",
             "React.JS",
             "NPM",
             "reac-router-dom Library React",
             "fetch.JS",
             "Hooks React API",
-            "Context API React"
+            "Context API React",
+            "CONSUMO API REST"
           ],
           "image": "project31.jpg"
         },

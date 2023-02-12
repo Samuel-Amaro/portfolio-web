@@ -1,20 +1,18 @@
 import NavBar from "../NavBar";
 import ContentMain from "../ContentMain";
 import Footer from "../Footer";
-import React, {/*useRef*/} from "react";
+import React from "react";
 import "./app.css";
 import ButtonPageUp from "../ButtonPageUp";
-import { ThemeContext } from "../../context/ThemeContext";
-import useTheme from "../../hooks/useTheme";
+import { ThemeContextProvider } from "../../context/ThemeContext";
 
 function App() {
- const [theme, toggleTheme] = useTheme();
 
   //criar as refs para as sections
   const nameSections = ["sobre", "experiencia", "educacao", "skills", "interesses", "projects"];
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <ThemeContextProvider>
       <main className="main">
         <NavBar
           items={nameSections}
@@ -25,7 +23,7 @@ function App() {
         <Footer />
         <ButtonPageUp />
       </main>
-    </ThemeContext.Provider>
+    </ThemeContextProvider>
   );
 }
 
