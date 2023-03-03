@@ -25,7 +25,7 @@
           "repository": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "url": "https://github.com/Samuel-Amaro/Projeto-TCC",
           "description": "Protejo de TCC, uma aplicação web cujo objetivo é resolver um problema pontual de distribuição de benefícios sociais durante a pandemia do (COVID-19), para as pessoas com menos condição financeira na cidade onde resido.",
-          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL SGBD", "Boostrap Framework", "JQuery Library", "Chart.JS API", "DataTables.JS API", "Apache Server", "API", "MVC"],
+          "tecnologys": ["html", "css", "JavaScript", "PHP", "PostGreSQL SGBD", "Boostrap Library", "JQuery Library", "Chart.JS Library", "DataTables.JS Plugin jQuery", "Apache Server", "MVC", "API VIACEP", "Plugin jQuery maskMoney", "Library sweetalert2.js", "Library inputMask.js", "Plugin jQuery simple-datatables"],
           "image": "project03.jpg"
         },
         {
@@ -215,7 +215,7 @@
           "repository": "https://github.com/Samuel-Amaro/advice-generator-app",
           "url": "https://samuel-amaro.github.io/advice-generator-app/",
           "description": "Solução de desafio de codificação Front-End, aplicativo gerador de conselhos que consome uma API que retorna conselhos.",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "API"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "API", "fetch.JS", "CONSUMO API REST"],
           "image": "project20.jpg"
         },
         {
@@ -251,7 +251,7 @@
           "repository": "https://github.com/Samuel-Amaro/ip-address-tracker",
           "url": "https://samuel-amaro.github.io/ip-address-tracker/",
           "description": "Solução de desafio de codificação Front-End, aplicativo de rastreador de endereço IP",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "API"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "APIs", "fetch.JS", "CONSUMO API REST"],
           "image": "project24.jpg"
         },
         {
@@ -269,7 +269,7 @@
           "repository": "https://github.com/Samuel-Amaro/qr-code-component-react",
           "url": "https://samuel-amaro.github.io/qr-code-component-react/",
           "description": "Solução de desafio de codificação Front-End, QRCode component",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "Web Acessibility"],
           "image": "project26.jpg"
         },
         {
@@ -278,7 +278,7 @@
           "repository": "https://github.com/Samuel-Amaro/coming-soon-page",
           "url": "https://samuel-amaro.github.io/coming-soon-page/",
           "description": "Solução de desafio de codificação Front-End, página ping column coming son",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "Web Acessibility"],
           "image": "project27.jpg"
         },
         {
@@ -287,7 +287,7 @@
           "repository": "https://github.com/Samuel-Amaro/e-commerce-product-page",
           "url": "https://samuel-amaro.github.io/e-commerce-product-page/",
           "description": "Solução de desafio de codificação Front-End, página de e-commerce de produto eletrônico",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "Web Acessibility"],
           "image": "project28.jpg"
         },
         {
@@ -296,7 +296,7 @@
           "repository": "https://github.com/Samuel-Amaro/landing-page-shortening",
           "url": "https://samuel-amaro.github.io/landing-page-shortening/",
           "description": "Solução de desafio de codificação Front-End, landing page encurtadora de links, com integração a API externa",
-          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "API"],
+          "tecnologys": ["html", "css", "Bem", "JavaScript", "React.JS", "NPM", "API", "fetch.JS", "CONSUMO API REST", "Web Acessibility"],
           "image": "project29.jpg"
         },
         {
@@ -312,7 +312,8 @@
             "JavaScript",
             "React.JS",
             "NPM",
-            "reac-router-dom"
+            "reac-router-dom",
+            "Web Acessibility"
           ],
           "image": "project30.jpg"
         },
@@ -329,11 +330,12 @@
             "Typescript",
             "React.JS",
             "NPM",
-            "reac-router-dom Library React",
+            "reac-router-dom Library",
             "fetch.JS",
             "Hooks React API",
             "Context API React",
-            "CONSUMO API REST"
+            "CONSUMO API REST",
+            "Web Acessibility"
           ],
           "image": "project31.jpg"
         },
@@ -350,7 +352,9 @@
             "JavaScript",
             "React.JS",
             "NPM",
-            "Hooks React API"
+            "Hooks React API",
+            "Custom Hooks",
+            "Web Acessibility"
           ],
           "image": "project32.jpg"
         },
@@ -369,9 +373,10 @@
             "NPM",
             "Hooks React API",
             "Contenxt API",
-            "reac-router-dom Library React",
+            "reac-router-dom Library",
             "TypeScript",
-            "LocalStorage browser"
+            "LocalStorage API Web browser",
+            "Web Acessibility"
           ],
           "image": "project33.jpg"
         },
@@ -390,9 +395,31 @@
             "Hooks React API",
             "Custom Hooks",
             "TypeScript",
-            "LocalStorage API Web browser "
+            "LocalStorage API Web browser",
+            "Web Acessibility"
           ],
           "image": "project36.jpg"
+        },
+        {
+          "id": 37,
+          "name": "Dictionary web app",
+          "repository": "https://github.com/Samuel-Amaro/dictionary-web-app",
+          "url": "https://samuel-amaro.github.io/dictionary-web-app/",
+          "description": "Aplicativo web de dicionário, onde você pode procurar os significados e exemplos de contexto e pronunciação de uma palavra em inglês que você esta em dúvida sobre o significado, ou pronuncia, ou em dúvida de onde usar a mesma.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "Contenxt API",
+            "TypeScript",
+            "fetch.JS",
+            "CONSUMO API REST",
+            "Web Acessibility"
+          ],
+          "image": "project37.jpg"
         }
     ]
 }
