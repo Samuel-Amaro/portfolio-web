@@ -136,7 +136,6 @@ export default function NavBar({ items }: PropsNavBar) {
         </div>
         <span
           className="switch-controler"
-          aria-label="Switch Controlador para alternar temas"
           title="Controlador esquema de cores usado neste site"
           tabIndex={0}
         ></span>

@@ -137,16 +137,7 @@ export default function Skills() {
           <Workflow>OOP(object oriented programming)</Workflow>
         </li>
         <li className="workflow__item">
-          <Workflow>Markup Semantic</Workflow>
-        </li>
-        <li className="workflow__item">
-          <Workflow>BEM naming methodology Architecture CSS</Workflow>
-        </li>
-        <li className="workflow__item">
-          <Workflow>Web Acessibility</Workflow>
-        </li>
-        <li className="workflow__item">
-          <Workflow>react-router-dom Library</Workflow>
+          <Workflow>Agile Development & Scrum</Workflow>
         </li>
       </ul>
     </div>
