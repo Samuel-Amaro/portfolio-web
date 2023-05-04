@@ -8,9 +8,10 @@ import {
   faGitAlt,
   faReact,
   faNpm,
+  faFigma
 } from "@fortawesome/free-brands-svg-icons";
 import { faUniversalAccess } from "@fortawesome/free-solid-svg-icons";
-import { SiReactrouter, SiTypescript } from "react-icons/si";
+import { SiReactrouter, SiTypescript, SiVite } from "react-icons/si";
 import Heading from "../Headings/";
 import "./skills.css";
 import React from "react";
@@ -121,6 +122,25 @@ export default function Skills() {
           <SiTypescript className="tools__Icon-Tool" />
           <span className="tools__content">TypeScript</span>
         </li>
+        <li
+          className="tools__item"
+          title="Frontend Tooling"
+          aria-label="Frontend Tooling"
+        >
+          <SiVite className="tools__Icon-Tool" />
+          <span className="tools__content">Vite</span>
+        </li>
+        <li
+          className="tools__item"
+          title="Ferramenta de design"
+          aria-label="Ferramenta de design"
+        >
+          <FontAwesomeIcon
+            icon={faFigma}
+            className="tools__Icon-Tool"
+          />
+          <span className="tools__content">Figma</span>
+        </li>
       </ul>
       <Heading level={4}>Workflow</Heading>
       <ul
@@ -138,6 +158,12 @@ export default function Skills() {
         </li>
         <li className="workflow__item">
           <Workflow>Agile Development & Scrum</Workflow>
+        </li>
+        <li className="workflow__item">
+          <Workflow>Noções de componentização</Workflow>
+        </li>
+        <li className="workflow__item">
+          <Workflow>Familiaridade com ferramenta Figma</Workflow>
         </li>
       </ul>
     </div>

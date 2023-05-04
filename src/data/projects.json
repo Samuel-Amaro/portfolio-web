@@ -420,6 +420,30 @@
             "Web Acessibility"
           ],
           "image": "project37.jpg"
+        },
+        {
+          "id": 38,
+          "name": "Kanban task management web app",
+          "repository": "https://github.com/Samuel-Amaro/kanban-web-app",
+          "url": "https://samuel-amaro.github.io/kanban-web-app/",
+          "description": "aplicativo web que gerencie tarefas e sub tarefas usando metodologia kanban.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "Contenxt API com reducers",
+            "TypeScript",
+            "Web Acessibility",
+            "HTML Drag and Drop API Web",
+            "LocalStorage Web API Browser",
+            "Immer.js package", 
+            "Classnames utility",
+            "Nano ID utility"
+          ],
+          "image": "project38.jpg"
         }
     ]
 }
