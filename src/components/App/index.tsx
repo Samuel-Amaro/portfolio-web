@@ -17,12 +17,12 @@ function App() {
   ];
 
   return (
-    <main className="main">
+    <>
       <NavBar items={nameSections}/>
       <ContentMain nameSections={nameSections} />
       <Footer />
       <ButtonPageUp />
-    </main>
+    </>
   );
 }
 

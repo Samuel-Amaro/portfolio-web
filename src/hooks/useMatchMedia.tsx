@@ -33,7 +33,7 @@ export default function useMatchMedia({mobileContent, desktopContent, mediaQuery
                 mediaWatcher.removeListener(updateIsScreenCurrentMatch);
             }
         }
-    });
+    }, [mediaQuery]);
 
     return isScreenCurrentMatch ? desktopContent : mobileContent;
 }

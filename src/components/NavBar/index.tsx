@@ -1,6 +1,6 @@
 import "./navbar.css";
 import profile from "../../assets/images/profile.jfif";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Switch from "components/Switch";
 import MenuMobile from "components/MenuMobile";
 import NavDesktop from "./NavDesktop";
@@ -21,25 +21,23 @@ export default function NavBar({ items }: PropsNavBar) {
     setMenuIsOpen(isOppen);
   }
 
-  return (
-    useMatchMedia({
-      mobileContent: (
-        <NavBarMobile
-          menuIsOppen={menuIsOpen}
-          handleMenuIsOpen={handleMenuIsOpen}
-          items={items}
-        />
-      ),
-      desktopContent: (
-        <NavBarDesktop
-          menuIsOppen={menuIsOpen}
-          handleMenuIsOpen={handleMenuIsOpen}
-          items={items}
-        />
-      ),
-      mediaQuery: "(min-width: 992px)",
-    })
-  );
+  return useMatchMedia({
+    mobileContent: (
+      <NavBarMobile
+        menuIsOppen={menuIsOpen}
+        handleMenuIsOpen={handleMenuIsOpen}
+        items={items}
+      />
+    ),
+    desktopContent: (
+      <NavBarDesktop
+        menuIsOppen={menuIsOpen}
+        handleMenuIsOpen={handleMenuIsOpen}
+        items={items}
+      />
+    ),
+    mediaQuery: "(min-width: 992px)",
+  });
 }
 
 interface PropsCommonNavBar extends PropsNavBar {
@@ -83,6 +81,18 @@ function NavBarDesktop({
       handleMenuIsOpen(!menuIsOppen);
     }
   }
+
+  useEffect(() => {
+    if (
+      menuIsOppen &&
+      document.querySelector(".main")?.classList.contains("main--pading")
+    ) {
+      document.querySelector(".main")?.classList.remove("main--pading");
+      return;
+    } else {
+      document.querySelector(".main")?.classList.add("main--pading");
+    }
+  }, [menuIsOppen]);
 
   if (menuIsOppen) {
     return (
