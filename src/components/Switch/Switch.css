@@ -1,0 +1,69 @@
+.switch {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  gap: 5px;
+  height: 21px;
+  background-color: var(--bg-switch-theme);
+  position: relative;
+  border-radius: 22px;
+  margin: 0 15px 0 0;
+}
+
+.switch:focus .switch-controler,
+.switch:hover .switch-controler {
+  box-shadow: 1px 1px 3px 2px var(--bs-orange),
+    -1px -1px 3px 2px var(--bs-orange);
+}
+
+.switch-controler {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  border: none;
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+  background-color: var(--bg-switch-controler);
+  position: absolute;
+  left: 3px;
+  border-radius: 50%;
+  top: 2px;
+  transition: all 0.3s;
+}
+
+.switch[aria-checked="false"] .switch-controler {
+  left: 3px;
+}
+
+.switch[aria-checked="true"] .switch-controler {
+  left: 30px;
+}
+
+.switch__icon {
+  display: block;
+}
+
+.switch__icons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px;
+}
+
+.switch__icon {
+  color: var(--color-icon-switch);
+  width: 15px;
+  height: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .switch {
+    margin: 0;
+  }
+}

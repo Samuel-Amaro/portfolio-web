@@ -1,0 +1,13 @@
+.nav__links {
+  list-style-type: none;
+  list-style: none;
+  display: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.nav__icon {
+  display: inline-block;
+}

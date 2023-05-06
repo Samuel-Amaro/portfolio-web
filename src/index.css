@@ -46,6 +46,8 @@
   --shadow-menu_color-link: rgba(255, 255, 255, 0.55);
   --color-hover-link: rgba(255, 255, 255, 0.75);
   --hover-switch: var(--color-05);
+  --bg-hover-btn-hide-sidebar: var(--bs-gray-900);
+  --bg-btn-show-sidebar: var(--bs-primary);
   /*colors palete theme dark*/
   --bg-dark: #000000;
   --text-primary: #f0f0f0;
@@ -108,6 +110,7 @@
   --color-btn-icon-all-projects: var(--bs-orange);
   --bg-color-notification: var(--bs-gray-900);
   --color-text-notification: var(--color-05);
+  --bg-btn-show-sidebar: var(--color-05);
 }
 
 html {
@@ -202,4 +205,5 @@ h6 {
   --border-menu-select: var(--bs-gray-200);
   --bg-color-notification: #974a2d;
   --color-text-notification: var(--bs-gray-300);
+  --bg-hover-btn-hide-sidebar: var(--bs-primary);
 }
