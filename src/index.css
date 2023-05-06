@@ -165,6 +165,10 @@ h6 {
   }
 }
 
+.has-dialog{
+  overflow: hidden;
+}
+
 [data-theme="dark"] {
   --bg-body: var(--bg-dark);
   --text: var(--text-primary);

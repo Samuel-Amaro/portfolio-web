@@ -1,9 +1,12 @@
 import useLocalStorage from "hooks/useLocalStorage";
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useCallback, useMemo } from "react";
+
+type DataTheme = "light" | "dark";
 
 type ThemeContextType = {
-  theme: string,
-  setToggleTheme: React.Dispatch<React.SetStateAction<string>>;
+  theme: DataTheme;
+  //setToggleTheme: React.Dispatch<React.SetStateAction<string>>;
+  toggleTheme: (theme: DataTheme) => void;
 };
 
 type PropsProviderThemeContext = {
@@ -12,28 +15,42 @@ type PropsProviderThemeContext = {
 
 export const ThemeContext = React.createContext<null | ThemeContextType>(null);
 
-export function ThemeContextProvider({children}: PropsProviderThemeContext) {
+export function ThemeContextProvider({ children }: PropsProviderThemeContext) {
+  const [theme, setToggleTheme] = useLocalStorage<DataTheme>(
+    "themeOption",
+    "light"
+  );
 
-  const [theme, setToggleTheme] = useLocalStorage("themeOption", "light");
+  const toggleTheme = useCallback((theme: DataTheme) => {
+    setToggleTheme(theme);
+  }, [setToggleTheme]);
+
+  const contextValue = useMemo(
+    () => ({
+      theme,
+      toggleTheme,
+    }),
+    [theme, toggleTheme]
+  );
 
   useEffect(() => {
     const body = document.querySelector("body") as HTMLBodyElement;
     body.dataset.theme = theme;
   }, [theme]);
 
-  return (<ThemeContext.Provider value={{theme, setToggleTheme}}>
-    {children}
-  </ThemeContext.Provider>);
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export function useThemeContext() {
   const themeContext = useContext(ThemeContext);
 
-  if(!themeContext) {
+  if (!themeContext) {
     throw new Error("Error ao usar theme context");
   }
 
   return themeContext;
 }
-
-

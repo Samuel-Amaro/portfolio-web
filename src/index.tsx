@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Projects from "./routers/Projects";
 import ErrorPage from "./routers/ErrorPage";
 import "./index.css";
+import { ThemeContextProvider } from "context/ThemeContext";
 
 const router = createBrowserRouter(
   [
@@ -25,7 +26,9 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.querySelector(".root") as Element).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
   </React.StrictMode>
 );
 
