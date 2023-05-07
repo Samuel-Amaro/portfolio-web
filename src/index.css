@@ -7,6 +7,7 @@
 }
 
 :root {
+  /******variable colors************/
   --color-01: #fffcf2;
   --color-02: #ccc5b9;
   --color-03: #403d39;
@@ -42,6 +43,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  /***variables to elements*****/
   --border-menu: rgba(255, 255, 255, 0.1);
   --shadow-menu_color-link: rgba(255, 255, 255, 0.55);
   --color-hover-link: rgba(255, 255, 255, 0.75);

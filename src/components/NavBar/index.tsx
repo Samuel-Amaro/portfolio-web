@@ -12,8 +12,6 @@ interface PropsNavBar {
   items: string[];
 }
 
-//TODO: pensar se vale a pena refatorar esta sidebar, criar um componente so para mobile e outro so para desktop, usar match media componente para ver qual mostrar, refatorar o switch componente para algo mais bonito, e tentar usar grid layout no main
-
 export default function NavBar({ items }: PropsNavBar) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -93,6 +91,12 @@ function NavBarDesktop({
       document.querySelector(".main")?.classList.add("main--pading");
     }
   }, [menuIsOppen]);
+
+  useEffect(() => {
+    if (!menuIsOppen) {
+      handleMenuIsOpen(true);
+    }
+  }, []);
 
   if (menuIsOppen) {
     return (

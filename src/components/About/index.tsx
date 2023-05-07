@@ -3,9 +3,9 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import iconFrontMentor from "../../assets/images/icon-logo-frontmentor-white.svg";
 import curriculo from "../../assets/files/samuel-curriculo-front-web.pdf";
 import React from "react";
-import SocialMediaLink from "./SocialMediaLink";
 import "./about.css";
 import Heading from "components/Headings";
+import Link from "components/Link";
 
 export default function About() {
   return (
@@ -53,31 +53,43 @@ export default function About() {
         aria-label="Lista de Links para midias Sociais de Samuel Amaro"
       >
         <li className="social-medias__item">
-          <SocialMediaLink
+          <Link
+            className="social-medias__link"
+            target="_blank"
+            rel="noreferrer"
+            title={"Link Para Media Social Linkedin"}
+            aria-label={"Link Para media Social Linkedin"}
             href="https://www.linkedin.com/in/samuel-amaro/"
-            titleAndLabel="Linkedin"
           >
             <FontAwesomeIcon
               icon={faLinkedinIn}
               className="social-medias__icon-link"
             />
-          </SocialMediaLink>
+          </Link>
         </li>
         <li className="social-medias__item">
-          <SocialMediaLink
+          <Link
+            className="social-medias__link"
+            target="_blank"
+            rel="noreferrer"
+            title={"Link Para Media Social GitHub"}
+            aria-label={"Link Para media Social GitHub"}
             href="https://github.com/Samuel-Amaro"
-            titleAndLabel="GitHub"
           >
             <FontAwesomeIcon
               icon={faGithub}
               className="social-medias__icon-link"
             />
-          </SocialMediaLink>
+          </Link>
         </li>
         <li className="social-medias__item">
-          <SocialMediaLink
+          <Link
+            className="social-medias__link"
+            target="_blank"
+            rel="noreferrer"
+            title={"Link Para Media Social Plataforma de desafio de codificação Front-End Mentor"}
+            aria-label={"Link Para media Social Plataforma de desafio de codificação Front-End Mentor"}
             href="https://www.frontendmentor.io/profile/Samuel-Amaro"
-            titleAndLabel="Plataforma de desafio de codificação Front-End Mentor"
           >
             <img
               src={iconFrontMentor}
@@ -86,7 +98,7 @@ export default function About() {
               alt=""
               aria-hidden="true"
             />
-          </SocialMediaLink>
+          </Link>
         </li>
       </ul>
       <a

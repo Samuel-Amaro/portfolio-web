@@ -5,7 +5,6 @@ type DataTheme = "light" | "dark";
 
 type ThemeContextType = {
   theme: DataTheme;
-  //setToggleTheme: React.Dispatch<React.SetStateAction<string>>;
   toggleTheme: (theme: DataTheme) => void;
 };
 

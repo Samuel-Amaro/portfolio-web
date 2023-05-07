@@ -1,11 +1,10 @@
-import "./link.css";
 import React from "react";
 
 interface PropsLink extends React.ComponentPropsWithRef<"a"> {
   //href: string,
   //label: string,
-  menuitemactivescroll: string;
-  namesectionmenu: string;
+  //menuitemactivescroll: string;
+  //namesectionmenu: string;
   //children: React.ReactNode
 }
 
@@ -15,15 +14,18 @@ const Link = React.forwardRef<RefLink, PropsLink>(function Link(
   /*{href, label, menuItemActiveScroll, nameSectionMenu, children}*/ props: PropsLink,
   ref: React.ForwardedRef<HTMLAnchorElement>
 ) {
+  const {/*menuitemactivescroll, namesectionmenu,*/className, ...rest} = props;
   return (
     <a
       className={
-        props.menuitemactivescroll === props.namesectionmenu
+        /*menuitemactivescroll === namesectionmenu
           ? "nav__link nav__link_active"
           : "nav__link"
+        */
+        className ? className : undefined
       }
       ref={ref}
-      {...props}
+      {...rest}
     >
       {props.children}
     </a>

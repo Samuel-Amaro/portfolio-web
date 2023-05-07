@@ -19,7 +19,6 @@ import Link from "components/Link";
 import React from "react";
 import "./Menu.css";
 
-
 export interface PropsMenu extends React.ComponentPropsWithoutRef<"ul"> {
   optionsmenu: string[];
   handlemenuisopen: (isOppen: boolean) => void;
@@ -146,8 +145,11 @@ export function Menu(props: PropsMenu) {
             <Link
               href={`#${item}`}
               aria-label={`Link de Menu para section ${item}`}
-              menuitemactivescroll={menuItemActiveScroll}
-              namesectionmenu={item}
+              /*menuitemactivescroll={menuItemActiveScroll}
+              namesectionmenu={item}*/
+              className={`nav__link${
+                menuItemActiveScroll === item ? " nav__link_active" : ""
+              }`}
               onKeyDown={handleKeyDownOptionMenu}
               ref={(optionMenu: HTMLAnchorElement) => {
                 const refOptions = getRefs(refsOptionsMenu);
