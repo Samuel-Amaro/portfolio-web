@@ -1,5 +1,10 @@
-import useLocalStorage from "hooks/useLocalStorage";
-import React, { useEffect, useContext, useCallback, useMemo } from "react";
+import React, {
+  useEffect,
+  useContext,
+  useCallback,
+  useMemo,
+  useState,
+} from "react";
 
 type DataTheme = "light" | "dark";
 
@@ -15,14 +20,18 @@ type PropsProviderThemeContext = {
 export const ThemeContext = React.createContext<null | ThemeContextType>(null);
 
 export function ThemeContextProvider({ children }: PropsProviderThemeContext) {
-  const [theme, setToggleTheme] = useLocalStorage<DataTheme>(
+  const themeValue = localStorage.getItem("themeOption");
+  const [theme, setToggleTheme] = /*useLocalStorage<DataTheme>(
     "themeOption",
     "light"
-  );
+  );*/ useState(themeValue ? themeValue as DataTheme : "light");
 
-  const toggleTheme = useCallback((theme: DataTheme) => {
-    setToggleTheme(theme);
-  }, [setToggleTheme]);
+  const toggleTheme = useCallback(
+    (theme: DataTheme) => {
+      setToggleTheme(theme);
+    },
+    [setToggleTheme]
+  );
 
   const contextValue = useMemo(
     () => ({
@@ -35,6 +44,7 @@ export function ThemeContextProvider({ children }: PropsProviderThemeContext) {
   useEffect(() => {
     const body = document.querySelector("body") as HTMLBodyElement;
     body.dataset.theme = theme;
+    localStorage.setItem("themeOption", theme);
   }, [theme]);
 
   return (
