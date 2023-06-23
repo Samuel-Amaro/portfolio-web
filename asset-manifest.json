@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio-web/static/css/main.afaa7c6c.css",
-    "main.js": "/portfolio-web/static/js/main.7574ede6.js",
+    "main.css": "/portfolio-web/static/css/main.30d3bdb9.css",
+    "main.js": "/portfolio-web/static/js/main.57aaadec.js",
     "static/media/samuel-curriculo-front-web.pdf": "/portfolio-web/static/media/samuel-curriculo-front-web.4aa3128e1a45a39ddf96.pdf",
     "static/media/profile.jfif": "/portfolio-web/static/media/profile.a9f1d815a6370edb85c9.jfif",
     "index.html": "/portfolio-web/index.html",
     "static/media/icon-logo-frontmentor-white.svg": "/portfolio-web/static/media/icon-logo-frontmentor-white.f71619eb2793e1d77a5cb506272cb67b.svg",
-    "main.afaa7c6c.css.map": "/portfolio-web/static/css/main.afaa7c6c.css.map",
-    "main.7574ede6.js.map": "/portfolio-web/static/js/main.7574ede6.js.map"
+    "main.30d3bdb9.css.map": "/portfolio-web/static/css/main.30d3bdb9.css.map",
+    "main.57aaadec.js.map": "/portfolio-web/static/js/main.57aaadec.js.map"
   },
   "entrypoints": [
-    "static/css/main.afaa7c6c.css",
-    "static/js/main.7574ede6.js"
+    "static/css/main.30d3bdb9.css",
+    "static/js/main.57aaadec.js"
   ]
 }
