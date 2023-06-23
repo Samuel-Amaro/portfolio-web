@@ -44,7 +44,7 @@ export default function About() {
         </a>
         , lá foi onde escrevi meus primeiros códigos e também onde eu descobri a
         minha paixão por esse mundo. Atualmente tenho experiencia em tecnologias
-        como React, Typescript, JavaScript, HTML, CSS, GIT, e continuo a estudar
+        como React, Typescript, JavaScript, HTML, CSS, GIT, Next.js, Integração com apis rest usando Fetch, é SWR e continuo a estudar
         constantemente, aprendendo as melhores praticas e ferramentas. Sinta-se
         a vontade para visualizar o meu currículo e minhas redes logo abaixo.
       </p>
@@ -116,25 +116,3 @@ export default function About() {
     </div>
   );
 }
-
-/*
-Olá! Meu nome e Samuel Amaro, sou
-        formado em análise e desenvolvimento de Sistemas, pelo{" "}
-        <a
-          className="about__link about__link--instituicao"
-          href="https://www.ifg.edu.br/formosa"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Link para instituição Federal Goias"
-        >
-          <abbr title="instituto federal de Goiás">IFG</abbr>
-        </a>
-        , tenho 22 anos, atualmente estou desempregado buscando uma oportunidade
-        profissional na areá de desenvolvimento web para atuar como
-        desenvolvedor Front-End. Sobre min sou um desenvolvedor que gosta do que
-        faz, me dedicado nas minhas tarefas, sou detalhista e busco sempre
-        extrair o melhor de min para entregar valor e contribuição, busco
-        aprender constantemente, consistência e oque busco no meu aprendizado,
-        tento ser proativo, sou determinado. Sinta-se a vontade para visualizar
-        o meu currículo e minhas redes logo abaixo.
-*/

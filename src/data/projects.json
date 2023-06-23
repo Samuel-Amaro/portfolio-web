@@ -444,6 +444,30 @@
             "Nano ID utility"
           ],
           "image": "project38.jpg"
+        },
+        {
+          "id": 39,
+          "name": "Entertainment web app",
+          "repository": "https://github.com/Samuel-Amaro/entertainment-web-app",
+          "url": "https://entertainment-web-app-rose.vercel.app/",
+          "description": "Aplicativo da Web de entretenimento, podendo visualizar informações sobre filmes e TV series.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "TypeScript",
+            "Web Acessibility",
+            "Next.JS",
+            "CSS Modules",
+            "SEO Basic(metatags, OpenGraph)",
+            "SWR",
+            "API TMDB",
+            "Server Side Rendering"
+          ],
+          "image": "project39.jpg"
         }
     ]
 }

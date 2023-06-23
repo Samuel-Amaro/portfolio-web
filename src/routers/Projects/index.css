@@ -138,3 +138,9 @@
 .notification__icon{
   display: block;
 }
+
+@media screen and (min-width: 992px) {
+  .main, .main--padding{
+    padding: 0;
+  }
+}
