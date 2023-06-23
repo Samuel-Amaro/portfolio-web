@@ -68,10 +68,6 @@ export default function Index() {
     return element.clientHeight < element.scrollHeight;
   }
 
-  /*const [theme, toggleTheme] = useTheme();*/
-
-  /*const themeContext = useThemeContext();*/
-
   useEffect(() => {
     //restaura scroll posição original
     window.scrollTo(0, 0);
