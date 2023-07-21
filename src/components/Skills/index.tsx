@@ -18,6 +18,7 @@ import React from "react";
 import IconBemCSS from "components/Icons/BemCSS";
 import IconSWR from "components/Icons/SWR";
 import IconCSSModules from "components/Icons/CSSModules";
+import ReactHookForm from "components/Icons/ReactHookForm";
 
 export default function Skills() {
   return (
@@ -156,6 +157,10 @@ export default function Skills() {
           <IconCSSModules className="tools__Icon-Tool tools__Icon-Tool_Mediun"/>
           <span className="tools__content">CSS Modules</span>
         </li>
+        <li className="tools__item" title="React Hook Form" aria-label="React Hook Form">
+          <ReactHookForm className="tools__Icon-Tool tools__Icon-Tool_Mediun"/>
+          <span className="tools__content">React Hook Form</span>
+        </li>
       </ul>
       <Heading level={4}>Workflow</Heading>
       <ul
@@ -188,6 +193,9 @@ export default function Skills() {
         </li>
         <li className="workflow__item">
           <Workflow>Integração com APIS rest usando Fetch é SWR</Workflow>
+        </li>
+        <li className="workflow__item">
+          <Workflow>React Hook Form</Workflow>
         </li>
       </ul>
     </div>
