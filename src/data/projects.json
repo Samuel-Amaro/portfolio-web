@@ -468,6 +468,31 @@
             "Server Side Rendering"
           ],
           "image": "project39.jpg"
+        },
+        {
+          "id": 40,
+          "name": "Aplicativo Web de fatura",
+          "repository": "https://github.com/Samuel-Amaro/app-web-faturamento",
+          "url": "https://app-web-faturamento.vercel.app/",
+          "description": "Projeto de estudo, para aprendizado de tecnologias relacionados ao front-end, aplicativo web de faturamento, o usuário pode criar, excluir, visualizar e mudar status de faturas ou cobranças.",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "Context API com reducers",
+            "React-Hook-Form",
+            "NPM",
+            "Hooks React API",
+            "TypeScript",
+            "Web Acessibility",
+            "Next.JS App Router",
+            "CSS Modules",
+            "SEO Basic(metatags, OpenGraph)",
+            "Server Side Rendering",
+            "LocalStorage Web API Browser"
+          ],
+          "image": "project40.jpg"
         }
     ]
 }
