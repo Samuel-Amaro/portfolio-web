@@ -493,6 +493,29 @@
             "LocalStorage Web API Browser"
           ],
           "image": "project40.jpg"
+        },
+        {
+          "id": 41,
+          "name": "Website Aluguel de Carros",
+          "repository": "https://github.com/Samuel-Amaro/aluguel-carros",
+          "url": "https://aluguel-carros.vercel.app/",
+          "description": "O objetivo deste projeto era construir um website de aluguel de carros, foi construído uma única page a home onde mostra informações sobre os carros disponíveis, e há um modal onde pode obter informações mais detalhadas sobre um veículo em específico. As imagens e informações sobre os veículos foram obtidas de APIS públicas disponíveis na comunidade. O objetivo do projeto era estudar mais a fundo sobre o consumo de APIS e geração de imagens de forma dinâmica através de um provedor",
+          "tecnologys": [
+            "html",
+            "css",
+            "Bem",
+            "React.JS",
+            "NPM",
+            "Hooks React API",
+            "TypeScript",
+            "Web Acessibility",
+            "Next.JS App Router",
+            "CSS Modules",
+            "Server Side Rendering",
+            "SWR Hook Fetch Datas",
+            "CONSUMO API REST"
+          ],
+          "image": "project41.jpg"
         }
     ]
 }
